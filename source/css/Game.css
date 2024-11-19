@@ -89,7 +89,8 @@ body, html {
     left: 187px;
     bottom: 491px;
     font-size: 35px;
-    color: rgb(237, 240, 243);
+    /* color: rgb(237, 240, 243); */
+    color: green;
     z-index: 2;
 }
 

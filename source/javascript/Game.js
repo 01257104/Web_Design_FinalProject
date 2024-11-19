@@ -29,8 +29,8 @@ const targetTextContainer = document.getElementById("TextContainer");
 
 targetText.split("").forEach(char => {//將假文拆分
     let span = document.createElement("span");//新增一個span元素
-    if(char === ' '){//將space元素轉為non breaking space元素
-        char= '&nbsp;';
+    if (char === ' ') {//將space元素轉為non breaking space元素
+        char = '&nbsp;';
     }
     span.innerHTML = char;//將拆分出來的元素(char)新增到span的內容裡
     targetTextContainer.appendChild(span);//新增span到HTML中
@@ -46,42 +46,77 @@ function Check_Input() {
         } else if (inputText[index] === targetText[index]) {
             span.classList.add("correct");
             span.classList.remove("incorrect", "blank_incorrect");
-        }else if(inputText[index] != " " && targetText[index] == " "){
+        } else if (inputText[index] != " " && targetText[index] == " ") {
             span.classList.add("blank_incorrect");
             span.classList.remove("incorrect", "correct");
-        }else {
+        } else {
             span.classList.add("incorrect");
             span.classList.remove("correct", "blank_incorrect");
         }
     });
+    if (inputText.length == targetText.length) {//當打到最後一個字自動送出
+        CorrectRateCal('', true);
+    }
 }
 
 //Enter吃進value
 let typeBoxValue = document.getElementById("typeBox");
-typeBoxValue.addEventListener("keypress", CorrectRateCal, false);//吃到鍵盤指令就呼叫CorrectRateCal函式
+typeBoxValue.addEventListener("keypress", CorrectRateCal, false);//每次吃到鍵盤指令就呼叫CorrectRateCal函式
+let firstKeypress = true;//用於檢測是否是第一個打得字，避免重複計時
+let start, end, duration, displayTime = 0, timerInterval;//用於計時的變數
+document.getElementById('displayTime').textContent = displayTime;
 
-//比對正確率並計時
-function CorrectRateCal(event){
+function Timer() {
+    let now = new Date();
+    start = now.getTime();//getTime的單位為millisecond
+    clearInterval(timerInterval);//確保之前的計時器被清除
+    timerInterval = setInterval(updateTime, 100); // 每100毫秒更新一次顯示
+}
+
+function updateTime() {
+    let now = new Date();
+    let elapsedTime = (now.getTime() - start) / 1000;//單位為sec
+    displayTime = Math.floor(elapsedTime * 100) / 100; //顯示至小數點後兩位
+    document.getElementById('displayTime').textContent = displayTime.toFixed(2);
+}
+
+//比對正確率並結算時間
+function CorrectRateCal(event, autoComplete = false) {
+    //開始計時
+    if (firstKeypress) {//第一次打字
+        Timer();
+        firstKeypress = false;
+    }
+
     let input = typeBoxValue.value;
     let targetTextArray = [], inputTextArray = [];
-    let count = 0;
-    if (event.key === "Enter") {//如果吃到的指令是enter，啟動計算
-        event.preventDefault();
-        targetText.split('').forEach((char, index)=>{//將目標文本拆分成陣列
+    let CorrectCount = 0;
+    if (event.key === "Enter" || autoComplete) {//如果吃到的指令是enter，吃進value並結算
+        if (!autoComplete) {//如果是用EnventListenr來執行，要防止報錯
+            event.preventDefault();//防止報錯用
+        }
+        //結束計時
+        clearInterval(timerInterval); // 停止計時
+        updateTime(); // 最後更新時間
+        duration = displayTime.toFixed(2);//更新duration
+        console.log(`耗時:${duration}sec`);//計算耗時
+        firstKeypress = true;//重設firstKeypress
+
+        targetText.split('').forEach((char, index) => {//將目標文本拆分成陣列
             targetTextArray[index] = char;
         });
         input.split('').forEach((char, index) => {//將inputText拆分成陣列
             inputTextArray[index] = char;
         });
-        for(let i = 0;i<inputTextArray.length;++i){
-            if(targetTextArray[i] === inputTextArray[i]){
-                count++;
+        for (let i = 0; i < inputTextArray.length; ++i) {
+            if (targetTextArray[i] === inputTextArray[i]) {
+                CorrectCount++;
             }
         }
-        let correctRate = count / targetText.length * 100;
-        console.log(`count = ${count}`);
+        let correctRate = CorrectCount / targetText.length * 100;
+        console.log(`CorrectCount = ${CorrectCount}`);
         console.log(correctRate);
-        DamageCalculate(correctRate);
+        DamageCalculate(correctRate, duration);
 
         //reset
         const inputField = document.getElementById("typeBox");
@@ -92,17 +127,10 @@ function CorrectRateCal(event){
     }
 }
 
-//傷害計算公式
-function DamageCalculate(correctRate){
-    let damage = Math.round(correctRate * 10);
-    for(let i = 0; i < 5; ++i){
+//傷害計算
+function DamageCalculate(correctRate, duration) {
+    let damage = Math.round(correctRate * 5 / duration);//傷害計算公式
+    for (let i = 0; i < 5; ++i) {
         attack(i, damage);
     }
-}
-
-//計時器
-function CountDown(){
-    let now = new Date();
-    let start = now.getTime();//紀錄開始時間
-    document.addEventListener()
 }
