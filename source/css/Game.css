@@ -1,0 +1,157 @@
+/* 初始化設定 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C0C0C0;
+}
+/* 怪物 */
+.mobArea {
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    gap: 20px; /* 控制 mob 之間的間距 */
+    padding: 20px; /* 控制 MOBs 容器與邊框之間的距離 */
+    max-width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+.mobs {
+    position: relative;
+    height: 350px; /* 根據需求調整 */
+    width: 350px;  /* 根據需求調整 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.mobs ul {
+    text-align: center;
+    list-style: none; /* 移除黑點 */
+    margin-bottom: 0; /* 控制文字區塊與圖片之間的間距 */
+    padding: 10px;
+}
+.mobs img {
+    display: inline-block;
+    aspect-ratio: 1/1;
+    /* max-width: 100%;
+    max-height: 100%; */
+    margin-top: 0;
+}
+
+/* 玩家生命值 */
+.playerHP{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, rgb(150, 5, 5), rgb(216, 4, 4));
+}
+.playerHP_Area_Left{
+    display: inline;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 99%;
+}
+.playerHP_Area_Right{
+    display: inline;
+    position: absolute;
+    left: 99%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.playerHP_value{
+    display: inline;
+    margin: 0;
+    padding: 10px;
+    width:1500px;
+    height: 30px;
+    position: absolute;
+    left: 187px;
+    bottom: 491px;
+    font-size: 35px;
+    color: rgb(237, 240, 243);
+    z-index: 2;
+}
+
+/* 打字區域 */
+#TextContainer {
+    position: absolute;
+    bottom: 15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2;
+
+    color: #888;
+    display: flex;
+    /* gap: 2px; */
+    flex-wrap: wrap;
+
+    width: 1500px;
+    height: 450px;
+    padding: 20px;
+    font-size: 55px;
+    background-color: rgba(28, 29, 28, 0.08);
+    border: solid;
+    border-color: rgb(128, 128, 128, 0.05);
+    border-radius: 10px;
+}
+#typeBox{
+    opacity: 0; /*取消顯示 */
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    bottom: 25px;
+}
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+.blank_incorrect{
+    background-color: red;
+    width: 30px;
+    height: 60px;
+}
+/* .typeBox::placeholder{
+    color: rgba(238, 241, 238, 0.514);
+}
+.typeBox:focus{
+    outline: none;
+    border-color: rgba(28, 29, 28, 0.2);
+} */
+
+.GetDamagebtn {
+    color: red;
+    width: 100px; /* 按鈕寬度 */
+    height: 40px; /* 按鈕高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    margin-top: 5px;
+}

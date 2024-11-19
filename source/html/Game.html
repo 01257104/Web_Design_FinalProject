@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gamemode</title>
+    <link rel="stylesheet" href="../css/Game.css">
+    <script src="../javascript/Game.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- <input type="text" id="choose">
+        <button onclick="attack()">攻擊</button> -->
+    </header>
+
+    <main>
+        <div class="mobArea">
+            <div class="mob1 mobs">
+                <ul>
+                    <li>怪物1</li>
+                    <li>血量: <span id="mob1HP"></span></li>
+                    <li>CD:</li>
+                </ul>
+                <img src="../image/Gray_Square.png">
+            </div>
+            <div class="mob2 mobs">
+                <ul>
+                    <li>怪物2</li>
+                    <li>血量: <span id="mob2HP"></span></li>
+                    <li>CD:</li>
+                </ul>
+                <img src="../image/Orange_Circle.png">
+            </div>
+            <div class="mob3 mobs">
+                <ul>
+                    <li>怪物3</li>
+                    <li>血量: <span id="mob3HP"></span></li>
+                    <li>CD:</li>
+                </ul>
+                <img src="../image/Yellow_Triangle.png">
+            </div>
+            <div class="mob4 mobs">
+                <ul>
+                    <li>怪物4</li>
+                    <li>血量: <span id="mob4HP"></span></li>
+                    <li>CD:</li>
+                </ul>
+                <img src="../image/Purple_Hexagon.png">
+            </div>
+            <div class="mob5 mobs">
+                <ul>
+                    <li>怪物5</li>
+                    <li>血量: <span id="mob5HP"></span></li>
+                    <li>CD:</li>
+                </ul>
+                <img src="../image/Pink_Pentagon.png">
+            </div>
+        </div>
+        <div class="playerHP_block">
+            <p class="playerHP playerHP_Area_Left"></p>
+            <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span></p>
+            <p class="playerHP playerHP_Area_Right"></p>
+        </div>
+    </main>
+
+    <footer>
+        <div id="TextContainer" onclick="typeBox_Focus()"></div>
+        <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
+    </footer>
+</body>
+
+</html>

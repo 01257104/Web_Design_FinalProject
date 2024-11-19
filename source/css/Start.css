@@ -1,0 +1,103 @@
+/* 到頂了 */
+* {
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+header h1{
+    color: white;
+    position: absolute;
+    left: 0.5vw;
+    top:0;
+    line-height: 80px;
+}
+header ul{
+    position: absolute;
+    right: 1vw;
+    top:0;
+    line-height: 80px;
+}
+header li{
+    display: inline;
+    margin: 2vw;
+}
+.top-menu-btn{
+    background-color: black;
+    border: none;
+    font-size: large;
+    text-align: center;
+    flex-wrap: nowrap;
+    color: white;
+    cursor: pointer;
+}
+.top-menu-btn:hover{
+    text-decoration: underline;
+}
+.top-menu-btn:active{
+    color:#59595a;
+}
+
+
+.start{
+    background-color: #C0C0C0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    height: 100vh; /* 使 div 填滿整個視口高度 */
+
+}
+#game-title { 
+    position: relative;
+    bottom: 70px;
+    font-size: 6rem; /* 設定標題的字體大小 */
+    margin-bottom: 5px; /* 給標題與按鈕之間加一點間距 */
+}
+.Gamestart_Button {
+    position: relative;
+    top: 50px;
+    background-color: gray;
+    letter-spacing: 0.1em;
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    margin: 10px;
+    text-align: center;
+    border: none;
+    flex-wrap: nowrap;
+    color: white;
+    width: 600px;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 7px #999;
+    text-decoration: none;
+}
+
+.Gamestart_Button:hover {
+    background-color: rgb(103, 103, 104);
+}
+
+.Gamestart_Button:active {
+    color:gray;
+    background-color: #59595a;
+    box-shadow: 0 3px #666;
+    transform: translateY(1px);
+}
+
+.fade_out{
+    animation: fade_out 0.35s;
+}
+
+@keyframes fade_out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
