@@ -5,12 +5,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 禁止滾動 */
+}
+
 header{
     display: flex;
-    position: absolute;
     top: 100px;
     justify-content: center;
     align-items: center;
+    z-index: 101;
 }
 
 body, html {
@@ -155,4 +163,35 @@ body, html {
     align-items: center;
  
     margin-top: 5px;
+}
+
+
+#TransitionBlock{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+    transform: translateX(0); /* 初始位置 */
+    transition: transform 0.3s ease-out; /* 加入平滑動畫效果 */
+}
+#TransitionBlock.hidden {
+    transform: translateX(-100%); /* 從右移到左，離開螢幕 */
+}
+
+.testButtons{
+    position: fixed;
+    top: 70%;
+    left: 5%;
+}
+
+.testButtons button{
+    cursor: pointer;
+}
+
+.fade_out{
+    transition: 1s;
+    opacity: 0;
 }

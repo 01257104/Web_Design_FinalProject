@@ -1,13 +1,16 @@
-let Gamestart_Button = document.querySelector('#Gamestart_Button');
-let GameTitle = document.querySelector('#game-title');
+document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('Gamestart_Button');
+    const transitionBlock = document.getElementById('TransitionBlock');
 
-Gamestart_Button.addEventListener('click', () => {
-    Gamestart_Button.classList.add('fade_out');
-    GameTitle.classList.add('fade_out');
+    startButton.addEventListener('click', () => {
+        //將轉場的localstorage設為true，觸發轉場
+        localStorage.setItem("Gamemode transition", true);
+        // 加入 .active 類，觸發轉場動畫
+        transitionBlock.classList.add('active');
+
+        setTimeout(() => {
+            // 替換為您的遊戲頁面路徑
+            location.href = "./source/html/Game.html";
+        }, 300); // 與 CSS transition 的時間一致
+    });
 });
-
-Gamestart_Button.addEventListener('animationend', () => {
-    console.log('Animation ended');
-    // GameTitle.remove();
-    // Gamestart_Button.remove();
-})

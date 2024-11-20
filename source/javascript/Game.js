@@ -1,21 +1,73 @@
+//開始轉場
+const transitionBlock = document.getElementById('TransitionBlock');
+
+if (localStorage.getItem("Gamemode transition") == "true") {//localstorage為true才轉場
+    localStorage.setItem("Gamemode transition", false);
+    transitionBlock.style.zIndex = 100;//將Block設到最上層
+    // 延遲移除黑屏效果
+    setTimeout(() => {
+        transitionBlock.classList.add('hidden'); // 加入滑出的 class
+    }, 300); // 延遲讓用戶能看到黑屏效果
+}
+else{//false的話直接消失
+    transitionBlock.style.display = "none";
+    transitionBlock.style.zIndex = 0;
+}
+
+
 //怪物數值
 let MobHP = [100, 500, 1000, 500, 100];
 let mob_id = ["mob1HP", "mob2HP", "mob3HP", "mob4HP", "mob5HP"]
+let mobCD_original = [2, 2, 3, 2, 2], mobCD_current = [];
+let mobAtkVal = [5, 10, 20, 10, 5];
 
-for (let i = 0; i < 5; ++i) {
+for (let i = 0; i < 5; ++i) {//初始化顯示mobHP mobCD
     document.getElementById(mob_id[i]).textContent = MobHP[i];
+    mobCD_current[i] = mobCD_original[i];
+    document.getElementById(`mob${i + 1}CD`).textContent = mobCD_current[i];
 }
 
-function attack(index, damage) {
-    MobHP[index] -= damage;
-    document.getElementById(mob_id[index]).textContent = MobHP[index];
-    console.log("attack successfully");
+function checkCD(mobIndex) {
+    mobCD_current[mobIndex]--;//CD減少1
+    if (mobCD_current[mobIndex] <= 0) {//CD到0了
+        console.log(`mob${mobIndex + 1}的CD = 0`);
+        attackPlayer(mobIndex);
+        mobCD_current[mobIndex] += mobCD_original[mobIndex];//CD重置
+    }
+    document.getElementById(`mob${mobIndex + 1}CD`).textContent = mobCD_current[mobIndex];//更新顯示
+}
+
+function attackPlayer(mobIndex) {//怪物攻擊玩家
+    currentHP -= mobAtkVal[mobIndex];//玩家生命減少對應mob的攻擊力
+    document.getElementById("currentHP").textContent = currentHP;//更新顯示
+}
+
+function checkMobAlive(mobIndex) {
+    if (MobHP[mobIndex] <= 0) {
+        MobHP[mobIndex] = 0;
+        let mob = document.getElementById(`mob${mobIndex + 1}`);
+        mob.classList.add("fade_out");
+    }
 }
 
 //玩家數值
 let currentHP = 100; let totalHP = 100;
 document.getElementById("currentHP").textContent = currentHP;
 document.getElementById("totalHP").textContent = totalHP;
+
+function attack(index, damage) {//攻擊怪物
+    MobHP[index] -= damage;
+    checkMobAlive(index);//檢查mob是否存活
+    document.getElementById(mob_id[index]).textContent = MobHP[index];
+    checkCD(index);//攻擊一次，CD--
+    console.log("attack successfully");
+}
+
+document.getElementById("attackBtn").addEventListener('click', () => {//測試用攻擊
+    for (let i = 0; i < 5; ++i) {
+        attack(i, 100);
+    }
+});
 
 //輸入欄位focus
 //document.getElementById("typeBox").focus();
