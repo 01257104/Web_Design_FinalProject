@@ -16,25 +16,24 @@ else{//false的話直接消失
 
 
 //怪物數值
-let MobHP = [100, 500, 1000, 500, 100];
-let mob_id = ["mob1HP", "mob2HP", "mob3HP", "mob4HP", "mob5HP"]
-let mobCD_original = [2, 2, 3, 2, 2], mobCD_current = [];
+let MobHP = [200, 500, 10000, 500, 200];
+let mobCD_original = [1, 2, 3, 2, 2], mobCD_current = [];
 let mobAtkVal = [5, 10, 20, 10, 5];
 
 for (let i = 0; i < 5; ++i) {//初始化顯示mobHP mobCD
-    document.getElementById(mob_id[i]).textContent = MobHP[i];
+    document.getElementById(`mob${i}HP`).textContent = MobHP[i];
     mobCD_current[i] = mobCD_original[i];
-    document.getElementById(`mob${i + 1}CD`).textContent = mobCD_current[i];
+    document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];
 }
 
 function checkCD(mobIndex) {
     mobCD_current[mobIndex]--;//CD減少1
     if (mobCD_current[mobIndex] <= 0) {//CD到0了
-        console.log(`mob${mobIndex + 1}的CD = 0`);
+        console.log(`mob${mobIndex}的CD = 0`);
         attackPlayer(mobIndex);
         mobCD_current[mobIndex] += mobCD_original[mobIndex];//CD重置
     }
-    document.getElementById(`mob${mobIndex + 1}CD`).textContent = mobCD_current[mobIndex];//更新顯示
+    document.getElementById(`mob${mobIndex}CD`).textContent = mobCD_current[mobIndex];//更新顯示
 }
 
 function attackPlayer(mobIndex) {//怪物攻擊玩家
@@ -45,8 +44,12 @@ function attackPlayer(mobIndex) {//怪物攻擊玩家
 function checkMobAlive(mobIndex) {
     if (MobHP[mobIndex] <= 0) {
         MobHP[mobIndex] = 0;
-        let mob = document.getElementById(`mob${mobIndex + 1}`);
+        let mob = document.getElementById(`mob${mobIndex}`);
         mob.classList.add("fade_out");
+        return false;
+    }
+    else{
+        return true;
     }
 }
 
@@ -57,11 +60,39 @@ document.getElementById("totalHP").textContent = totalHP;
 
 function attack(index, damage) {//攻擊怪物
     MobHP[index] -= damage;
-    checkMobAlive(index);//檢查mob是否存活
-    document.getElementById(mob_id[index]).textContent = MobHP[index];
-    checkCD(index);//攻擊一次，CD--
-    console.log("attack successfully");
+    displayDamage(index, damage);
+    if(checkMobAlive(index)){//mob沒死才計算CD，避免mob死亡仍然攻擊玩家
+        checkCD(index);//玩家攻擊mob一次，MobCD--
+        console.log("attack successfully");
+    }
+    document.getElementById(`mob${index}HP`).textContent = MobHP[index];//更新顯示怪物生命
 }
+
+function displayDamage(index, damage) {
+    // 獲取顯示的元素
+    let output = document.getElementById(`displayDamage${index}`);
+    
+    // 設置顯示的文字
+    output.textContent = `-${damage}`;
+    
+    // 顯示元素並觸發動畫
+    output.style.display = 'block';
+    
+    // 觸發動畫
+    output.classList.remove('animate'); // 確保清除之前的動畫狀態
+    void output.offsetWidth; // 觸發重排，使動畫重新啟動
+    output.classList.add('animate'); // 再次添加動畫類
+
+    setTimeout(() => {
+        output.classList.add('fade_out');
+    }, 300);
+    setTimeout(() => {
+        output.classList.remove('fade_out');
+        output.style.display = 'none'; // 隱藏元素
+    }, 500);
+}
+
+
 
 document.getElementById("attackBtn").addEventListener('click', () => {//測試用攻擊
     for (let i = 0; i < 5; ++i) {
