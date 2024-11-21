@@ -73,14 +73,14 @@
                 </div>
             </div>
         </div>
-        <div class="playerHP_block">
-            <p class="playerHP playerHP_Area_Left"></p>
+        <div class="playerHP_Area">
+            <div class="playerHP_Bar_Left playerHP_Bar" id="playerHP_Left"></div>
             <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span>   Time: <span id = "displayTime">0</span>sec</p>
-            <p class="playerHP playerHP_Area_Right"></p>
+            <div class="playerHP_Bar_Right playerHP_Bar" id="playerHP_Right"></div>
         </div>
-        <div class="testButtons">
+        <!-- <div class="testButtons">
             <button id="attackBtn">攻擊100</button>
-        </div>
+        </div> -->
     </main>
 
     <footer>
@@ -88,6 +88,7 @@
         <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
     </footer>
     <div id = "TransitionBlock"></div>
+    <div id="damageEffect">1000</div>
 </body>
 
 </html>
