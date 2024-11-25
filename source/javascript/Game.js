@@ -36,6 +36,10 @@ let mobAtkVal = [50, 100, 200, 100, 50];
 localStorage.setItem("Turn", 1);
 localStorage.setItem("score", 0);
 mob_init(localStorage.getItem("Turn"));
+setTimeout(()=>{
+    document.getElementById('scoreArea').innerHTML = '<p>score : </p><span id = "score">0</span>';
+
+}, 325);
 
 async function mob_init(turn) {//初始化顯示mobHP mobCD
     await startGameTransition();//確認是否觸發開始轉場
@@ -183,19 +187,32 @@ function PlayerHP_bar(current, total) {
     bar.style.height = `${current / total * 100}%`;
 }
 
-function player_died() {
+function player_died() {//玩家死亡
     let score = localStorage.getItem("score");
     window.alert("You died");
     window.alert(`You Score is ${score}`);
     window.alert('Back to Start mode');
     location.href = "../../Start.html";
+    //將轉場的localstorage設為true，觸發轉場
+    // localStorage.setItem("Start transition", true);
+    // // 加入 .active 類，觸發轉場動畫    
+    // // 觸發轉場動畫
+    // transitionBlock.classList.remove('hidden');
+    // transitionBlock.classList.remove('TransitionBlock_in');
+    // transitionBlock.classList.add('TransitionBlock_out');
+    // transitionBlock.classList.add('hidden');
+
+    // setTimeout(() => {
+    //     // 替換為您的遊戲頁面路徑
+    //     location.href = "../../Start.html";
+    // }, 300); // 與 CSS transition 的時間一致
 }
 
 function KillAllBtn(){
     //關閉typeBox
     document.getElementById('typeBox').disabled = true;
     for(let i = 0; i < 5; ++i){
-        attack(i, 700);
+        attack(i, 777);
     }
     setTimeout(() => {
         Mob_move();
@@ -213,7 +230,7 @@ function typeBox_Focus() {
 }
 
 //目標文本
-const targetText = "At all say face see still move do may no right time few by face eye write end begin how state write make little write into program develop thing right possible never also she most many real problem order against play form find.";
+const targetText = "at all say face see still move do may no right time few by face eye write end begin how state write make little write into program develop thing right possible never also she most many real problem order against play form find.";
 const targetTextContainer = document.getElementById("TextContainer");
 
 targetText.split("").forEach(char => {//將假文拆分
