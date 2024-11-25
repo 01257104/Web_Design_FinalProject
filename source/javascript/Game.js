@@ -2,18 +2,25 @@
 //=======================================================================我是分隔線==================================================================
 //開始的轉場
 const transitionBlock = document.getElementById('TransitionBlock');
-
-if (localStorage.getItem("Gamemode transition") == "true") {//localstorage為true才轉場
-    localStorage.setItem("Gamemode transition", false);
-    transitionBlock.style.zIndex = 100;//將Block設到最上層
-    // 延遲移除黑屏效果
-    setTimeout(() => {
-        transitionBlock.classList.add('hidden'); // 加入滑出的 class
-    }, 300); // 延遲讓用戶能看到黑屏效果
-}
-else {//false的話直接消失
-    transitionBlock.style.display = "none";
-    transitionBlock.style.zIndex = 0;
+function startGameTransition() {
+    return new Promise(resolve => {
+        if (localStorage.getItem("Gamemode transition") == "true") {//localstorage為true才轉場
+            localStorage.setItem("Gamemode transition", false);
+            transitionBlock.style.zIndex = 100;//將Block設到最上層
+            // 延遲移除黑屏效果
+            setTimeout(() => {
+                transitionBlock.classList.add('hidden'); // 加入滑出的 class
+            }, 300); // 延遲讓用戶能看到黑屏效果
+            setTimeout(() => {
+                resolve();
+            }, 700);
+        }
+        else {//false的話直接消失
+            transitionBlock.style.display = "none";
+            transitionBlock.style.zIndex = 0;
+            resolve();
+        }
+    });
 }
 //=======================================================================我是分隔線==================================================================
 
@@ -21,60 +28,81 @@ else {//false的話直接消失
 
 //Part怪物
 //=======================================================================我是分隔線==================================================================
-let MobHP = [200, 500, 10000, 500, 200];
-let mobCD_original = [2, 2, 3, 2, 2], mobCD_current = [];
-let mobAtkVal = [5, 10, 20, 10, 5];
+let MobHP = [], MobHP_original = [300, 500, 700, 500, 300];
+let MobLevel = [1, 2, 3, 2, 1];
+let mobAlive = [true, true, true, true, true];
+let mobCD_original = [2, 3, 4, 3, 2], mobCD_current = [];
+let mobAtkVal = [50, 100, 200, 100, 50];
+localStorage.setItem("Turn", 1);
+localStorage.setItem("score", 0);
+mob_init(localStorage.getItem("Turn"));
 
-for (let i = 0; i < 5; ++i) {//初始化顯示mobHP mobCD
-    document.getElementById(`mob${i}HP`).textContent = MobHP[i];
-    mobCD_current[i] = mobCD_original[i];
-    document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];
+async function mob_init(turn) {//初始化顯示mobHP mobCD
+    await startGameTransition();//確認是否觸發開始轉場
+    window.alert(`Turn ${turn}`);
+    for (let i = 0; i < 5; ++i) {
+        MobHP[i] = MobHP_original[i];
+        mobCD_current[i] = mobCD_original[i];
+        mobAlive[i] = true;
+        let mob = document.getElementById(`mob${i}`);
+        mob.classList.remove("fade_out");
+        mob.classList.add('fade_in');
+        mob.style.display = 'flex';
+        document.getElementById(`mob${i}HP`).textContent = MobHP[i];
+        mobCD_current[i] = mobCD_original[i];
+        document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];
+    }
 }
 
 async function Mob_move() {//Mob行動步驟
     //檢查mob生存狀態
+    let allDied = true;
     for (let i = 0; i < 5; ++i) {
-        if (checkMobAlive(i)) {//mob沒死才計算CD，避免mob死亡仍然攻擊玩家
+        if (mobAlive[i]) {//mob沒死才計算CD，避免mob死亡仍然攻擊玩家
             mobCD_current[i]--;//CD減少1
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];//更新顯示
+            allDied = false;
         }
+        console.log(`Mob${i}HP = ${MobHP[i]}`);
+    }
+    if (allDied) {//mob全死，重置mob並進入下一回合
+        let turn = parseInt(localStorage.getItem("Turn"));
+        localStorage.setItem("Turn", turn + 1); // 確保回合數更新
+
+        await mob_init(turn + 1); // 確保初始化完成後再繼續
+
+        //恢復typeBox並focus
+        document.getElementById('typeBox').disabled = false;
+        typeBox_Focus();
+
+        //重置計時器
+        document.getElementById('displayTime').textContent = '0';
+        return;
     }
     for (let i = 0; i < 5; ++i) {
-        if (mobCD_current[i] <= 0) {
-            await attackPlayer(i); // 等待動畫結束後再繼續
+        if (mobCD_current[i] <= 0) {//CD到0了
+            await mob_attack(i); // 等待動畫結束後再繼續
+            if (currentHP <= 0) {
+                player_died();
+            }
             mobCD_current[i] = mobCD_original[i]; // 重置CD
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i]; // 更新顯示
         }
     }
-
-
-    // let index = 0;
-    // let temp = window.setInterval(() => {
-    //     checkCD(index);//CD==0的mob攻擊
-    //     index++;
-    //     if (index >= 5) {
-    //         window.clearInterval(temp);
-    //     }
-    // }, 2000);
-    // //mobCD判定
-    // for(let i = 0; i < 5; ++i){
-    //     checkCD(i);//CD==0的mob攻擊
-    //     await new Promise(resolve => setTimeout(resolve, 1200)); // 等待指定的時間
-    // }
+    //恢復typeBox並focus
+    document.getElementById('typeBox').disabled = false;
+    typeBox_Focus();
+    //重置計時器
+    document.getElementById('displayTime').textContent = '0';
 }
 
-function checkCD(mobIndex) {
-    if (mobIndex >= 5) return;
-    if (mobCD_current[mobIndex] <= 0) {//CD到0了
-        attackPlayer(mobIndex);
-        mobCD_current[mobIndex] += mobCD_original[mobIndex];//CD重置
-        document.getElementById(`mob${mobIndex}CD`).textContent = mobCD_current[mobIndex];//更新顯示
-    }
-}
-
-function attackPlayer(mobIndex) {//怪物攻擊玩家
+function mob_attack(mobIndex) {//怪物攻擊玩家
     window.alert(`mob${mobIndex} attack!`);
-    return new Promise((resolve, reject) => {
+    currentHP -= mobAtkVal[mobIndex];//玩家生命減少對應mob的攻擊力
+    if (currentHP < 0) {
+        currentHP = 0;
+    }
+    return new Promise(resolve => {
         let effect = document.getElementById('damageEffect');
         effect.textContent = `HP - ${mobAtkVal[mobIndex]}`;
         effect.style.display = 'flex';
@@ -90,27 +118,11 @@ function attackPlayer(mobIndex) {//怪物攻擊玩家
             effect.style.zIndex = 0;
             resolve();
         });
-        currentHP -= mobAtkVal[mobIndex];//玩家生命減少對應mob的攻擊力
-        if (currentHP < 0) {
-            currentHP = 0;
-        }
         //更新血量條顯示
         document.getElementById('playerHP_Left').style.height = `${currentHP / totalHP * 100}%`;
         document.getElementById('playerHP_Right').style.height = `${currentHP / totalHP * 100}%`;
         document.getElementById("currentHP").textContent = currentHP;//更新顯示
     });
-}
-
-function checkMobAlive(mobIndex) {
-    if (MobHP[mobIndex] <= 0) {
-        MobHP[mobIndex] = 0;
-        let mob = document.getElementById(`mob${mobIndex}`);
-        mob.classList.add("fade_out");
-        return false;
-    }
-    else {
-        return true;
-    }
 }
 //=======================================================================我是分隔線==================================================================
 
@@ -118,38 +130,52 @@ function checkMobAlive(mobIndex) {
 
 //Part玩家
 //=======================================================================我是分隔線==================================================================
-let currentHP = 100; let totalHP = 100;
+let currentHP, totalHP = 500;
+currentHP = totalHP;
 document.getElementById("currentHP").textContent = currentHP;
 document.getElementById("totalHP").textContent = totalHP;
 
-function attack(index, damage) {//攻擊怪物
-    MobHP[index] -= damage;
-    displayDamage(index, damage);//顯示傷害動畫
+async function attack(index, damage) {//攻擊怪物
+    MobHP[index] = (MobHP[index] - damage < 0) ? 0 : MobHP[index] - damage;
     document.getElementById(`mob${index}HP`).textContent = MobHP[index];//更新顯示怪物生命
+    await displayDamage(index, damage);//顯示傷害動畫
+    if (MobHP[index] <= 0 && mobAlive[index] == true) {//mob若被殺死(原本mobAlive == true變成false)，將mob隱藏
+        MobHP[index] = 0;
+        mobAlive[index] = false;
+        let score = localStorage.getItem("score");
+        score = parseInt(score) + MobLevel[index] * 1000;
+        localStorage.setItem("score", score);//加分
+        document.getElementById('score').textContent = score;//更新顯示score
+        await Mob_fade_out(index);
+        function Mob_fade_out(index) {
+            return new Promise(resolve => {
+                if (MobHP[index] <= 0) {//待傷害動畫結束再顯示消失動畫
+                    let mob = document.getElementById(`mob${index}`);
+                    mob.classList.add("fade_out");
+                }
+                setTimeout(() => {
+                    resolve();
+                }, 300);
+            });
+        }
+    }
 }
 
 function displayDamage(index, damage) {//顯示mob受到的傷害
-    // 獲取顯示的元素
-    let output = document.getElementById(`displayDamage${index}`);
+    return new Promise(resolve => {//確保動畫結束再做下一步
+        let output = document.getElementById(`displayDamage${index}`);
+        output.textContent = `-${damage}`;
+        output.style.display = 'block';// 顯示元素並觸發動畫
 
-    // 設置顯示的文字
-    output.textContent = `-${damage}`;
-
-    // 顯示元素並觸發動畫
-    output.style.display = 'block';
-
-    // 觸發動畫
-    // output.classList.remove('animate'); // 確保清除之前的動畫狀態
-    // void output.offsetWidth; // 觸發重排，使動畫重新啟動
-    // output.classList.add('animate'); // 再次添加動畫類
-
-    setTimeout(() => {
-        output.classList.add('fade_out');
-    }, 300);
-    setTimeout(() => {
-        output.classList.remove('fade_out');
-        output.style.display = 'none'; // 隱藏元素
-    }, 500);
+        setTimeout(() => {
+            output.classList.add('fade_out');
+        }, 300);
+        setTimeout(() => {
+            output.classList.remove('fade_out');
+            output.style.display = 'none'; // 隱藏元素
+            resolve();
+        }, 700);
+    })
 }
 
 function PlayerHP_bar(current, total) {
@@ -157,13 +183,24 @@ function PlayerHP_bar(current, total) {
     bar.style.height = `${current / total * 100}%`;
 }
 
+function player_died() {
+    let score = localStorage.getItem("score");
+    window.alert("You died");
+    window.alert(`You Score is ${score}`);
+    window.alert('Back to Start mode');
+    location.href = "../../Start.html";
+}
 
-
-// document.getElementById("attackBtn").addEventListener('click', () => {//測試用攻擊
-//     for (let i = 0; i < 5; ++i) {
-//         attack(i, 100);
-//     }
-// });
+function KillAllBtn(){
+    //關閉typeBox
+    document.getElementById('typeBox').disabled = true;
+    for(let i = 0; i < 5; ++i){
+        attack(i, 700);
+    }
+    setTimeout(() => {
+        Mob_move();
+    }, 1000);//一秒延遲
+}
 //=======================================================================我是分隔線==================================================================
 
 
@@ -176,7 +213,7 @@ function typeBox_Focus() {
 }
 
 //目標文本
-const targetText = "at all say face see still move do may no right time few by face eye write end begin how state write make little write into program develop thing right possible never also she most many real problem order against play form find.";
+const targetText = "At all say face see still move do may no right time few by face eye write end begin how state write make little write into program develop thing right possible never also she most many real problem order against play form find.";
 const targetTextContainer = document.getElementById("TextContainer");
 
 targetText.split("").forEach(char => {//將假文拆分
@@ -254,8 +291,6 @@ function CorrectRateCal(event, autoComplete = false) {
         console.log(`耗時:${duration}sec`);//計算耗時
         firstKeypress = true;//重設firstKeypress
 
-        //關閉typeBox
-        document.getElementById('typeBox').disabled = true;
 
         targetText.split('').forEach((char, index) => {//將目標文本拆分成陣列
             targetTextArray[index] = char;
@@ -284,15 +319,14 @@ function CorrectRateCal(event, autoComplete = false) {
 
 //傷害計算
 function DamageCalculate(correctRate, duration) {
-    let damage = Math.round(correctRate * 5 / duration);//傷害計算公式
+    //關閉typeBox
+    document.getElementById('typeBox').disabled = true;
+    let damage = Math.round(correctRate * 50 / duration);//傷害計算公式
     for (let i = 0; i < 5; ++i) {
         attack(i, damage);//玩家攻擊mob
     }
     setTimeout(() => {
         Mob_move();
     }, 1000);//一秒延遲
-    //恢復typeBox並focus
-    document.getElementById('typeBox').disabled = false;
-    typeBox_Focus();
 }
 //=======================================================================我是分隔線==================================================================

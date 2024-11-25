@@ -11,13 +11,14 @@
 
 <body>
     <header>
-        <!-- <input type="text" id="choose">
-        <button onclick="attack()">攻擊</button> -->
+        <div class = "score">
+            <p>score : </p><span id = "score">0</span>
+        </div>
     </header>
 
     <main>
         <div class="mobArea">
-            <div class="mob0 mobs" id="mob0">
+            <div class="mob0 mob" id="mob0">
                 <ul>
                     <li>怪物0</li>
                     <li>血量: <span id="mob0HP"></span></li>
@@ -28,7 +29,7 @@
                     <div id="displayDamage0" class="displayDamage"></div>
                 </div>
             </div>
-            <div class="mob1 mobs" id="mob1">
+            <div class="mob1 mob" id="mob1">
                 <ul>
                     <li>怪物1</li>
                     <li>血量: <span id="mob1HP"></span></li>
@@ -39,7 +40,7 @@
                     <div id="displayDamage1" class="displayDamage"></div>
                 </div>
             </div>
-            <div class="mob2 mobs" id="mob2">
+            <div class="mob2 mob" id="mob2">
                 <ul>
                     <li>怪物2</li>
                     <li>血量: <span id="mob2HP"></span></li>
@@ -50,7 +51,7 @@
                     <div id="displayDamage2" class="displayDamage"></div>
                 </div>
             </div>
-            <div class="mob3 mobs" id="mob3">
+            <div class="mob3 mob" id="mob3">
                 <ul>
                     <li>怪物3</li>
                     <li>血量: <span id="mob3HP"></span></li>
@@ -61,7 +62,7 @@
                     <div id="displayDamage3" class="displayDamage"></div>
                 </div>
             </div>
-            <div class="mob4 mobs" id="mob4">
+            <div class="mob4 mob" id="mob4">
                 <ul>
                     <li>怪物4</li>
                     <li>血量: <span id="mob4HP"></span></li>
@@ -78,15 +79,15 @@
             <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span>   Time: <span id = "displayTime">0</span>sec</p>
             <div class="playerHP_Bar_Right playerHP_Bar" id="playerHP_Right"></div>
         </div>
-        <!-- <div class="testButtons">
-            <button id="attackBtn">攻擊100</button>
-        </div> -->
     </main>
 
     <footer>
         <div id="TextContainer" onclick="typeBox_Focus()"></div>
         <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
     </footer>
+    <div class="testButtons">
+        <button id="KillAllBtn" onclick="KillAllBtn()">Kill All</button>
+    </div>
     <div id = "TransitionBlock"></div>
     <div id="damageEffect">1000</div>
 </body>
