@@ -84,10 +84,15 @@ async function Mob_move() {//Mob行動步驟
         return;
     }
     for (let i = 0; i < 5; ++i) {
-        if (mobCD_current[i] <= 0) {//CD到0了
+        if (mobCD_current[i] <= 0 && currentHP > 0) {//CD到0了，且玩家仍存活
             await mob_attack(i); // 等待動畫結束後再繼續
-            if (currentHP <= 0) {
-                player_died();
+            if (currentHP < 0) {
+                currentHP = 0;
+                //更新血量條顯示
+                document.getElementById('playerHP_Left').style.height = `${currentHP / totalHP * 100}%`;
+                document.getElementById('playerHP_Right').style.height = `${currentHP / totalHP * 100}%`;
+                document.getElementById("currentHP").textContent = currentHP;//更新顯示
+                player_died();//玩家死亡
             }
             mobCD_current[i] = mobCD_original[i]; // 重置CD
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i]; // 更新顯示
@@ -103,9 +108,6 @@ async function Mob_move() {//Mob行動步驟
 function mob_attack(mobIndex) {//怪物攻擊玩家
     window.alert(`mob${mobIndex} attack!`);
     currentHP -= mobAtkVal[mobIndex];//玩家生命減少對應mob的攻擊力
-    if (currentHP < 0) {
-        currentHP = 0;
-    }
     return new Promise(resolve => {
         let effect = document.getElementById('damageEffect');
         effect.textContent = `HP - ${mobAtkVal[mobIndex]}`;
@@ -214,9 +216,11 @@ function KillAllBtn(){
     for(let i = 0; i < 5; ++i){
         attack(i, 777);
     }
-    setTimeout(() => {
-        Mob_move();
-    }, 1000);//一秒延遲
+    if(currentHP > 0){
+        setTimeout(() => {
+            Mob_move();
+        }, 1000);//一秒延遲
+    }
 }
 //=======================================================================我是分隔線==================================================================
 
