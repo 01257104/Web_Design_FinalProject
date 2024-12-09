@@ -36,14 +36,14 @@ let mobAtkVal = [50, 100, 200, 100, 50];
 localStorage.setItem("Turn", 1);
 localStorage.setItem("score", 0);
 mob_init(localStorage.getItem("Turn"));
-setTimeout(()=>{
+setTimeout(() => {
     document.getElementById('scoreArea').innerHTML = '<p>score : </p><span id = "score">0</span>';
 
 }, 325);
 
 async function mob_init(turn) {//初始化顯示mobHP mobCD
     await startGameTransition();//確認是否觸發開始轉場
-    window.alert(`Turn ${turn}`);
+    await Turn_Transition(turn);
     for (let i = 0; i < 5; ++i) {
         MobHP[i] = MobHP_original[i];
         mobCD_current[i] = mobCD_original[i];
@@ -56,6 +56,28 @@ async function mob_init(turn) {//初始化顯示mobHP mobCD
         mobCD_current[i] = mobCD_original[i];
         document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];
     }
+}
+
+async function Turn_Transition(turn) {
+    return new Promise(resolve => {
+        let showTurn = document.getElementById('turnBlock');
+        showTurn.textContent = `Turn${turn}`;
+        // 觸發動畫
+        showTurn.classList.remove('turnAnimation'); // 確保清除之前的動畫狀態
+        void showTurn.offsetWidth; // 觸發重排，使動畫重新啟動
+        showTurn.classList.add('turnAnimation'); // 再次添加動畫類
+        showTurn.style.display = 'block';
+        showTurn.style.zIndex = 200;
+
+        showTurn.addEventListener('animationend', () => {//動畫結束
+            showTurn.classList.remove('turnAnimation');
+            showTurn.style.display = 'none';
+            showTurn.style.zIndex = 0;
+
+            resolve();
+        });
+    });
+
 }
 
 async function Mob_move() {//Mob行動步驟
@@ -85,15 +107,13 @@ async function Mob_move() {//Mob行動步驟
     }
     for (let i = 0; i < 5; ++i) {
         if (mobCD_current[i] <= 0 && currentHP > 0) {//CD到0了，且玩家仍存活
-            await mob_attack(i); // 等待動畫結束後再繼續
-            if (currentHP < 0) {
-                currentHP = 0;
-                //更新血量條顯示
-                document.getElementById('playerHP_Left').style.height = `${currentHP / totalHP * 100}%`;
-                document.getElementById('playerHP_Right').style.height = `${currentHP / totalHP * 100}%`;
-                document.getElementById("currentHP").textContent = currentHP;//更新顯示
+            await mob_attack(i);// 等待動畫結束後再繼續
+
+            if (currentHP <= 0) {//檢查玩家生存狀態
                 player_died();//玩家死亡
+                break;
             }
+
             mobCD_current[i] = mobCD_original[i]; // 重置CD
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i]; // 更新顯示
         }
@@ -107,7 +127,7 @@ async function Mob_move() {//Mob行動步驟
 
 function mob_attack(mobIndex) {//怪物攻擊玩家
     window.alert(`mob${mobIndex} attack!`);
-    currentHP -= mobAtkVal[mobIndex];//玩家生命減少對應mob的攻擊力
+    currentHP = (currentHP - mobAtkVal[mobIndex]) > 0 ? currentHP - mobAtkVal[mobIndex] : 0;//玩家生命減少對應mob的攻擊力
     return new Promise(resolve => {
         let effect = document.getElementById('damageEffect');
         effect.textContent = `HP - ${mobAtkVal[mobIndex]}`;
@@ -117,17 +137,19 @@ function mob_attack(mobIndex) {//怪物攻擊玩家
         effect.classList.remove('animate'); // 確保清除之前的動畫狀態
         void effect.offsetWidth; // 觸發重排，使動畫重新啟動
         effect.classList.add('animate'); // 再次添加動畫類
-        effect.addEventListener('animationend', () => {
-            console.log(`Animation for mob${mobIndex} finished!`); // 確認事件觸發
-            effect.classList.remove('animate');
-            effect.style.display = 'none';
-            effect.style.zIndex = 0;
-            resolve();
-        });
         //更新血量條顯示
         document.getElementById('playerHP_Left').style.height = `${currentHP / totalHP * 100}%`;
         document.getElementById('playerHP_Right').style.height = `${currentHP / totalHP * 100}%`;
         document.getElementById("currentHP").textContent = currentHP;//更新顯示
+
+        effect.addEventListener('animationend', () => {//動畫結束
+            console.log(`Animation for mob${mobIndex} finished!`); // 確認事件觸發
+            effect.classList.remove('animate');
+            effect.style.display = 'none';
+            effect.style.zIndex = 0;
+
+            resolve();
+        });
     });
 }
 //=======================================================================我是分隔線==================================================================
@@ -194,7 +216,7 @@ function player_died() {//玩家死亡
     window.alert("You died");
     window.alert(`You Score is ${score}`);
     window.alert('Back to Start mode');
-    location.href = "../../Start.html";
+    location.href = '../../Start.html';
     //將轉場的localstorage設為true，觸發轉場
     // localStorage.setItem("Start transition", true);
     // // 加入 .active 類，觸發轉場動畫    
@@ -210,13 +232,13 @@ function player_died() {//玩家死亡
     // }, 300); // 與 CSS transition 的時間一致
 }
 
-function KillAllBtn(){
+function KillAllBtn() {
     //關閉typeBox
     document.getElementById('typeBox').disabled = true;
-    for(let i = 0; i < 5; ++i){
+    for (let i = 0; i < 5; ++i) {
         attack(i, 777);
     }
-    if(currentHP > 0){
+    if (currentHP > 0) {
         setTimeout(() => {
             Mob_move();
         }, 1000);//一秒延遲

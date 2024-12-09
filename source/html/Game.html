@@ -11,10 +11,13 @@
 
 <body>
     <header>
-        <div class = "score" id = "scoreArea"></div>
+        <div class="playerHP_Bar_Left playerHP_Bar" id="playerHP_Left"></div>
     </header>
 
     <main>
+        <!-- 分數與其他設定 -->
+        <div class = "score" id = "scoreArea"></div>
+        <!-- 怪物區域 -->
         <div class="mobArea">
             <div class="mob0 mob" id="mob0">
                 <ul>
@@ -72,17 +75,23 @@
                 </div>
             </div>
         </div>
-        <div class="playerHP_Area">
-            <div class="playerHP_Bar_Left playerHP_Bar" id="playerHP_Left"></div>
-            <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span>   Time: <span id = "displayTime">0</span>sec</p>
-            <div class="playerHP_Bar_Right playerHP_Bar" id="playerHP_Right"></div>
-        </div>
+        <!-- 打字區域 -->
+        <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span>   Time: <span id = "displayTime">0</span>sec</p> <!--玩家生命值數值與時間-->
+        <div id="TextContainer" onclick="typeBox_Focus()"></div>
+        <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
+        <!-- 選項區域 -->
+         <!-- <div id="playerDied">
+            <div id="settleScore"></div>
+            <button id="Back_to_StartMode">回到主畫面</button>
+            <button id="tryAgain">重新挑戰</button>
+         </div> -->
     </main>
 
     <footer>
-        <div id="TextContainer" onclick="typeBox_Focus()"></div>
-        <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
+        <div class="playerHP_Bar_Right playerHP_Bar" id="playerHP_Right"></div>
     </footer>
+    <!-- 轉場方塊區域 -->
+    <div id="turnBlock"></div>
     <div class="testButtons">
         <button id="KillAllBtn" onclick="KillAllBtn()">Kill All</button>
     </div>

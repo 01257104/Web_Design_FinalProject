@@ -14,8 +14,16 @@ html, body {
     overflow: hidden; /* 禁止滾動 */
 }
 
-header{
+body{
     display: flex;
+}
+
+header ,main ,footer{
+    flex-wrap: nowrap;
+} 
+
+header{
+    flex-wrap: nowrap;
     top: 100px;
     justify-content: center;
     align-items: center;
@@ -252,6 +260,9 @@ body, html {
 }
 
 
+
+
+
 .TransitionBlock_in{
     position: fixed;
     top: 0;
@@ -291,5 +302,36 @@ body, html {
 
 .testButtons button{
     cursor: pointer;
+}
+
+#turnBlock{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(2, 82, 2);
+    color: white;
+    font-size: 40vh;
+    margin: 0;
+    padding: 0;
+    line-height: 2.2;
+    z-index: 0;
+    opacity: 0;
+}
+
+.turnAnimation{
+    animation: Turn_Effect_Animation 1.7s ease-out;
+}
+
+@keyframes Turn_Effect_Animation {
+    0%{opacity: 0;}
+    50%{opacity: 90%;}
+    70%{opacity: 90%;}
+    100%{opacity: 0;}
 }
 /* =======================================================================我是分隔線================================================================== */
