@@ -256,7 +256,7 @@ function typeBox_Focus() {
 }
 
 //目標文本
-const targetText = "at all say face see still move do may no right time few by face eye write end begin how state write make little write into program develop thing right possible never also she most many real problem order against play form find.";
+const targetText = "cool";
 const targetTextContainer = document.getElementById("TextContainer");
 
 targetText.split("").forEach(char => {//將假文拆分
@@ -269,12 +269,17 @@ targetText.split("").forEach(char => {//將假文拆分
 });
 
 //時刻比對文字正確並修改顏色
+let checkEnable = true;
 function Check_Input() {
+    if (!checkEnable) {//checkEnable==0，不執行
+        checkEnable = true;
+        return;
+    }
     const inputText = document.getElementById("typeBox").value;
 
     targetTextContainer.childNodes.forEach((span, index) => {
         if (inputText[index] === undefined) {
-            span.classList.remove("correct", "incorrect", "blank_incorrect");
+            span.classList = "";
         } else if (inputText[index] === targetText[index]) {
             span.classList.add("correct");
             span.classList.remove("incorrect", "blank_incorrect");
@@ -314,7 +319,11 @@ function updateTime() {
 
 //比對正確率並結算時間
 function CorrectRateCal(event, autoComplete = false) {
-    //開始計時
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("typeBox").value = "";//避免textBox吃到enter的值
+        return;
+    }
     if (firstKeypress) {//第一次打字
         Timer();
         firstKeypress = false;
@@ -323,7 +332,7 @@ function CorrectRateCal(event, autoComplete = false) {
     let input = typeBoxValue.value;
     let targetTextArray = [], inputTextArray = [];
     let CorrectCount = 0;
-    if (event.key === "Enter" || autoComplete) {//如果吃到的指令是enter，吃進value並結算
+    if (autoComplete) {//打字完成
         if (!autoComplete) {//如果是用EnventListenr來執行，要防止報錯
             event.preventDefault();//防止報錯用
         }

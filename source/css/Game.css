@@ -58,10 +58,10 @@ body, html {
 /* =======================================================================我是分隔線================================================================== */
 .mobArea {
     position: relative;
-    bottom: 200px;
+    bottom: 20vh;
     display: flex;
-    gap: 20px; /* 控制 mob 之間的間距 */
-    padding: 20px; /* 控制 MOBs 容器與邊框之間的距離 */
+    gap: 4vh; /* 控制 mob 之間的間距 */
+    padding: 20vh; /* 控制 MOBs 容器與邊框之間的距離 */
     max-width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -69,20 +69,20 @@ body, html {
 }
 
 .mob {
-    position: relative;
-    height: 350px; /* 根據需求調整 */
-    width: 350px;  /* 根據需求調整 */
+    height: 35vh; /* 根據需求調整 */
+    width: 35vh;  /* 根據需求調整 */
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    /* opacity: 0; */
 }
 
 .mob ul {
     text-align: center;
     list-style: none; /* 移除黑點 */
     margin-bottom: 0; /* 控制文字區塊與圖片之間的間距 */
-    padding: 10px;
+    padding: 1vh;
 }
 .mob img {
     display: inline-block;
@@ -93,11 +93,11 @@ body, html {
 }
 
 .displayDamage{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 80px;
+    position: relative;
+    bottom: 40%;
+    left: 80%;
+    /* transform: translate(-70%,-70%); */
+    font-size: 8vh;
     color: red;
     z-index: 100;
     display: none;
