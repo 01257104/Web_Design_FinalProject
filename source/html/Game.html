@@ -16,14 +16,13 @@
 
     <main>
         <!-- 分數與其他設定 -->
-        <div class = "score" id = "scoreArea"></div>
+        <div class="score" id="scoreArea"></div>
         <!-- 怪物區域 -->
         <div class="mobArea">
             <div class="mob0 mob" id="mob0">
                 <ul>
-                    <li>怪物0</li>
-                    <li>血量: <span id="mob0HP"></span></li>
                     <li>CD: <span id="mob0CD"></span></li>
+                    <li><span class="mobHP" id="mob0HP"></span></li>
                 </ul>
                 <div id="image-container">
                     <img src="../image/Gray_Square.png">
@@ -32,9 +31,8 @@
             </div>
             <div class="mob1 mob" id="mob1">
                 <ul>
-                    <li>怪物1</li>
-                    <li>血量: <span id="mob1HP"></span></li>
                     <li>CD: <span id="mob1CD"></span></li>
+                    <li><span class="mobHP" id="mob1HP"></span></li>
                 </ul>
                 <div id="image-container">
                     <img src="../image/Orange_Circle.png">
@@ -43,9 +41,8 @@
             </div>
             <div class="mob2 mob" id="mob2">
                 <ul>
-                    <li>怪物2</li>
-                    <li>血量: <span id="mob2HP"></span></li>
                     <li>CD: <span id="mob2CD"></span></li>
+                    <li><span class="mobHP" id="mob2HP"></span></li>
                 </ul>
                 <div id="image-container">
                     <img src="../image/Yellow_Triangle.png">
@@ -54,9 +51,8 @@
             </div>
             <div class="mob3 mob" id="mob3">
                 <ul>
-                    <li>怪物3</li>
-                    <li>血量: <span id="mob3HP"></span></li>
                     <li>CD: <span id="mob3CD"></span></li>
+                    <li><span class="mobHP" id="mob3HP"></span></li>
                 </ul>
                 <div id="image-container">
                     <img src="../image/Purple_Hexagon.png">
@@ -65,9 +61,8 @@
             </div>
             <div class="mob4 mob" id="mob4">
                 <ul>
-                    <li>怪物4</li>
-                    <li>血量: <span id="mob4HP"></span></li>
                     <li>CD: <span id="mob4CD"></span></li>
+                    <li><span class="mobHP" id="mob4HP"></span></li>
                 </ul>
                 <div id="image-container">
                     <img src="../image/Pink_Pentagon.png">
@@ -76,15 +71,19 @@
             </div>
         </div>
         <!-- 打字區域 -->
-        <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span>   Time: <span id = "displayTime">0</span>sec</p> <!--玩家生命值數值與時間-->
+        <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span> Time: <span
+                id="displayTime">0</span>sec</p> <!--玩家生命值數值與時間-->
         <div id="TextContainer" onclick="typeBox_Focus()"></div>
         <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
-        <!-- 選項區域 -->
-         <!-- <div id="playerDied">
-            <div id="settleScore"></div>
-            <button id="Back_to_StartMode">回到主畫面</button>
-            <button id="tryAgain">重新挑戰</button>
-         </div> -->
+        <!-- 遊戲中選單區域 -->
+        <div id="playerDied">
+            <div class="You_Died"><strong>You Died</strong></div>
+            <div class="menuArea">
+                <div id="settleScore"></div>
+                <button id="Back_to_StartMode">回到主畫面</button>
+                <button id="tryAgain">重新挑戰</button>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -95,7 +94,7 @@
     <div class="testButtons">
         <button id="KillAllBtn" onclick="KillAllBtn()">Kill All</button>
     </div>
-    <div id = "TransitionBlock" class="TransitionBlock_in"></div>
+    <div id="TransitionBlock" class="TransitionBlock_in"></div>
     <div id="damageEffect">1000</div>
 </body>
 

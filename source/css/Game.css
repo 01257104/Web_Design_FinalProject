@@ -27,7 +27,6 @@ header{
     top: 100px;
     justify-content: center;
     align-items: center;
-    z-index: 101;
 }
 
 body, html {
@@ -69,8 +68,8 @@ body, html {
 }
 
 .mob {
-    height: 35vh; /* 根據需求調整 */
-    width: 35vh;  /* 根據需求調整 */
+    height: 35vh;
+    width: 35vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,11 +78,22 @@ body, html {
 }
 
 .mob ul {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
     text-align: center;
-    list-style: none; /* 移除黑點 */
-    margin-bottom: 0; /* 控制文字區塊與圖片之間的間距 */
-    padding: 1vh;
+    list-style: none;
+    margin-bottom: 0;
+    width: 14vw;
 }
+
+.mob ul li {
+    display: flex;
+    width: 10vw;
+}
+
+
 .mob img {
     display: inline-block;
     aspect-ratio: 1/1;
@@ -92,10 +102,42 @@ body, html {
     margin-top: 0;
 }
 
+.mobHP{
+    text-align: center;
+    height: 2vh;
+    width: 50vw;
+    padding: auto;
+    background-image: linear-gradient(to right, rgb(190, 5, 5), rgb(216, 4, 4));
+    opacity: 0.8;
+}
+
+.mob_attack_step1{
+    animation: attack_step1 1s forwards;
+}
+
+.mob_attack_step2{
+    animation: attack_step2 0.5s forwards;
+}
+
+@keyframes attack_step1 {
+    0%{transform: scale(1);}
+    25%{transform: scale(1.2);}
+    75%{transform: scale(1.2);}
+    100%{transform: scale(1.2);}
+}
+
+@keyframes attack_step2 {
+    0%{transform: scale(1);}
+    25%{transform: scale(1.25);}
+    75%{transform: scale(1.25);}
+    100%{transform: scale(1);}
+}
+
 .displayDamage{
     position: relative;
+    text-align: center;
     bottom: 40%;
-    left: 80%;
+    left: 50%;
     /* transform: translate(-70%,-70%); */
     font-size: 8vh;
     color: red;
@@ -129,6 +171,7 @@ body, html {
     padding: 0;
     background-image: linear-gradient(to top, rgb(150, 5, 5), rgb(216, 4, 4));
     opacity: 0.8;
+    z-index: 0;
 }
 .playerHP_Bar_Left{
     position: absolute;
@@ -190,6 +233,84 @@ body, html {
     70%{opacity: 50%;}
     100%{opacity: 0;}
 }
+
+#playerDied {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw; 
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    z-index: 200;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* 子元素水平居中 */
+    justify-content: center; /* 子元素垂直居中 */
+}
+
+.menuFadein {
+    animation: menu_fadein 1s forwards; /* 持續 2 秒 */
+}
+
+@keyframes menu_fadein {
+    0% { opacity: 0; }   /* 起始完全透明 */
+    100% { opacity: 1; } /* 最終完全不透明 */
+}
+
+
+#playerDied div strong{
+    color: red;
+    
+    text-align: center;
+    font-size: larger;
+}
+
+.menuArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: auto; 
+    width: 60vw; 
+    background-color: rgb(192, 190, 190); 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#playerDied div {
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+    margin-bottom: 20px; 
+}
+
+#playerDied button {
+    height: 10vh;
+    width: 80%;
+    margin-top: 10px;
+    background-color: #444;
+    color: aqua;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.3vh #666;
+    cursor: pointer;
+}
+
+#playerDied button:hover {
+    background-color: #666;
+}
+
+#playerDied button:active {
+    color:#444;
+    background-color: #59595a;
+    box-shadow: 0 0.5vh #666;
+    transform: translateY(1px);
+}
+
 /* =======================================================================我是分隔線================================================================== */
 
 
@@ -240,28 +361,6 @@ body, html {
     /* width: 30px; */
     height: 60px;
 }
-/* .typeBox::placeholder{
-    color: rgba(238, 241, 238, 0.514);
-}
-.typeBox:focus{
-    outline: none;
-    border-color: rgba(28, 29, 28, 0.2);
-} */
-
-.GetDamagebtn {
-    color: red;
-    width: 100px; /* 按鈕寬度 */
-    height: 40px; /* 按鈕高度 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-    margin-top: 5px;
-}
-
-
-
-
 
 .TransitionBlock_in{
     position: fixed;
@@ -324,8 +423,12 @@ body, html {
     opacity: 0;
 }
 
+#turnBlock div{
+    opacity: 1;
+}
+
 .turnAnimation{
-    animation: Turn_Effect_Animation 1.7s ease-out;
+    animation: Turn_Effect_Animation 1.2s ease-out;
 }
 
 @keyframes Turn_Effect_Animation {
