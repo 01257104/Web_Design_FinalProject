@@ -4,32 +4,29 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final_Project</title>
     <link rel="stylesheet" href="./source/css/Start.css">
     <script src="./source/javascript/Start.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="top-menu">
-            <h1>遊戲名稱</h1>
-            <nav>
-            <ul>
-                <li><button id="top-menu-btn" class="top-menu-btn sound">聲音</button></li>
-                <li><button id="top-menu-btn" class="top-menu-btn tutorial">教學手冊</button></li>
-                <li><button id="top-menu-btn" class="top-menu-btn about-us">關於我們</button></li>
-            </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- 背景影片 -->
+    <video id="myVideo" class="video-background" autoplay muted>
+        <source src="background.mp4" type="video/mp4">
+        <source src="background.webm" type="video/webm">
+        您的瀏覽器不支援 HTML5 影片標籤。
+    </video>
 
     <main>
-        <div class="start">
+        <div class="start" id="fadeContent">
             <h1 id="game-title">遊戲名稱</h1>
             <button  id="Gamestart_Button" class="Gamestart_Button">開始</button>
         </div>
     </main>
+    
     <div id = 'TransitionBlock'></div>
+    
     <footer></footer>
 </body>
 

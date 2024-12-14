@@ -4,100 +4,91 @@
     margin: 0;
 }
 
-html, body {
+/*影片背景*/
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* 防止出現滾動條 */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* 禁止滾動 */
+    object-fit: cover;
+    z-index: -1;
 }
-
-header{
-    background-color: black;
-    height: 8vh;
-    width: 100%;
-}
-header h1{
-    color: white;
-    position: absolute;
-    left: 1vh;
-    top:0;
-    line-height: 80px;
-}
-header ul{
-    position: absolute;
-    right: 1vw;
-    top:0;
-    line-height: 8vh;
-}
-header li{
-    display: inline;
-    margin: 5vh;
-}
-.top-menu-btn{
-    background-color: black;
-    border: none;
-    font-size: large;
-    text-align: center;
-    flex-wrap: nowrap;
-    color: white;
-    cursor: pointer;
-}
-.top-menu-btn:hover{
-    text-decoration: underline;
-}
-.top-menu-btn:active{
-    color:#59595a;
-}
-
-
+/*遊戲標題與開始按鈕fade-in*/
 .start{
-    background-color: #C0C0C0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 水平置中 */
-    align-items: center; /* 垂直置中 */
-    height: 100vh; /* 使 div 填滿整個視口高度 */
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+    opacity: 0;
+    transition: opacity 2s ease-in;
 
 }
+.start.active{
+    opacity: 1;
+}
+
 #game-title { 
     position: relative;
     bottom: 7vh;
     font-size: 6rem; /* 設定標題的字體大小 */
     margin-bottom: 4vh; /* 給標題與按鈕之間加一點間距 */
 }
-.Gamestart_Button {
+
+/*按鈕設計*/
+.Gamestart_Button,
+.Gamestart_Button:focus{
     position: relative;
-    top: 5vh;
-    background-color: gray;
-    letter-spacing: 0.1em;
-    font-size: 50px;
-    padding-top: 1vh;
-    padding-bottom: 8.25vh;
-    margin: 1vh;
+    z-index: 1;
+    min-width: 300px;
+    border: 2px solid #3D7878;
+    border-radius: 0;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
-    border: none;
-    flex-wrap: nowrap;
-    color: white;
-    width: 600px;
-    height: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 1vh #999;
     text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden; /* 確保偽元素限制在按鈕範圍內 */
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    padding: 15px 30px;
+    background: none;
 }
-
+.Gamestart_Button:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #3D7878;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
 .Gamestart_Button:hover {
-    background-color: rgb(103, 103, 104);
+    color: #FFFFFF;
+    text-shadow: none;
 }
-
+.Gamestart_Button:hover:after {
+    transform: scaleX(1); /* 偽元素從小放大覆蓋按鈕 */
+}
 .Gamestart_Button:active {
-    color:gray;
-    background-color: #59595a;
-    box-shadow: 0 0.5vh #666;
-    transform: translateY(1px);
+    transform: scaleY(2px);
 }
 
+
+/*開始轉場*/
 #TransitionBlock{
     position: fixed;
     top: 0;
