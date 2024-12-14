@@ -21,7 +21,78 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-/*遊戲標題與開始按鈕fade-in*/
+
+/*選單樣式*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* 預設隱藏在螢幕外 */
+    width: 250px;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+    color:white;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    background-color: #209a9a;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #555;
+    font-size: 1.5rem;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+.sidebar.open{
+    left: 0;
+}
+
+.menu-button.rotate{
+    transform: rotate(90deg);
+}
+
+/*音量*/
+#volumeSlider {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#volumeLabel {
+    margin-left: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* 左上角選單按鈕 */
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+/*fade-in*/
 .start{
     position: relative;
     z-index: 1;
