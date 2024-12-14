@@ -16,6 +16,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//選單按鈕地展開與收縮
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menuButton');
+    const sidebar = document.getElementById('sidebar');
+
+    // 點擊按鈕切換選單展開/收起
+    menuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('open'); // 切換 sidebar 的 open 狀態
+        menuButton.classList.toggle('rotate'); // 切換按鈕的旋轉效果
+    });
+
+    // 點擊選單內的項目後自動收起選單
+    sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            menuButton.classList.remove('rotate');
+        });
+    });
+});
+
+//音量調整
+document.addEventListener('DOMContentLoaded', () => {
+    const volumeSlider = document.getElementById('volumeSlider'); // 音量滑桿
+    const volumeLabel = document.getElementById('volumeLabel');   // 音量百分比
+    const mediaElements = document.querySelectorAll('video, audio'); // 所有影音元素
+
+    // 當滑桿值變化時，調整所有音頻元素的音量
+    volumeSlider.addEventListener('input', () => {
+        const volume = volumeSlider.value; // 取得滑桿值 (0 ~ 1)
+        mediaElements.forEach(media => {
+            media.volume = volume; // 設定每個影音元素的音量
+        });
+
+        // 更新音量百分比顯示
+        const volumePercent = Math.round(volume * 100); // 轉換為百分比
+        volumeLabel.textContent = `${volumePercent}%`;
+        console.log(`整體音量調整為: ${volumePercent}%`);
+    });
+});
+
 // 取得影片元素和淡入元素
 const video = document.getElementById('myVideo');
 const fadeContent = document.getElementById('fadeContent');
