@@ -17,59 +17,8 @@
     <main>
         <!-- 分數與其他設定 -->
         <div class="score" id="scoreArea"></div>
-        <!-- 怪物區域 -->
-        <div class="mobArea">
-            <div class="mob0 mob" id="mob0">
-                <ul>
-                    <li>CD: <span id="mob0CD"></span></li>
-                    <li><span class="mobHP" id="mob0HP"></span></li>
-                </ul>
-                <div id="image-container">
-                    <img src="../image/Gray_Square.png">
-                    <div id="displayDamage0" class="displayDamage"></div>
-                </div>
-            </div>
-            <div class="mob1 mob" id="mob1">
-                <ul>
-                    <li>CD: <span id="mob1CD"></span></li>
-                    <li><span class="mobHP" id="mob1HP"></span></li>
-                </ul>
-                <div id="image-container">
-                    <img src="../image/Orange_Circle.png">
-                    <div id="displayDamage1" class="displayDamage"></div>
-                </div>
-            </div>
-            <div class="mob2 mob" id="mob2">
-                <ul>
-                    <li>CD: <span id="mob2CD"></span></li>
-                    <li><span class="mobHP" id="mob2HP"></span></li>
-                </ul>
-                <div id="image-container">
-                    <img src="../image/Yellow_Triangle.png">
-                    <div id="displayDamage2" class="displayDamage"></div>
-                </div>
-            </div>
-            <div class="mob3 mob" id="mob3">
-                <ul>
-                    <li>CD: <span id="mob3CD"></span></li>
-                    <li><span class="mobHP" id="mob3HP"></span></li>
-                </ul>
-                <div id="image-container">
-                    <img src="../image/Purple_Hexagon.png">
-                    <div id="displayDamage3" class="displayDamage"></div>
-                </div>
-            </div>
-            <div class="mob4 mob" id="mob4">
-                <ul>
-                    <li>CD: <span id="mob4CD"></span></li>
-                    <li><span class="mobHP" id="mob4HP"></span></li>
-                </ul>
-                <div id="image-container">
-                    <img src="../image/Pink_Pentagon.png">
-                    <div id="displayDamage4" class="displayDamage"></div>
-                </div>
-            </div>
-        </div>
+        <!-- 怪物生成區域 -->
+        <div class="mobArea" id="mobArea"></div>
         <!-- 打字區域 -->
         <p class="playerHP_value">HP: <span id="currentHP"></span> / <span id="totalHP"></span> Time: <span
                 id="displayTime">0</span>sec</p> <!--玩家生命值數值與時間-->
@@ -91,11 +40,12 @@
     </footer>
     <!-- 轉場方塊區域 -->
     <div id="turnBlock"></div>
+    <div id="warningBlock"><img class="warningBlock" src="../image/warning.gif"></div>
     <div class="testButtons">
         <button id="KillAllBtn" onclick="KillAllBtn()">Kill All</button>
     </div>
     <div id="TransitionBlock" class="TransitionBlock_in"></div>
-    <div id="damageEffect">1000</div>
+    <div id="damageEffect"></div>
 </body>
 
 </html>

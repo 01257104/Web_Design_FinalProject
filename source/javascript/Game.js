@@ -28,11 +28,22 @@ function startGameTransition() {
 
 //Part怪物
 //=======================================================================我是分隔線==================================================================
+//基本數據
 let MobHP = [], MobHP_original = [300, 500, 700, 500, 300];
 let MobLevel = [1, 2, 3, 2, 1];
 let mobAlive = [true, true, true, true, true];
 let mobCD_original = [2, 3, 4, 3, 2], mobCD_current = [];
 let mobAtkVal = [1000, 100, 200, 100, 50];
+let mobPicSrc = ['../image/Gray_Square.png',
+    '../image/Orange_Circle.png',
+    '../image/Yellow_Triangle.png',
+    '../image/Purple_Hexagon.png',
+    '../image/Pink_Pentagon.png'];
+//BOSS數據
+let BossHP = [700, 1000, 2500];
+let BossPicSrc = ['../image/Elon Ma!.jpg', '../image/Elon Ma!.jpg', '../image/Elon Ma!.jpg'];
+let BossIndex = 0;
+
 localStorage.setItem("Turn", 1);
 localStorage.setItem("score", 0);
 mob_init(localStorage.getItem("Turn"));
@@ -41,26 +52,94 @@ setTimeout(() => {
 
 }, 325);
 
-async function mob_init(turn) {//初始化顯示mobHP mobCD
+async function mob_init(turn) {
     document.getElementById('typeBox').disabled = true;
-    await startGameTransition();//確認是否觸發開始轉場
-    await Turn_Transition(turn);
+    await startGameTransition();  // 確認是否觸發開始轉場
+    await Turn_Transition(turn);  // 等待轉場動畫結束
+
+    // 動態生成HTML中的mob
+    let mobArea = document.getElementById('mobArea');
+    mobArea.innerHTML = '';
+    mobArea.style.display = 'none';
     for (let i = 0; i < 5; ++i) {
-        MobHP[i] = MobHP_original[i];
-        mobCD_current[i] = mobCD_original[i];
-        mobAlive[i] = true;
-        let mob = document.getElementById(`mob${i}`);
-        mob.classList.remove("fade_out");
-        mob.classList.add('fade_in');
+        let mob = document.createElement('div');
+        mob.classList.add(`mob${i}`, 'mob');
+        mob.setAttribute('id', `mob${i}`);
+        mob.innerHTML = `
+            <ul>
+                <li>CD: <span id="mob${i}CD"></span></li>
+                <li><span class="mobHP" id="mob${i}HP"></span></li>
+            </ul>
+            <div id="image-container">
+                <img id="mobPic${i}" src="${mobPicSrc[i]}">
+                <div id="displayDamage${i}" class="displayDamage"></div>
+            </div>
+        `;
         mob.style.display = 'flex';
+        mobArea.appendChild(mob);
+    }
+
+    // 編輯怪物基本數據
+    for (let i = 0; i < 5; ++i) {
+        // Boss產生
+        if (i == 2 && turn % 3 == 0) {
+            await BossWarningAnimation();
+            MobHP[i] = BossHP[BossIndex++];
+            BossIndex = (BossIndex >= 3) ? 0 : BossIndex;
+            let mobPic = document.getElementById(`mobPic${i}`);
+            mobPic.src = BossPicSrc[BossIndex];
+        } else {
+            MobHP[i] = MobHP_original[i];
+            mobCD_current[i] = mobCD_original[i];
+        }
+
+        mobAlive[i] = true;
         document.getElementById(`mob${i}HP`).textContent = `${MobHP[i]}/${MobHP[i]}`;
-        document.getElementById(`mob${i}HP`).style.width = `${MobHP[i]/MobHP_original[i] * 100}%`;
+        document.getElementById(`mob${i}HP`).style.width = `${MobHP[i] / MobHP_original[i] * 100}%`;
         mobCD_current[i] = mobCD_original[i];
         document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];
     }
+
+    // 等待mob區域的動畫結束再顯示
+    await MobArea_Animation();
+
     document.getElementById('typeBox').disabled = false;
     typeBox_Focus();
 }
+
+function BossWarningAnimation() {
+    return new Promise(resolve => {
+        let warningBlock = document.getElementById('warningBlock');
+
+        warningBlock.classList.remove("warningBlock_fade");
+        warningBlock.offsetHeight;  // 觸發重排，讓動畫能夠重新開始
+        warningBlock.classList.add('warningBlock_fade');
+        warningBlock.style.display = 'flex';
+
+        // 等待動畫結束
+        warningBlock.addEventListener('animationend', () => {
+            warningBlock.classList.remove("warningBlock_fade");
+            warningBlock.style.display = 'none';
+            resolve();
+        });
+    });
+}
+
+async function MobArea_Animation() {
+    return new Promise(resolve => {
+        let mobArea = document.getElementById('mobArea');
+        mobArea.classList.remove("mob_fade_in");
+        void mobArea.offsetWidth; // 觸發重排，使動畫重新啟動
+        mobArea.classList.add('mob_fade_in');
+        mobArea.style.display = 'flex';
+        mobArea.addEventListener('animationend', () => {
+            mobArea.classList.remove("mob_fade_in");
+            resolve();
+        }, { once: true });
+    });
+}
+
+
 
 async function Turn_Transition(turn) {
     return new Promise(resolve => {
@@ -85,20 +164,41 @@ async function Turn_Transition(turn) {
 }
 
 async function Mob_move() {//Mob行動步驟
-    //檢查mob生存狀態
     let allDied = true;
+    //更新mob生存狀態
+    for (let i = 0; i < 5; ++i) {
+        if (MobHP[i] <= 0 && mobAlive[i] === true) {//剛剛被打死
+            mobAlive[i] = false;
+
+            // 更新分數
+            let score = parseInt(localStorage.getItem("score"));
+            score += MobLevel[i] * 1000;
+            localStorage.setItem("score", score);
+            document.getElementById('score').textContent = score;  // 更新顯示score
+
+            // 執行怪物死亡動畫
+            Mob_fade_out(i);
+        }
+    }
+
     for (let i = 0; i < 5; ++i) {
         if (mobAlive[i]) {//mob沒死才計算CD，避免mob死亡仍然攻擊玩家
             mobCD_current[i]--;//CD減少1
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];//更新顯示
             allDied = false;
         }
-        console.log(`Mob${i}HP = ${MobHP[i]}`);
     }
     if (allDied) {//mob全死，重置mob並進入下一回合
         let turn = parseInt(localStorage.getItem("Turn"));
         localStorage.setItem("Turn", turn + 1); // 確保回合數更新
-
+        await spaceFunc();//等待450毫秒
+        async function spaceFunc() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve();
+                }, 450);
+            });
+        }
         await mob_init(turn + 1); // 確保初始化完成後再繼續
 
         //恢復typeBox並focus
@@ -183,6 +283,20 @@ function mob_attack_damage_Animation(mobIndex) {
         });
     });
 }
+
+// 隱藏死亡的怪物
+function Mob_fade_out(index) {
+    let mob = document.getElementById(`mob${index}`);
+
+    mob.classList.remove('mob_fade_out');
+    void mob.offsetWidth; // 觸發重排
+    mob.classList.add('mob_fade_out');
+
+    mob.addEventListener('animationend', () => {
+        mob.classList.remove('mob_fade_out');
+        mob.style.opacity = '0';
+    }, { once: true });
+}
 //=======================================================================我是分隔線==================================================================
 
 
@@ -194,32 +308,15 @@ currentHP = totalHP;
 document.getElementById("currentHP").textContent = currentHP;
 document.getElementById("totalHP").textContent = totalHP;
 
-async function attack(index, damage) {//攻擊怪物
+async function attack(index, damage) {
+    // 更新怪物生命
     MobHP[index] = (MobHP[index] - damage < 0) ? 0 : MobHP[index] - damage;
-    document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${MobHP_original[index]}`;//更新顯示怪物生命
-    document.getElementById(`mob${index}HP`).style.width = `${MobHP[index]/MobHP_original[index] * 100}%`;
-    await displayDamage(index, damage);//顯示傷害動畫
-    if (MobHP[index] <= 0 && mobAlive[index] == true) {//mob若被殺死(原本mobAlive == true變成false)，將mob隱藏
-        MobHP[index] = 0;
-        mobAlive[index] = false;
-        let score = localStorage.getItem("score");
-        score = parseInt(score) + MobLevel[index] * 1000;
-        localStorage.setItem("score", score);//加分
-        document.getElementById('score').textContent = score;//更新顯示score
-        await Mob_fade_out(index);
-        function Mob_fade_out(index) {
-            return new Promise(resolve => {
-                if (MobHP[index] <= 0) {//待傷害動畫結束再顯示消失動畫
-                    let mob = document.getElementById(`mob${index}`);
-                    mob.classList.add("fade_out");
-                }
-                setTimeout(() => {
-                    resolve();
-                }, 300);
-            });
-        }
-    }
+    document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${MobHP_original[index]}`;
+    document.getElementById(`mob${index}HP`).style.width = `${(MobHP[index] / MobHP_original[index]) * 100}%`;
+
+    await displayDamage(index, damage);  // 顯示傷害動畫
 }
+
 
 function displayDamage(index, damage) {//顯示mob受到的傷害
     return new Promise(resolve => {//確保動畫結束再做下一步
@@ -228,13 +325,12 @@ function displayDamage(index, damage) {//顯示mob受到的傷害
         output.style.display = 'block';// 顯示元素並觸發動畫
 
         setTimeout(() => {
-            output.classList.add('fade_out');
-        }, 300);
-        setTimeout(() => {
-            output.classList.remove('fade_out');
+            output.classList.add('mob_fade_out');
+        }, 350);
+        document.addEventListener('animationend', () => {
             output.style.display = 'none'; // 隱藏元素
             resolve();
-        }, 700);
+        });
     });
 }
 
@@ -249,10 +345,10 @@ async function player_died() {//玩家死亡
     document.getElementById('settleScore').textContent = `Your score is ${score}`;
     await menu_fade_in();
     //回主畫面按鈕
-    document.getElementById('Back_to_StartMode').addEventListener('click', ()=>{
+    document.getElementById('Back_to_StartMode').addEventListener('click', () => {
         location.href = '../../Start.html';
     });
-    document.getElementById('tryAgain').addEventListener('click', ()=>{
+    document.getElementById('tryAgain').addEventListener('click', () => {
         location.href = location.href;//重新載入頁面
     });
 }
