@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: gray 2px solid;
+            border-collapse: collapse;
+        }
+    </style>
+    <title>排行榜</title>
+</head>
+
+<body>
+    <h1>Ranking</h1>
+
+    <table id="ranking-list" style="width: 80%">
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+            </the>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 取得學生列表
+            $.get('server', function (Data) {
+                const studentList = $('#ranking-list');
+                Data.forEach(function (data) {
+                    studentList.append(`<tr><td>${data.name}</td><td>${data.score}分</td></tr>`);
+                });
+            });
+            
+        });
+
+
+    </script>
+</body>
+
+</html>

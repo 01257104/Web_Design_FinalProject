@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final_Project</title>
+    <link rel="stylesheet" href="./stylesheets/Start.css">
+    <script src="./javascripts/Start.js" defer></script>
+</head>
+
+<body>
+    <!-- 背景影片 -->
+    <video id="myVideo" class="video-background" autoplay muted>
+        <source src="background.mp4" type="video/mp4">
+        <source src="background.webm" type="video/webm">
+        您的瀏覽器不支援 HTML5 影片標籤。
+    </video>
+
+    <!-- 選單列表 -->
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">排行榜</a></li>
+            <li><a href="#">關於我們</a></li>
+            <li>
+                <label for="volumeSlider">調整整體音量</label>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+                <span id="volumeLabel">50%</span>
+            </li>   
+        </ul>
+    </div>
+
+    <!-- 左上角選單按鈕 -->
+    <button id="menuButton" class="menu-button">&#9776;</button> 
+    
+    <main>
+        <div class="start" id="fadeContent">
+            <h1 id="game-title">遊戲名稱</h1>
+            <button  id="Gamestart_Button" class="Gamestart_Button">開始</button>
+        </div>
+    </main>
+    
+    <div id = 'TransitionBlock'></div>
+    
+    <footer></footer>
+</body>
+
+</html>
