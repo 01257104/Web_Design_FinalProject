@@ -24,33 +24,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/server', serverRouter);
 
-// 新增的路由來處理接收資料
-app.get('/receive-data', (req, res) => {
-  const userName = req.query.name;
-  const score = req.query.score;
-
-  // 呼叫 server.js 路由並傳遞資料
-  // 假設 server.js 中有處理 /server/receive 這個路由
-  fetch(`http://localhost:3000/server/receive?name=${userName}&score=${score}`)
-    .then(response => response.text())
-    .then(data => {
-      console.log('Server 回傳:', data);
-      res.send('資料已送到 server.js');
-    })
-    .catch(err => {
-      console.error('錯誤:', err);
-      res.status(500).send('發生錯誤');
-    });
-});
-
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
-
-
 
 // error handler
 app.use(function (err, req, res, next) {

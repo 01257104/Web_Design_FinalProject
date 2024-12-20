@@ -205,13 +205,13 @@ body, html {
 .playerHP_value{
     display: inline;
     margin: 0;
-    padding: 10px;
-    width:1500px;
-    height: 30px;
+    padding: 1vh;
+    width:80vw;
+    height: 9vh;
     position: absolute;
-    left: 187px;
-    bottom: 491px;
-    font-size: 35px;
+    left: 10vw;
+    bottom:33.5vh;
+    font-size: 3.5vh;
     /* color: rgb(237, 240, 243); */
     color: green;
     z-index: 2;
@@ -333,24 +333,27 @@ body, html {
 /* =======================================================================我是分隔線================================================================== */
 #TextContainer {
     position: absolute;
-    bottom: 15px; 
+    bottom: 7.5vh; 
     left: 50%; 
     transform: translateX(-50%); 
     z-index: 2;
+    padding: 2.5%;
 
     color: #888;
     display: flex;
-    /* gap: 2px; */
     flex-wrap: wrap;
 
-    width: 1500px;
-    height: 450px;
-    padding: 20px;
-    font-size: 55px;
+    width: 80vw;
+    height: 30vh;
+    font-size: 5.5vh;
     background-color: rgba(28, 29, 28, 0.08);
     border: solid;
     border-color: rgb(128, 128, 128, 0.05);
-    border-radius: 10px;
+}
+#TextContainer span{
+    height: 5vh;
+    margin: 0;
+    padding: 0;
 }
 #typeBox{
     opacity: 0; /*取消顯示 */

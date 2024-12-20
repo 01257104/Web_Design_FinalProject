@@ -22,6 +22,8 @@ function startGameTransition() {
         }
     });
 }
+//從json檔案fetch生成文'
+fetchTextJSON();
 //=======================================================================我是分隔線==================================================================
 
 
@@ -223,6 +225,8 @@ async function Mob_move() {//Mob行動步驟
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i]; // 更新顯示
         }
     }
+    //從json檔案fetch生成文'
+    fetchTextJSON();
     //恢復typeBox並focus
     document.getElementById('typeBox').disabled = false;
     typeBox_Focus();
@@ -344,22 +348,27 @@ async function player_died() {//玩家死亡
     document.getElementById('typeBox').disabled = true;
     const score = localStorage.getItem("score");
     const userName = localStorage.getItem('userName');
-    document.getElementById('settleScore').textContent = `Your score is ${score}`;
-    await menu_fade_in();
 
+    const data = {
+        name: userName,
+        score: score,
+    };
+
+    window.postMessage(JSON.stringify(data), "*");
+
+
+
+    document.getElementById('settleScore').textContent = `Your score is ${score}`;
     //回主畫面按鈕
     document.getElementById('Back_to_StartMode').addEventListener('click', () => {
-        // 將資料附加到 URL 中，並重定向至伺服器頁面
-        window.location.href = `http://localhost:3000/receive-data?name=${encodeURIComponent(userName)}&score=${encodeURIComponent(score)}`;
-
-
-        return;
-        //location.href = '../../Start.html';
+        localStorage.clear();
+        location.href = '../Start.html';
     });
     document.getElementById('tryAgain').addEventListener('click', () => {
         localStorage.clear();
         location.href = location.href;//重新載入頁面
     });
+    await menu_fade_in();
 }
 
 function menu_fade_in() {
@@ -410,25 +419,43 @@ function typeBox_Focus() {
 }
 
 //目標文本
-const targetText = "cool";
+let targetText = "init";
 const targetTextContainer = document.getElementById("TextContainer");
 
-targetText.split("").forEach(char => {//將假文拆分
-    let span = document.createElement("span");//新增一個span元素
-    if (char === ' ') {//將space元素轉為non breaking space元素
-        char = '&nbsp;';
-    }
-    span.innerHTML = char;//將拆分出來的元素(char)新增到span的內容裡
-    targetTextContainer.appendChild(span);//新增span到HTML中
-});
+function fetchTextJSON() {
+    // 使用 fetch 來讀取 words.json 檔案
+    fetch('../JSON_Data/words.json')
+        .then(response => response.json())  // 解析 JSON 資料
+        .then(data => {
+            // 取得 words 屬性並顯示在頁面上
+            JsonTextArray = data.words;
+            console.log(JsonTextArray[getRandomNum(JsonTextArray.length)]);
+            targetText = JsonTextArray[getRandomNum(JsonTextArray.length)];
+            targetTextContainer.innerHTML = "";
+            split_targetText_to_span();
+        })
+        .catch(error => {
+            console.error('Error fetching JSON:', error);
+        })
+}
+
+function getRandomNum(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function split_targetText_to_span() {
+    targetText.split("").forEach(char => {//將假文拆分
+        let span = document.createElement("span");//新增一個span元素
+        if (char === ' ') {//將space元素轉為non breaking space元素
+            char = '&nbsp;';
+        }
+        span.innerHTML = char;//將拆分出來的元素(char)新增到span的內容裡
+        targetTextContainer.appendChild(span);//新增span到HTML中
+    });
+}
 
 //時刻比對文字正確並修改顏色
-let checkEnable = true;
 function Check_Input() {
-    if (!checkEnable) {//checkEnable==0，不執行
-        checkEnable = true;
-        return;
-    }
     const inputText = document.getElementById("typeBox").value;
 
     targetTextContainer.childNodes.forEach((span, index) => {
@@ -475,7 +502,6 @@ function updateTime() {
 function CorrectRateCal(event, autoComplete = false) {
     if (event.key === "Enter") {
         event.preventDefault();
-        document.getElementById("typeBox").value = "";//避免textBox吃到enter的值
         return;
     }
     if (firstKeypress) {//第一次打字

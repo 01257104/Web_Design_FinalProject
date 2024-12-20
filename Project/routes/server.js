@@ -1,4 +1,5 @@
 // 引入套件
+// const { MongoClient, ServerApiVersion } = require('mongodb');
 const express = require("express");
 const mongoose = require('mongoose');
 const router = express.Router();
@@ -15,19 +16,18 @@ db.once('open', function () {
 });
 
 // 該collection的格式設定
-const scoreSchema = new mongoose.Schema({
-    name: { //名稱
+const todoSchema = new mongoose.Schema({
+    name: { //事項名稱
         type: String, //設定該欄位的格式
         required: true //設定該欄位是否必填
     },
-    score: { //分數
+    score: { //是否已完成
         type: String,
         required: true,
-        default: 0//設定預設值
-    },
+    }
 })
 
-const Score = mongoose.model('Todo', scoreSchema);
+const Score = mongoose.model('Todo', todoSchema);
 
 // 取得全部資料
 // 使用非同步，才能夠等待資料庫回應
@@ -44,12 +44,17 @@ router.get("/", async (req, res) => {
     }
 });
 
-// 新增rank
+// 新增待辦事項
+// 將Method改為Post
 router.post("/", async (req, res) => {
+    // $.post('students', { name, age, grade }, function (newStudent) {
+    //     $('#student-list').append(`<tr><td>${newStudent.name}</td><td>${newStudent.age}歲</td><td>${newStudent.grade}年級</td></tr>`);
+    //     $('#add-student-form').reset();
+    // });
     // 從req.body中取出資料
-    const score = new Score({
+    const score = new Todo({
         name: req.body.name,
-        score: req.body.score,
+        score: req.body.score
     });
     try {
         // 使用.save()將資料存進資料庫
