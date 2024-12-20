@@ -16,7 +16,7 @@ db.once('open', function () {
 });
 
 // 該collection的格式設定
-const todoSchema = new mongoose.Schema({
+const scoreSchema = new mongoose.Schema({
     name: { //事項名稱
         type: String, //設定該欄位的格式
         required: true //設定該欄位是否必填
@@ -27,7 +27,7 @@ const todoSchema = new mongoose.Schema({
     }
 })
 
-const Score = mongoose.model('Todo', todoSchema);
+const Score = mongoose.model('Score', scoreSchema);
 
 // 取得全部資料
 // 使用非同步，才能夠等待資料庫回應
@@ -47,12 +47,8 @@ router.get("/", async (req, res) => {
 // 新增待辦事項
 // 將Method改為Post
 router.post("/", async (req, res) => {
-    // $.post('students', { name, age, grade }, function (newStudent) {
-    //     $('#student-list').append(`<tr><td>${newStudent.name}</td><td>${newStudent.age}歲</td><td>${newStudent.grade}年級</td></tr>`);
-    //     $('#add-student-form').reset();
-    // });
     // 從req.body中取出資料
-    const score = new Todo({
+    const score = new Score({
         name: req.body.name,
         score: req.body.score
     });
@@ -63,6 +59,7 @@ router.post("/", async (req, res) => {
         res.status(201).json(newScore);
     } catch (err) {
         // 錯誤訊息發生回傳400 代表使用者傳入錯誤的資訊
+        console.log(err);
         res.status(400).json({ message: err.message })
     }
 });

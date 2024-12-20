@@ -4,22 +4,15 @@
 const transitionBlock = document.getElementById('TransitionBlock');
 function startGameTransition() {
     return new Promise(resolve => {
-        if (localStorage.getItem("Gamemode transition") == "true") {//localstorage為true才轉場
-            localStorage.setItem("Gamemode transition", false);
-            transitionBlock.style.zIndex = 100;//將Block設到最上層
-            // 延遲移除黑屏效果
-            setTimeout(() => {
-                transitionBlock.classList.add('hidden'); // 加入滑出的 class
-            }, 300); // 延遲讓用戶能看到黑屏效果
-            setTimeout(() => {
-                resolve();
-            }, 700);
-        }
-        else {//false的話直接消失
-            transitionBlock.style.display = "none";
-            transitionBlock.style.zIndex = 0;
+        localStorage.setItem("Gamemode transition", false);
+        transitionBlock.style.zIndex = 100;//將Block設到最上層
+        // 延遲移除黑屏效果
+        setTimeout(() => {
+            transitionBlock.classList.add('hidden'); // 加入滑出的 class
+        }, 300); // 延遲讓用戶能看到黑屏效果
+        setTimeout(() => {
             resolve();
-        }
+        }, 700);
     });
 }
 //從json檔案fetch生成文'
@@ -49,6 +42,7 @@ let BossIndex = 0;
 localStorage.setItem('userName', 'Eric');
 localStorage.setItem("Turn", 1);
 localStorage.setItem("score", 0);
+localStorage.setItem('renewScore', 0);
 mob_init(localStorage.getItem("Turn"));
 setTimeout(() => {
     document.getElementById('scoreArea').innerHTML = '<p>score : </p><span id = "score">0</span>';
@@ -344,31 +338,31 @@ function PlayerHP_bar(current, total) {
     bar.style.height = `${current / total * 100}%`;
 }
 
-async function player_died() {//玩家死亡
+//玩家死亡
+async function player_died() {
     document.getElementById('typeBox').disabled = true;
-    const score = localStorage.getItem("score");
-    const userName = localStorage.getItem('userName');
+    localStorage.setItem('renewScore', 1);
 
-    const data = {
-        name: userName,
-        score: score,
-    };
-
-    window.postMessage(JSON.stringify(data), "*");
-
-
-
+    const score = localStorage.getItem('score');
     document.getElementById('settleScore').textContent = `Your score is ${score}`;
+    //排行榜按鈕
+    document.getElementById('rankbtn').addEventListener('click', () => {
+        document.getElementById('rank').style.display = 'flex';
+    });
     //回主畫面按鈕
     document.getElementById('Back_to_StartMode').addEventListener('click', () => {
         localStorage.clear();
-        location.href = '../Start.html';
+        location.href = 'Start.html';
     });
     document.getElementById('tryAgain').addEventListener('click', () => {
         localStorage.clear();
         location.href = location.href;//重新載入頁面
     });
     await menu_fade_in();
+}
+
+function returnToGame(){
+    document.getElementById('rank').style.display = 'none';
 }
 
 function menu_fade_in() {
@@ -384,7 +378,6 @@ function menu_fade_in() {
 
         // 監聽目標元素的動畫結束事件
         playerDied.addEventListener('animationend', function onAnimationEnd(event) {
-            console.log('hello');
             if (event.target === playerDied) { // 確保是目標元素
                 playerDied.classList.remove('menuFadein'); // 清除動畫類別
                 playerDied.removeEventListener('animationend', onAnimationEnd); // 移除事件監聽

@@ -48,6 +48,32 @@ body, html {
     display: inline;
     margin: 0;
 }
+
+.rank{
+    background-color: rgb(168, 166, 166);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: larger;
+}
+.rank table, .rank table th,.rank table td {
+    border: gray 2px solid;
+    border-collapse: collapse;
+}
+.rank button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 20vh;
+}
 /* =======================================================================我是分隔線================================================================== */
 
 

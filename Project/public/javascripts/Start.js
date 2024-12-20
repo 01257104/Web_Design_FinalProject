@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             // 替換為您的遊戲頁面路徑
-            location.href = "./html/Game.html";
+            location.href = "http://localhost:3000/";
         }, 300); // 與 CSS transition 的時間一致
     });
 });
