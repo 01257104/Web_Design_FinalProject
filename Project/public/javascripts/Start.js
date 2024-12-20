@@ -67,3 +67,28 @@ video.addEventListener('ended', function () {
         fadeContent.classList.add('active');
     }
 });
+
+//兩個影片接續撥放
+document.addEventListener('DOMContentLoaded', () => {
+    const videoElement = document.getElementById('myVideo');
+    const videoSource = document.getElementById('videoSource');
+
+    // 定義三部影片的路徑
+    const videos = ['background1.mp4', 'background2.mp4'];
+    let currentVideoIndex = 0;
+
+    // 監聽影片結束事件
+    videoElement.addEventListener('ended', () => {
+        // 如果不是最後一部影片，切換到下一部影片
+        if (currentVideoIndex < videos.length - 1) {
+            currentVideoIndex++;
+            videoSource.src = videos[currentVideoIndex];
+            videoElement.load(); // 重新加載影片
+            videoElement.play(); // 播放影片
+        } else {
+            // 如果是最後一部影片，設置為循環播放
+            videoElement.loop = true;
+            videoElement.play(); // 播放影片
+        }
+    });
+});
