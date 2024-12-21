@@ -74,6 +74,53 @@ body, html {
     height: 10vh;
     width: 20vh;
 }
+
+#typeUserArea{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(146, 146, 146, 0.7);
+}
+#UserNameForm {
+    display: none;
+    background-color: rgb(71, 71, 71, 0.9);
+    height: 40vh;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#UserNameForm h3 {
+    color: aliceblue;
+    font-size: 4rem;
+    margin-bottom: 1vh;
+}
+
+#typeUserName {
+    height: 5vh;
+    width: 20vw;
+    font-size: 2rem;
+}
+
+input[type="submit"] {
+    height: 5vh;
+    width: 5vw; /* 增大按鈕寬度 */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* =======================================================================我是分隔線================================================================== */
 
 

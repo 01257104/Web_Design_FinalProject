@@ -10,17 +10,11 @@
     <script src="./javascripts/Game.js" defer></script>
     <script>
         $(document).ready(function () {
-            // 取得rank列表
-            $.get('server', function (Data) {
-                const studentList = $('#rank-list');
-                Data.forEach(function (data) {
-                    studentList.append(`<tr><td>${data.name}</td><td>${data.score}分</td></tr>`);
-                });
-            });
             setInterval(() => {
                 if (localStorage.getItem('renewScore') == 1) {
                     localStorage.setItem('renewScore', 0);
-                    const score = localStorage.getItem("score");
+                    let score = localStorage.getItem("score");
+                    score = parseInt(score);
                     const userName = localStorage.getItem('userName');
                     console.log(userName, score); // 檢查變數值
                     const data = {
@@ -28,9 +22,17 @@
                         score: score,
                     };
 
+                    document.getElementById('rank-list').innerHTML = "<tr><th>Name</th><th>Score</th></tr>";
+
                     // 新增rank到db
-                    $.post('server', data, function (newScore) {
-                        $('#rank-list').append(`<tr><td>${newScore.name}</td><td>${newScore.score}分</td></tr>`);
+                    $.post('server', data);
+
+                    // 取得rank列表
+                    $.get('server', function (Data) {
+                        const studentList = $('#rank-list');
+                        Data.forEach(function (data) {
+                            studentList.append(`<tr><td>${data.name}</td><td>${data.score}分</td></tr>`);
+                        });
                     });
                 }
             }, 500);
@@ -74,12 +76,7 @@
         </div>
         <div class="rank" id="rank">
             <button id="returnToGame" onclick="returnToGame()">返回</button>
-            <table id="rank-list" style="width: 80%;">
-                <tr>
-                    <th>Name</th>
-                    <th>Score</th>
-                </tr>
-            </table>
+            <table id="rank-list" style="width: 80%;"></table>
         </div>
     </main>
 
@@ -87,6 +84,15 @@
         <div class="playerHP_Bar_Right playerHP_Bar" id="playerHP_Right"></div>
     </footer>
     <!-- 轉場方塊區域 -->
+    <div id="typeUserArea">
+        <form id="UserNameForm">
+            <h3>你的名字?</h3>
+            <div class="form_group">
+                <input type="text" id="typeUserName" placeholder="輸入你的名字" required />
+                <input type="submit" value="提交" />
+            </div>
+        </form>
+    </div>
     <div id="turnBlock"></div>
     <div id="warningBlock"><img class="warningBlock" src="../images/warning.gif"></div>
     <div class="testButtons">

@@ -15,6 +15,14 @@ function startGameTransition() {
         }, 700);
     });
 }
+fetchTextJSON();
+//只要有按鈕按下，就發出聲音
+document.addEventListener('click', () => {
+    let audio = document.createElement('audio');
+    audio.volume = 0.2;
+    audio.src = `sound_effect/button.mp3`;
+    audio.play();
+});
 //=======================================================================我是分隔線==================================================================
 
 
@@ -22,24 +30,32 @@ function startGameTransition() {
 //Part怪物
 //=======================================================================我是分隔線==================================================================
 //基本數據
-let MobHP = [], MobHP_original = [300, 500, 700, 500, 300];
-let MobLevel = [1, 2, 3, 2, 1];
+let MobHP = [], MobHP_original = [10, 20, 20, 20, 10];
+let MobLevel = [], MobLevel_original = [1, 2, 2, 2, 1];
 let mobAlive = [true, true, true, true, true];
-let mobCD_original = [2, 3, 4, 3, 2], mobCD_current = [];
-let mobAtkVal = [500, 100, 1000, 100, 50];
-let mobPicSrc = ['./images/chiikawa1.png','./images/chiikawa2.png','./images/chiikawa3.png','./images/chiikawa4.png','./images/chiikawa5.png'
-                ,'./images/chiikawa6.png','./images/ghost.png','./images/George.png','./images/goblin.png'
+let mobCD_original = [1, 2, 3, 2, 1], mobCD_current = [];
+let mobAtkVal = [], mobAtkVal_original = [25, 50, 50, 50, 25];
+let mobPicSrc = ['./images/chiikawa1.png', './images/chiikawa2.png', './images/chiikawa3.png', './images/chiikawa4.png', './images/chiikawa5.png'
+    , './images/chiikawa6.png', './images/ghost.png', './images/George.png', './images/goblin.png', './images/PePePig.png'
 ];
 //BOSS數據
-let BossHP = [700, 1000, 2500];
+let BossHP = [50, 50, 50];
 let BossPicSrc = ['./images/Elon Ma!.png', './images/Zuckerberg-frog.png', './images/i_show_sponge.png'];
+let BossSE = ['yi long ma.mp3', 'Zuckerberg.mp3', 'sponge_laugh.mp3'];
+let BossVolume = [0.9, 0.6, 0.6];
+let BossATKVal = [100, 100, 100];
+let BossLevel = [5, 5, 5];
 let BossIndex = 0;
 //localStorage設定
-localStorage.setItem('userName', 'Eric');
+localStorage.setItem('userName', 'init');
 localStorage.setItem("Turn", 1);
 localStorage.setItem("score", 0);
 localStorage.setItem('renewScore', 0);
+localStorage.setItem('wpm', 1);
+
 mob_init(localStorage.getItem("Turn"));
+
+
 setTimeout(() => {
     document.getElementById('scoreArea').innerHTML = '<p>score : </p><span id = "score">0</span>';
 
@@ -50,7 +66,6 @@ async function mob_init(turn) {
     await startGameTransition();  // 確認是否觸發開始轉場
     await Turn_Transition(turn);  // 等待轉場動畫結束
     //從json檔案fetch生成文'
-    fetchTextJSON();
 
     // 動態生成HTML中的mob
     let mobArea = document.getElementById('mobArea');
@@ -80,21 +95,32 @@ async function mob_init(turn) {
         if (i == 2 && turn % 3 == 0) {
             await BossWarningAnimation();
             MobHP[i] = BossHP[BossIndex];
+            mobAtkVal[i] = BossATKVal[BossIndex];
             let mobPic = document.getElementById(`mobPic${i}`);
-            mobPic.src = BossPicSrc[BossIndex++];
-            BossIndex = (BossIndex >= 3) ? 0 : BossIndex;
+            mobPic.src = BossPicSrc[BossIndex];
+            MobLevel[i] = BossLevel[BossIndex];
+            let audio = document.createElement('audio');
+            audio.volume = BossVolume[BossIndex];
+            audio.src = `sound_effect/${BossSE[BossIndex]}`;
+            audio.play();
+            BossIndex = ((BossIndex + 1) >= 3) ? 0 : BossIndex + 1;
         } else {
+            mobAtkVal[i] = mobAtkVal[i];
             MobHP[i] = MobHP_original[i];
             mobCD_current[i] = mobCD_original[i];
+            MobLevel[i] = MobLevel_original[i];
         }
+
+        MobHP[i] = Math.round(MobHP[i] * Math.pow(1.2, turn - 1));
+        mobAtkVal[i] = Math.round(mobAtkVal_original[i] * Math.pow(1.2, turn - 1));
+
 
         mobAlive[i] = true;
         document.getElementById(`mob${i}HP`).textContent = `${MobHP[i]}/${MobHP[i]}`;
-        document.getElementById(`mob${i}HP`).style.width = `${MobHP[i] / MobHP_original[i] * 100}%`;
+        document.getElementById(`mob${i}HP`).style.width = `${MobHP[i] / MobHP[i] * 100}%`;
         mobCD_current[i] = mobCD_original[i];
         document.getElementById(`mob${i}CD`).textContent = mobCD_current[i];
     }
-
     // 等待mob區域的動畫結束再顯示
     await MobArea_Animation();
 
@@ -104,8 +130,12 @@ async function mob_init(turn) {
 
 function BossWarningAnimation() {
     return new Promise(resolve => {
-        let warningBlock = document.getElementById('warningBlock');
+        let audio = document.createElement('audio');
+        audio.src = 'sound_effect/warning.mp3';
+        audio.volume = 0.2;
+        audio.play();
 
+        let warningBlock = document.getElementById('warningBlock');
         warningBlock.classList.remove("warningBlock_fade");
         warningBlock.offsetHeight;  // 觸發重排，讓動畫能夠重新開始
         warningBlock.classList.add('warningBlock_fade');
@@ -140,6 +170,10 @@ async function Turn_Transition(turn) {
     return new Promise(resolve => {
         let showTurn = document.getElementById('turnBlock');
         showTurn.innerHTML = `<div>Stage${turn}</div>`;
+        //觸發音效
+        let audio = document.createElement('audio');
+        audio.src = "sound_effect/stage.mp3";
+        audio.play();
         // 觸發動畫
         showTurn.classList.remove('turnAnimation'); // 確保清除之前的動畫狀態
         void showTurn.offsetWidth; // 觸發重排，使動畫重新啟動
@@ -167,7 +201,9 @@ async function Mob_move() {//Mob行動步驟
 
             // 更新分數
             let score = parseInt(localStorage.getItem("score"));
-            score += MobLevel[i] * 1000;
+            let wpm = localStorage.getItem('wpm');
+            wpm = parseInt(wpm);
+            score += MobLevel[i] * wpm;
             localStorage.setItem("score", score);
             document.getElementById('score').textContent = score;  // 更新顯示score
 
@@ -245,6 +281,10 @@ function mob_attack_Animation_step1(mobIndex) {
 }
 
 function mob_attack_Animation_step2(mobIndex) {
+    let audio = document.createElement('audio');
+    audio.src = 'sound_effect/jab.mp3';
+    audio.volume = 0.7;
+    audio.play();
     let mob = document.getElementById(`mob${mobIndex}`);
     mob.classList.add('mob_attack_step2');
     mob.addEventListener('animationend', () => {
@@ -306,14 +346,26 @@ document.getElementById("totalHP").textContent = totalHP;
 async function attack(index, damage) {
     // 更新怪物生命
     MobHP[index] = (MobHP[index] - damage < 0) ? 0 : MobHP[index] - damage;
-    document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${MobHP_original[index]}`;
-    document.getElementById(`mob${index}HP`).style.width = `${(MobHP[index] / MobHP_original[index]) * 100}%`;
+    let turn = parseInt(localStorage.getItem('Turn'));
+    if (turn % 3 == 0) {
+        document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${Math.round(BossHP[index] * Math.pow(1.2, turn - 1))}`;
+        document.getElementById(`mob${index}HP`).style.width = `${MobHP[index] / (BossHP[index] * Math.pow(1.2, turn - 1)) * 100}%`;
+    }
+    else {
+        document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${Math.round(MobHP_original[index] * Math.pow(1.2, turn - 1))}`;
+        document.getElementById(`mob${index}HP`).style.width = `${MobHP[index] / (MobHP_original[index] * Math.pow(1.2, turn - 1)) * 100}%`;
+    }
 
     await displayDamage(index, damage);  // 顯示傷害動畫
+    fetchTextJSON();
 }
 
 
 function displayDamage(index, damage) {//顯示mob受到的傷害
+    let audio = document.createElement('audio');
+    audio.src = 'sound_effect/player_attack.mp3';
+    audio.volume = 0.2;
+    audio.play();
     return new Promise(resolve => {//確保動畫結束再做下一步
         let output = document.getElementById(`displayDamage${index}`);
         output.textContent = `-${damage}`;
@@ -337,6 +389,14 @@ function PlayerHP_bar(current, total) {
 //玩家死亡
 async function player_died() {
     document.getElementById('typeBox').disabled = true;
+
+    await typeUserName();
+
+    let audio = document.createElement('audio');
+    audio.volume = 0.3;
+    audio.src = `sound_effect/player_died.mp3`;
+    audio.play();
+
     localStorage.setItem('renewScore', 1);
 
     const score = localStorage.getItem('score');
@@ -357,7 +417,41 @@ async function player_died() {
     await menu_fade_in();
 }
 
-function returnToGame(){
+async function typeUserName() {
+    await form_fade_in();
+    return new Promise(resolve => {
+        let displayForm = document.getElementById('typeUserArea');
+        let form = document.getElementById('UserNameForm');
+        let name = document.getElementById('typeUserName');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            localStorage.setItem("userName", name.value);
+            displayForm.style.display = 'none';
+            displayForm.style.zIndex = '0';
+            form.style.zIndex = '0';
+            form.style.display = 'none';
+            resolve();
+        });
+    });
+}
+
+function form_fade_in() {
+    return new Promise((resolve) => {
+        let displayForm = document.getElementById('typeUserArea');
+        displayForm.classList.add('menuFadein');
+        displayForm.style.zIndex = '200';
+        displayForm.style.display = 'flex';
+        let form = document.getElementById('UserNameForm');
+        form.style.zIndex = '200';
+        form.style.display = 'flex';
+        displayForm.addEventListener('animationend', () => {
+            displayForm.classList.remove('menuFadein');
+            resolve();
+        });
+    });
+}
+
+function returnToGame() {
     document.getElementById('rank').style.display = 'none';
 }
 
@@ -443,6 +537,7 @@ function split_targetText_to_span() {
     });
 }
 
+let incorrectCount = 0;
 //時刻比對文字正確並修改顏色
 function Check_Input() {
     const inputText = document.getElementById("typeBox").value;
@@ -454,9 +549,11 @@ function Check_Input() {
             span.classList.add("correct");
             span.classList.remove("incorrect", "blank_incorrect");
         } else if (inputText[index] != " " && targetText[index] == " ") {
+            incorrectCount++;
             span.classList.add("blank_incorrect");
             span.classList.remove("incorrect", "correct");
         } else {
+            incorrectCount++;
             span.classList.add("incorrect");
             span.classList.remove("correct", "blank_incorrect");
         }
@@ -524,7 +621,7 @@ function CorrectRateCal(event, autoComplete = false) {
                 CorrectCount++;
             }
         }
-        let correctRate = CorrectCount / targetText.length * 100;
+        let correctRate = CorrectCount / targetText.length;
         console.log(`CorrectCount = ${CorrectCount}`);
         console.log(correctRate);
         DamageCalculate(correctRate, duration);//傷害計算
@@ -540,9 +637,13 @@ function CorrectRateCal(event, autoComplete = false) {
 
 //傷害計算
 function DamageCalculate(correctRate, duration) {
+    console.log("duration: ", duration);
+    let wpm = Math.max(Math.round((targetText.length - incorrectCount) / 5) * (60 / duration), 0);//words per minute
+    incorrectCount = 0;
+    localStorage.setItem('wpm', wpm);
     //關閉typeBox
     document.getElementById('typeBox').disabled = true;
-    let damage = Math.round(correctRate / duration);//傷害計算公式
+    let damage = Math.round(correctRate * wpm);//傷害計算公式
     for (let i = 0; i < 5; ++i) {
         attack(i, damage);//玩家攻擊mob
     }

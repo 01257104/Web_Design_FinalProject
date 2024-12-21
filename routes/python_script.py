@@ -25,7 +25,7 @@ except FileNotFoundError:
     pass
 
 # 添加新句子
-new_data['words'].append(sentence.capitalize())
+new_data['words'].append(sentence.capitalize() + '.')
 
 # 寫回到sentence.json
 with open(output_file, 'w') as file:

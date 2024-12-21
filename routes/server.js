@@ -24,7 +24,7 @@ const scoreSchema = new mongoose.Schema({
         required: true //設定該欄位是否必填
     },
     score: { //是否已完成
-        type: String,
+        type: Number,
         required: true,
     }
 })
@@ -37,8 +37,8 @@ router.get("/", async (req, res) => {
     // 使用try catch方便Debug的報錯訊息
     try {
         // 找出Todo資料資料表中的全部資料
-        const score = await Score.find();
-        // 將回傳的資訊轉成Json格式後回傳
+        let score = await Score.find().sort({ "score": -1 }).limit(15);
+        console.log('score mongo: ', typeof(score), score);
         res.json(score);
     } catch (err) {
         // 如果資料庫出現錯誤時回報 status:500 並回傳錯誤訊息 
