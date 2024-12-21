@@ -3,6 +3,8 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const router = express.Router();
+const { spawn } = require('child_process');
+const path = require('path');
 
 mongoose.connect('mongodb+srv://yaochenwu0111:Eric527957@cluster0.zv3ow.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 const db = mongoose.connection;
@@ -44,7 +46,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// 新增待辦事項
+// 新增rank
 // 將Method改為Post
 router.post("/", async (req, res) => {
     // 從req.body中取出資料
@@ -64,6 +66,28 @@ router.post("/", async (req, res) => {
     }
 });
 
+router.get('/get-words', (req, res) => {
+    const pythonScript = path.join(__dirname, 'python_script.py');
+    const process = spawn('python', [pythonScript]);
+
+    let result = '';
+
+    process.stdout.on('data', (data) => {
+        result += data.toString();
+    });
+
+    process.stderr.on('data', (data) => {
+        console.error(`Error: ${data}`);
+    });
+
+    process.on('close', (code) => {
+        if (code === 0) {
+            res.json({ sentence: result.trim() });
+        } else {
+            res.status(500).json({ error: 'Python script failed' });
+        }
+    });
+});
 
 // Export 該Router
 module.exports = router;

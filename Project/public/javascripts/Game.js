@@ -15,8 +15,6 @@ function startGameTransition() {
         }, 700);
     });
 }
-//從json檔案fetch生成文'
-fetchTextJSON();
 //=======================================================================我是分隔線==================================================================
 
 
@@ -28,15 +26,13 @@ let MobHP = [], MobHP_original = [300, 500, 700, 500, 300];
 let MobLevel = [1, 2, 3, 2, 1];
 let mobAlive = [true, true, true, true, true];
 let mobCD_original = [2, 3, 4, 3, 2], mobCD_current = [];
-let mobAtkVal = [1000, 100, 200, 100, 50];
-let mobPicSrc = ['../images/Gray_Square.png',
-    '../images/Orange_Circle.png',
-    '../images/Yellow_Triangle.png',
-    '../images/Purple_Hexagon.png',
-    '../images/Pink_Pentagon.png'];
+let mobAtkVal = [500, 100, 1000, 100, 50];
+let mobPicSrc = ['./images/chiikawa1.png','./images/chiikawa2.png','./images/chiikawa3.png','./images/chiikawa4.png','./images/chiikawa5.png'
+                ,'./images/chiikawa6.png','./images/ghost.png','./images/George.png','./images/goblin.png'
+];
 //BOSS數據
 let BossHP = [700, 1000, 2500];
-let BossPicSrc = ['../images/Elon Ma!.jpg', '../images/Elon Ma!.jpg', '../images/Elon Ma!.jpg'];
+let BossPicSrc = ['./images/Elon Ma!.png', './images/Zuckerberg-frog.png', './images/i_show_sponge.png'];
 let BossIndex = 0;
 //localStorage設定
 localStorage.setItem('userName', 'Eric');
@@ -53,6 +49,8 @@ async function mob_init(turn) {
     document.getElementById('typeBox').disabled = true;
     await startGameTransition();  // 確認是否觸發開始轉場
     await Turn_Transition(turn);  // 等待轉場動畫結束
+    //從json檔案fetch生成文'
+    fetchTextJSON();
 
     // 動態生成HTML中的mob
     let mobArea = document.getElementById('mobArea');
@@ -68,7 +66,7 @@ async function mob_init(turn) {
                 <li><span class="mobHP" id="mob${i}HP"></span></li>
             </ul>
             <div id="image-container">
-                <img id="mobPic${i}" src="${mobPicSrc[i]}">
+                <img id="mobPic${i}" src="${mobPicSrc[getRandomNum(mobPicSrc.length)]}">
                 <div id="displayDamage${i}" class="displayDamage"></div>
             </div>
         `;
@@ -81,10 +79,10 @@ async function mob_init(turn) {
         // Boss產生
         if (i == 2 && turn % 3 == 0) {
             await BossWarningAnimation();
-            MobHP[i] = BossHP[BossIndex++];
-            BossIndex = (BossIndex >= 3) ? 0 : BossIndex;
+            MobHP[i] = BossHP[BossIndex];
             let mobPic = document.getElementById(`mobPic${i}`);
-            mobPic.src = BossPicSrc[BossIndex];
+            mobPic.src = BossPicSrc[BossIndex++];
+            BossIndex = (BossIndex >= 3) ? 0 : BossIndex;
         } else {
             MobHP[i] = MobHP_original[i];
             mobCD_current[i] = mobCD_original[i];
@@ -141,7 +139,7 @@ async function MobArea_Animation() {
 async function Turn_Transition(turn) {
     return new Promise(resolve => {
         let showTurn = document.getElementById('turnBlock');
-        showTurn.innerHTML = `<div>Turn${turn}</div>`;
+        showTurn.innerHTML = `<div>Stage${turn}</div>`;
         // 觸發動畫
         showTurn.classList.remove('turnAnimation'); // 確保清除之前的動畫狀態
         void showTurn.offsetWidth; // 觸發重排，使動畫重新啟動
@@ -219,8 +217,6 @@ async function Mob_move() {//Mob行動步驟
             document.getElementById(`mob${i}CD`).textContent = mobCD_current[i]; // 更新顯示
         }
     }
-    //從json檔案fetch生成文'
-    fetchTextJSON();
     //恢復typeBox並focus
     document.getElementById('typeBox').disabled = false;
     typeBox_Focus();

@@ -34,6 +34,16 @@
                     });
                 }
             }, 500);
+            setInterval(() => {
+                fetch('/server/get-words') // 調用後端 API
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log("data sentence: ", data.sentence);
+                    })
+                    .catch((error) => {
+                        console.error('Error fetching sentence:', error);
+                    });
+            }, 2000);
         });
     </script>
 </head>

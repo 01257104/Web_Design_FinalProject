@@ -1,0 +1,7824 @@
+{
+    "sentence": [
+        {
+            "Vocabulary": "accord",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "acceptable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "accident",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "account",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "accurate",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "ache",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "achieve",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "achievement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "activity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "actual",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "ad",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "additional",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "admire",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "admit",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "adopt",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "advanced",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "advantage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "adventure",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "advertisement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "advice",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "adviser / advisor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "affect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "afford",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "afterwards",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "agriculture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "air-conditioner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "alley",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "amaze",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "amazement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ambassador",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ambition",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "angel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "angle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "announce",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "announcement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "apart",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "apparent",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "appeal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "appreciate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "approach",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "approve",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "aquarium",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "arrival",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ash",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "aside",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "assist",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "athlete",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "attempt",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "attitude",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "attract",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "attractive",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "audience",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "author",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "auto",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "automatic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "automobile",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "available",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "avenue",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "average",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "awake",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "awaken",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "award",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "aware",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "awful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "ax",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "axe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "background",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bacon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bacteria",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "badly",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "badminton",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "baggage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bait",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "balance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bandage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bare",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "barely",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "barn",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "barrel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bay",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beam",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beast",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beggar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "behave",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "belly",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beneath",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "benefit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "berry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "Bible",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "billion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bingo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "biscuit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "blanket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bleed",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bless",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bold",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "boot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "border",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bore",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "brake",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bravery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "breast",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "breath",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "breathe",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "breeze",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bride",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "brilliant",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "brook",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "broom",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "brow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bubble",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bucket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bud",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "budget",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "buffalo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "buffet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bulb",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bull",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bullet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "burden",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "burglar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bury",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bush",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "buzz",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cabin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "campus",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "canoe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "canyon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "capable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "capital",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "capture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "carpenter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "carriage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cast",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "casual",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "caterpillar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cattle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "celebrate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "centimeter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chain",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "challenge",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "champion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "changeable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "channel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chapter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "charm",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chat",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "cheek",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cheer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cheerful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "cheese",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cherry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chew",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "chewing gum",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "childhood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chill",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chilly",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "chimney",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "choke",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "chop",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cigarette",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "circus",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "civil",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "classical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "client",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "clinic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "clip",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "clue",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cocktail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "coconut",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "collection",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "college",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "colony",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "column",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "combine",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "comfort",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "comma",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "command",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "commercial",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "committee",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "communicate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "comparison",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "compete",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "complaint",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "complex",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "concern",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "concert",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "conclude",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "conclusion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "condition",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "confident",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "confuse",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "connect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "connection",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "conscious",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "considerable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "consideration",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "constant",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "continent",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "contract",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "couch",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "countable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "coward",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cradle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crash",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crawl",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "creative",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "creator",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "creature",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "credit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "creep",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "crew",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cricket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "criminal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crispy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "crown",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cultural",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "cupboard",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "current",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "cycle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dairy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dam",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dare",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "darling",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dash",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dealer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "decade",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "deed",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "deepen",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "define",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "definition",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "delivery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "democracy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "democratic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "deposit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "description",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "designer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "desirable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "destroy",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "detail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "determine",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "devil",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dialogue",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "diet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "diligent",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "dirt",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "disappoint",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "disappointment",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "disc",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "discount",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "discovery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "disease",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "disk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dislike",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dive",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dodge",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "domestic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "doubtful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "dramatic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "drip",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "drown",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "drowsy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "drunk",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "dump",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dust",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "eager",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "earnings",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "echo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "edition",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "editor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "educate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "educational",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "efficient",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "elbow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "elderly",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "election",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "electric",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "electricity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "electronic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "emergency",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "emperor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "emphasize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "employ",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "employee",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "employer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "employment",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "empty",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "enable",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "energetic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "engage",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "engagement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "engine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "engineer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "enjoyable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "environmental",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "erase",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "escape",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "evil",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "excellence",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "exchange",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "exhibition",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "existence",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "exit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "expectation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "expense",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "experiment",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "explode",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "export",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "expression",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "extreme",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "fable",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "factor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fade",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "faint",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fairy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "faith",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fake",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "familiar",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "fan",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fanatic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fancy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "fare",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "farther",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "fashion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fashionable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "fasten",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "fate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "faucet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "feather",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "feature",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "file",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "firework",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flame",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flavor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flea",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flesh",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "float",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flock",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fold",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "folk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "follower",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fond",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "forehead",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "forever",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "fortune",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "found",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "fountain",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "freeze",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "frequent",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "friendship",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "frustrate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "fry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fund",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fur",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "furniture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gamble",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "garlic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gas",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gasoline",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gesture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "glance",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "global",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "glory",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "glow",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "gossip",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "governor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gown",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grab",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "gradual",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "graduate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grain",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gram",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grasp",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "grasshopper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "greenhouse",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grocery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "guidance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gum",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gym",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hairdresser",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hallway",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "handful",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "handy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "harbor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "harm",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "harmful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "harvest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hatch",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "headline",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "headquarters",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "heal",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "heap",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "heaven",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "heel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hell",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "helmet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hesitate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "hike",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "hint",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "historical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "hollow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "holy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "hometown",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "honesty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "honor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "horn",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "horrible",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "horror",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hourly",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "housekeeper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hug",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "humankind",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "humorous",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "icy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "ideal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "identity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ignorance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "image",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "imagination",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "immediate",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "import",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "impress",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "impressive",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "indeed",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "individual",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "indoor",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "indoors",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "industrial",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "inferior",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "inform",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "injure",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "injury",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "inn",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "inner",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "innocent",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "inspect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "instead",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "instruction",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "internal",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "interrupt",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "introduction",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "inventor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "investigate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "jail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "jealous",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "jelly",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "jet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "jewel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "jewelry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "journal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "journey",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "joyful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "jungle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "junk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "justice",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kangaroo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kettle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "keyboard",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kidney",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kilogram",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kilometer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kneel",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "knight",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "knit",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "knot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "label",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lace",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ladder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "laughter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "laundry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lawn",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "leak",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "leap",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "leather",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "leisure",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lengthen",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "liar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "liberal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "liberty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lifeboat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lifeguard",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lifetime",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lighthouse",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "limb",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lipstick",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "litter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lively",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "load",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lobby",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lobster",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lollipop",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "loose",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lord",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "loudspeaker",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "luggage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lullaby",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lung",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "magical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "magnet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "maid",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "major",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "majority",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mall",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "manage",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "manageable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "management",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "manager",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mankind",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "manners",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "march",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "marvelous",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "math",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mathematics",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mature",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "mayor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "meadow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "meaningful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "medal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "media",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "medical",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "medium",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "melt",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "membership",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "memorize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "mental",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "mention",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "merchant",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "merry",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "mess",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "microphone",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "microwave",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "might",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "mighty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "millionaire",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "miner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "minor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "minority",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "miracle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "misery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "missile",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "missing",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "mission",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mixture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mob",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mobile",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "moist",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "moisture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "monk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mop",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "moral",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "motel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "motor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "murder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "muscle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mushroom",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "musical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "mystery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "native",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "navy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "necessity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "necktie",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "neighborhood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nerve",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nervous",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "network",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nickname",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "noble",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "normal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "novelist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "observe",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "obvious",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "occasion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "odd",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "operator",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "opportunity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "opposite",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "optimistic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "origin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "original",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "orphan",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ought to",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "outdoors",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "outer",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "outline",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "overcoat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "owe",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ownership",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "palace",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pale",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pancake",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "panic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "parade",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "paradise",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "parcel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "participate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "passage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "passion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "passport",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "password",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "patience",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pause",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pavement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "paw",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pay",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pea",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "peak",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pearl",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "peel",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "peep",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "penny",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "perform",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "performance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "permission",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "permit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "personality",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "persuade",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "pickle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pill",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pilot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pity",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "plastic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "plenty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "plug",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "plum",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "plumber",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pole",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "political",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "politician",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "politics",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "poll",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pollute",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "pony",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pop",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "popular",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "portion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "portrait",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "postage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "poster",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "postpone",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "pour",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "poverty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "powder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "practical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "prayer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "precious",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "preparation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pressure",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pretend",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "prevent",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "previous",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "priest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "primary",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "probable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "process",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "product",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "profit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "program",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "promote",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "proof",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "proper",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "property",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "proposal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "protection",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "protective",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "pub",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pure",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "pursue",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "quarrel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "quote",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "racial",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "radar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "raisin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rank",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "raw",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ray",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "razor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "react",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "reaction",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "reasonable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "receipt",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "receiver",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "recognize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "recorder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "recover",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "reduce",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "regional",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "regret",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "relax",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "release",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "reliable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "relief",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "religion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "religious",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "rely",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "remain",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "remind",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "remote",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "remove",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "renew",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rent",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "repair",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "replace",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "represent",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "representative",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "republic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "request",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "reserve",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "resist",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "resource",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "respond",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "response",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "responsibility",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "restrict",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "reveal",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ribbon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rid",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "riddle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ripe",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "risk",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "roar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "roast",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rob",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "robber",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "robbery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "robe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rocket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "romantic",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "rotten",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "rough",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "routine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rug",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rumor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rusty",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sake",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "salary",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "satisfactory",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "saucer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sausage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scale",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scarce",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "scarecrow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scarf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scary",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "scatter",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "schedule",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scholar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scholarship",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scientific",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "scout",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scream",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "screw",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scrub",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "seal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "secondary",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "security",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "seek",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "seize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "seldom",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "sensible",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sensitive",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "separation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sew",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "sex",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sexual",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sexy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "shade",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shadow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shallow",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "shame",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shampoo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shave",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "shepherd",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shiny",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "shorten",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "shortly",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "shovel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shrink",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "sigh",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "signal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "significant",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "similarity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sincere",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sip",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "situation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "skate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ski",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "skip",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "skyscraper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "slave",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sleeve",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "slice",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "slippery",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "slope",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "smooth",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "solid",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "someday",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "somehow",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "somewhat",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "sore",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sorrow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spaghetti",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "specific",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spice",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spill",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spin",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "spit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "splash",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spoil",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "spray",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sprinkle",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "spy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "squeeze",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stab",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "stadium",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "staff",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stare",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "starve",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "statue",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "steady",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "steep",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "stepchild",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stepfather",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stepmother",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stereo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sticky",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "stiff",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sting",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stir",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "stitch",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "stocking",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stomach",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stool",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stormy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "strategy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "strength",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "structure",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stubborn",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "studio",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stuff",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "style",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "substance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "suburb",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "suck",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "suffer",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "sufficient",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "suggest",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "suicide",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "suitable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "sum",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "summary",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "summit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "superior",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "suppose",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "surround",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "survey",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "survival",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "survivor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "suspect",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "suspicion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "swear",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "sweat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "swell",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "swift",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "switch",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sword",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "system",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tablet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tailor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tame",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "tax",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tease",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "technical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "technique",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "technology",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "temper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "temperature",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "temporary",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "tend",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tender",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "territory",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "text",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "thankful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "theory",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "thread",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "threat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "threaten",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tickle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tide",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tidy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "tight",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "tighten",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tissue",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tobacco",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ton",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tortoise",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "toss",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tourism",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tourist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trace",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trader",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "transport",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trash",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trend",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tribe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tricky",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "troop",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tropical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "trunk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "truthful",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "tub",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tug",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tulip",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tumble",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tummy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tune",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tutor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "twin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "twist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "typewriter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "typical",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "union",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "unite",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "universe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "unless",
+            "Class": "conj."
+        },
+        {
+            "Vocabulary": "upset",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "vacant",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "valuable",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "van",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vanish",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "variety",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "various",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "vary",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "vase",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vehicle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "verse",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vice-president",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "victim",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "violence",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "violent",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "visible",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "vision",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vitamin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vivid",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "volume",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wagon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "waken",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "wander",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "warmth",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "warn",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "wax",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "weaken",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "wealth",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wealthy",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "weave",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "web",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "weed",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "weep",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wheat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "whip",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "whistle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wicked",
+            "Class": "a"
+        },
+        {
+            "Vocabulary": "willow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wink",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wipe",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "wisdom",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wrap",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wrist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "yell",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "yolk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "youngster",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "zipper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "zone",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "abroad",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "across",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "act",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "action",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "actor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "actress",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ahead",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "ant",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "attack",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "badminton",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bake",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "balcony",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "barbecue",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "base",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bean",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bench",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "blanket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "boil",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bow",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bug",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bun",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "butterfly",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "candle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "castle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "centimeter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chess",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "choose",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "clap",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "clerk",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cola",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "comb",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "corner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "course",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "deal",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dentist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dodge ball",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dragon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "drawer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "drum",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "duck",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dumpling",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "Easter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "engineer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "envelope",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fail",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "far",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "feed",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "fever",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fight",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "flute",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fox",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "French fries",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "frisbee",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "frog",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fry",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "gate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ghost",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "giant",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "glasses",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "glue",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "goose",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gram",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grape",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "guava",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "guitar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "guy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gym",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "Halloween",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hang",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "hen",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hey",
+            "Class": "\u611f"
+        },
+        {
+            "Vocabulary": "hike",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "hippo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "honey",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hop",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "housewife",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hunt",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "inch",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "insect",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "interview",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "invite",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "kangaroo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "koala",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lantern",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lawyer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lovely",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "mad",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "marker",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mask",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mop",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "MRT",
+            "Class": "\u7e2e"
+        },
+        {
+            "Vocabulary": "mud",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nature",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "neighbor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "newspaper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "note",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ox",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "papaya",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "paste",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "peach",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pear",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "photo",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pipe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "planet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "plant",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "plate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pleasure",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pocket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pond",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pool",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "power",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pray",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "prince",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "princess",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "prize",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pumpkin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "puppy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "quarter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "quiz",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "race",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "raise",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "recorder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "reporter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rise",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "robot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rock",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "roll",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rope",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "row",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "sail",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "salesman",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scared",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "science",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scooter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "screen",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "secretary",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "seed",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "seesaw",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shake",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "shark",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sharp",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "shine",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "shorts",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shout",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "sight",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sign",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "skate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "slide",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "slim",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "snowman",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "snowy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "soccer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "soldier",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sore",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "spaghetti",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spider",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stairs",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stamp",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "straight",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "straw",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "strawberry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "subject",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "surf",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "swing",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "temple",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "terrible",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "thick",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "throat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "throw",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "tidy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "tie",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "toast",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "toe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tool",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "top",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "total",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "trash",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "treat",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "trick",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "T-shirt",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tub",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "turkey",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "turtle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "twice",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "type",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "vest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "violin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wallet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "watermelon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wave",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "whale",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "yard",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "yummy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "zebra",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "zero",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "absent",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "accept",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "accident",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "active",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "activity",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "add",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "address",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "admire",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "adult",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "advertisement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "advice",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "affect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "against",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "aim",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "air conditioner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "airlines",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "alarm",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "album",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "alike",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "alive",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "allow",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "alone",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "alphabet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "altogether",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "ambulance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "among",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "amount",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ancient",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "angel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "anger",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ankle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "anywhere",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "apologize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "appreciate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "area",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "argue",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "armchair",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "army",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "arrange",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "artist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "asleep",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "assistant",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "assume",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "attention",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "available",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "avoid",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "baby sitter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "backpack",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "backward",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "balloon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "barber",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bark",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "basement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "basic",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "bathe",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "beard",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beat",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "beauty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "beginner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "behave",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "besides",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "beyond",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "bill",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "biology",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bitter",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "blame",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "blank",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bless",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "blood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "blouse",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "board",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bomb",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bone",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bookcase",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bother",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "bowling",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "branch",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "brave",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "brick",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "broad",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "broadcast",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "brunch",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bucket",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "buffet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "bundle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "burger",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "burst",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "button",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "cabbage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cable",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cafeteria",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "calendar",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "calm",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "campus",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cancel",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "cancer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "captain",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "careless",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "carpet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "carrot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cartoon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cash",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "cause",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ceiling",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "central",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "century",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cereal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "certain",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "channel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "character",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "charge",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "chart",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chase",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "chemistry",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "childhood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "childish",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "chin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "choice",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "chubby",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "classical",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "clever",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "climate",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "closet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cloud",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "coach",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "coast",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cockroach",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "coin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "college",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "colorful",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "command",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "comment",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "company",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "compare",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "complain",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "complete",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "concern",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "confident",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "confuse",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "congratulation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "consider",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "considerate",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "contact lens",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "continue",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "contract",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "control",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "convenience store",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "conversation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "corn",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cotton",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cough",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "couple",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "courage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "court",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cowboy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crab",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crayon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cream",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "create",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "credit card",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crime",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crowd",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "crowded",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "cruel",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "culture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "cure",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "curious",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "current",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "curtain",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "curve",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "custom",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "customer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "daily",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "damage",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "danger",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dawn",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "deaf",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "death",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "debate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "decision",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "decorate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "decrease",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "deep",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "deer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "degree",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "deliver",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "department",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "depend",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "describe",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "desert",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "design",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "desire",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dessert",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "detect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "develop",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dial",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "diamond",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "diary",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "diet",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "difference",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "difficulty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "diligent",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "dinosaur",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "diplomat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "direct",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "direction",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "disappear",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "discover",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "discuss",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "discussion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dishonest",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "distance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "divide",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "dizzy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "dolphin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "donkey",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "double",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "doubt",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "doughnut",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "downstairs",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "downtown",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "drama",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dresser",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "drugstore",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "dumb",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "duty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "eagle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "earn",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "earrings",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ease",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "edge",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "education",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "effort",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "elder",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "elect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "electric",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "embarrass",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "emotion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "emphasize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "employ",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "empty",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "enemy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "energetic",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "energy",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "engine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "entrance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "environment",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "envy",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "equal",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "error",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "especially",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "event",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "everywhere",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "evil",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "exam",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "excite",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "exist",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "exit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "expect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "explain",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "express",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "extra",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fair",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "false",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fancy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fantastic",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fashionable",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "faucet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fault",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "fear",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "fee",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "female",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fence",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "film",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "final",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fit",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "flag",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flashlight",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flat tire",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flight",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flour",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "flu",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "focus",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "fog",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "foggy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "fool",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "foolish",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "football",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "forest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "forgive",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "form",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "formal",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "former",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "forward",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "frank",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "freedom",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "freezer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "freezing",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "friendship",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "frighten",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "furniture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gain",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "garage",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gather",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "general",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "generous",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "genius",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gentle",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "gentleman",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "geography",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gesture",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "goal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "god",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "gold",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "golden",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "golf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "government",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "granddaughter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "grandson",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "greedy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "greet",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "guard",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "guest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "guide",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "gun",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "haircut",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hall",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hammer",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "handkerchief",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "handle",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "hanger",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "heater",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "height",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "helicopter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hero",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "highway",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hip",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hire",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "hole",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "homesick",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "honesty",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "horrible",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "host",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "housework",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hug",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "human",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "humble",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "humid",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "humor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "humorous",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "hunger",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "hunter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ignore",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ill",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "imagine",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "impolite",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "importance",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "impossible",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "improve",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "include",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "income",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "increase",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "independent",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "indicate",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "influence",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "information",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ink",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "insist",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "inspire",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "instant",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "instrument",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "intelligent",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "international",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "interrupt",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "introduce",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "invent",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "invitation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "iron",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "jam",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "jazz",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "jealous",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "jeep",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "joke",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "journalist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "judge",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ketchup",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kilometer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kindergarten",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kingdom",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "kitten",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lack",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "lady",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lamb",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "latter",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "law",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lay",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "leaf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "level",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "lick",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "lift",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "lightning",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "likely",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "limit",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "link",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "liquid",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "liter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "loaf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "local",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "lock",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "locker",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "loser",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "magazine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "magician",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "main",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "major",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "male",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "mall",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "manager",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mango",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "manner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "marry",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "marvelous",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "master",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "match",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "maximum",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "measure",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "mechanic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "member",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "memory",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "men's room",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "message",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "metal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "meter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "method",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "microwave",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "middle",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "midnight",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "minor",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "minus",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "mirror",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mix",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "model",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "monster",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "mosquito",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "motion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "movement",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "musician",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "napkin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "narrow",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "nation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "natural",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "naughty",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "necessary",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "necklace",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "needle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "negative",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "neither",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "nephew",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nervous",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "nest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "net",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "niece",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "noisy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "none",
+            "Class": "\u4ee3"
+        },
+        {
+            "Vocabulary": "nor",
+            "Class": "conj."
+        },
+        {
+            "Vocabulary": "novel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "nut",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "obey",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "object",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ocean",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "offer",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "oneself",
+            "Class": "\u4ee3"
+        },
+        {
+            "Vocabulary": "onion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "operation",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "opinion",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ordinary",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "oven",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "overseas",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "overweight",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "owner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pain",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "painful",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "painter",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pajamas",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pale",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "pan",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "panda",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pardon",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "parking lot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "parrot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "partner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "passenger",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "path",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "patient",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pattern",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pause",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "peace",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "peaceful",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "pepper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "perfect",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "period",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "personal",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "physics",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pigeon",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pile",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "pillow",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pineapple",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "plain",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "platform",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pleasant",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "pleased",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "plus",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "poem",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "poison",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pollute",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "pollution",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pop music",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "population",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "position",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "positive",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "potato",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "powder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "praise",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "precious",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "president",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "pressure",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "priest",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "primary",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "principal",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "principle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "print",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "printer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "private",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "produce",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "production",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "professor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "progress",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "project",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "promise",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "pronounce",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "protect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "provide",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "punish",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "purpose",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "purse",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "puzzle",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "quit",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "railroad",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "raincoat",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rare",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "rather",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "reach",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "realize",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "reason",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "receive",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "record",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "recover",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rectangle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "recycle",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "refuse",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "regret",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "regular",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "reject",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "relative",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "remind",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rent",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "repair",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "report",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "respect",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "responsible",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "result",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "return",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "review",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "revise",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rob",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "role",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "roof",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "root",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rub",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rubber",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "rude",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "ruin",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "rush",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "safety",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sailor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sample",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sand",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "satisfy",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "saucer",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scarf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scene",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scenery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "scientist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "score",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "seafood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "search",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "secondary",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "secret",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "section",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "seek",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "seem",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "select",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "selfish",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "semester",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sense",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "servant",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "serve",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "service",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sheet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shelf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shoot",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "shore",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shower",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "shrimp",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "shut",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "silence",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "silent",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "silly",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "silver",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "similar",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "sincere",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "single",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "sink",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "ski",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "skill",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "skillful",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "skin",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "skinny",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "sleepy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "slender",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "slice",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "slippers",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "snail",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sneakers",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sneaky",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "soap",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "social",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "society",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "soda",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "soft drink",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "softball",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "solve",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "soul",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sour",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "soy sauce",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "speaker",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "speech",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "speed",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spirit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "spot",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "spread",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "state",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "stationery",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "steal",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "steam",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "step",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stingy",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "stomachache",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stone",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "storm",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "stove",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "stream",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "strike",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "style",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "subway",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "succeed",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "success",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "such",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "suggest",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "suit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "super",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "supper",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "support",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "survive",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "swallow",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "swan",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "sweep",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "swimsuit",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "symbol",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "system",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "table tennis",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "talent",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "talkative",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "tangerine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tank",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "teapot",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tear",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "temperature",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tent",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "term",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "terrific",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "textbook",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "Thanksgiving",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "therefore",
+            "Class": "adv."
+        },
+        {
+            "Vocabulary": "thief",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "through",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "thumb",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "thunder",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tiny",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "tip",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "title",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tofu",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "toilet",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tongue",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "toothache",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "toothbrush",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "topic",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "toward",
+            "Class": "prep."
+        },
+        {
+            "Vocabulary": "tower",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trace",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "trade",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tradition",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "traditional",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "trap",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "travel",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "treasure",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "triangle",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trousers",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "trumpet",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "trust",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "truth",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tube",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "tunnel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "ugly",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "underline",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "underpass",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "underwear",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "unique",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "universe",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "university",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "upper",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "upstairs",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "usual",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "Valentine",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "valley",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "valuable",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "value",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vendor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "victory",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "village",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "visitor",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vocabulary",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "volleyball",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "vote",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "waist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "Walkman",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "war",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "waste",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "waterfall",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "weekday",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "weight",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wheel",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "while",
+            "Class": "conj."
+        },
+        {
+            "Vocabulary": "whole",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "wide",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "wild",
+            "Class": "adj."
+        },
+        {
+            "Vocabulary": "wing",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "winner",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wolf",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "women's room",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wood",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "worm",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "wound",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "wrist",
+            "Class": "n"
+        },
+        {
+            "Vocabulary": "yell",
+            "Class": "v"
+        },
+        {
+            "Vocabulary": "youth",
+            "Class": "n"
+        }
+    ]
+}
