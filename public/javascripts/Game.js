@@ -413,12 +413,12 @@ const targetTextContainer = document.getElementById("TextContainer");
 
 function fetchTextJSON() {
     // 使用 fetch 來讀取 words.json 檔案
-    fetch('../JSON_Data/words.json')
+    localStorage.setItem('appendSentence', 1);
+    fetch('../JSON_Data/sentence.json')
         .then(response => response.json())  // 解析 JSON 資料
         .then(data => {
             // 取得 words 屬性並顯示在頁面上
             JsonTextArray = data.words;
-            console.log(JsonTextArray[getRandomNum(JsonTextArray.length)]);
             targetText = JsonTextArray[getRandomNum(JsonTextArray.length)];
             targetTextContainer.innerHTML = "";
             split_targetText_to_span();

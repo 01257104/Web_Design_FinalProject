@@ -66,9 +66,10 @@ router.post("/", async (req, res) => {
     }
 });
 
+
 router.get('/get-words', (req, res) => {
-    const pythonScript = path.join(__dirname, 'python_script.py');
-    const process = spawn('python', [pythonScript]);
+    //const pythonScript = path.join(__dirname, 'Project/routes/python_script.py');
+    const process = spawn('python', ['routes/python_script.py']);
 
     let result = '';
 
@@ -78,16 +79,20 @@ router.get('/get-words', (req, res) => {
 
     process.stderr.on('data', (data) => {
         console.error(`Error: ${data}`);
+        console.error(`Error from Python script: ${data.toString()}`);
     });
+
 
     process.on('close', (code) => {
         if (code === 0) {
             res.json({ sentence: result.trim() });
         } else {
+            console.error(`Python script failed with exit code ${code}`);
             res.status(500).json({ error: 'Python script failed' });
         }
     });
 });
+
 
 // Export 該Router
 module.exports = router;
