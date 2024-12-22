@@ -62,7 +62,10 @@ html {
 }
 
 .rank {
-    background-color: rgb(168, 166, 166);
+    background-image: url('../images/Ranking_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -70,6 +73,7 @@ html {
     left: 0;
     z-index: 300;
     display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: black;
@@ -79,16 +83,37 @@ html {
 .rank table,
 .rank table th,
 .rank table td {
-    border: gray 2px solid;
+    border: black 2px solid;
     border-collapse: collapse;
+    font-size: 1.2rem;
+    font-weight:bold;
+    background-color: rgba(210,165,5,0.2);
+    color: white;
 }
-
+.rank table th{
+    background-color: rgba(210,165,5,0.5);
+}
+.rank table tr:nth-of-type(even) td{
+    background-color:rgba(210,165,5,0.35);
+  }
 .rank button {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 10vh;
-    width: 20vh;
+    top: 6%;
+    left: 2.5%;
+    height: 6vh;
+    width: 12vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #59595a;
+    color: azure;
+}
+.rank-title{
+    margin:0 0 5%;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 6rem;
+    color: white;
+    text-align: center;
 }
 
 #typeUserArea {
@@ -355,7 +380,7 @@ input[type="submit"] {
     height: 9vh;
     position: absolute;
     left: 10vw;
-    bottom: 35vh;
+    bottom: 35%;
     font-size: 3.5rem;
     /* color: rgb(237, 240, 243); */
     color: aliceblue;
@@ -501,7 +526,7 @@ input[type="submit"] {
 /* =======================================================================我是分隔線================================================================== */
 #TextContainer {
     position: absolute;
-    bottom: 7.5vh;
+    bottom:5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
