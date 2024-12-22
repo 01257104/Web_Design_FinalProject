@@ -4,30 +4,40 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    caret-color: transparent; /* 隱藏插入符號 */
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* 禁止滾動 */
+    overflow: hidden;
+    /* 禁止滾動 */
 }
 
-body{
+body {
     display: flex;
+    background-image: url('../images/Game_backgroud.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-header ,main ,footer{
+header,
+main,
+footer {
     flex-wrap: nowrap;
-} 
+}
 
-header{
+header {
     flex-wrap: nowrap;
     top: 100px;
     justify-content: center;
     align-items: center;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -35,7 +45,7 @@ body, html {
     background-color: #C0C0C0;
 }
 
-.score{
+.score {
     display: block;
     width: auto;
     color: aliceblue;
@@ -44,12 +54,14 @@ body, html {
     top: 1%;
     left: 90%;
 }
-.score p, .score span{
+
+.score p,
+.score span {
     display: inline;
     margin: 0;
 }
 
-.rank{
+.rank {
     background-color: rgb(168, 166, 166);
     height: 100%;
     width: 100%;
@@ -63,11 +75,15 @@ body, html {
     color: black;
     font-size: larger;
 }
-.rank table, .rank table th,.rank table td {
+
+.rank table,
+.rank table th,
+.rank table td {
     border: gray 2px solid;
     border-collapse: collapse;
 }
-.rank button{
+
+.rank button {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,7 +91,7 @@ body, html {
     width: 20vh;
 }
 
-#typeUserArea{
+#typeUserArea {
     display: none;
     align-items: center;
     justify-content: center;
@@ -86,6 +102,7 @@ body, html {
     left: 0;
     background-color: rgba(146, 146, 146, 0.7);
 }
+
 #UserNameForm {
     display: none;
     background-color: rgb(71, 71, 71, 0.9);
@@ -110,7 +127,8 @@ body, html {
 
 input[type="submit"] {
     height: 5vh;
-    width: 5vw; /* 增大按鈕寬度 */
+    width: 5vw;
+    /* 增大按鈕寬度 */
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -128,10 +146,11 @@ input[type="submit"] {
 /* =======================================================================我是分隔線================================================================== */
 .mobArea {
     position: relative;
-    bottom: 20vh;
+    bottom: 15vh;
     display: flex;
-    gap: 4vh; /* 控制 mob 之間的間距 */
-    padding: 20vh; /* 控制 MOBs 容器與邊框之間的距離 */
+    gap: 3vw;
+    /* 控制 mob 之間的間距 */
+    /* 控制 MOBs 容器與邊框之間的距離 */
     max-width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -147,13 +166,23 @@ input[type="submit"] {
 }
 
 @keyframes MobFadein {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes MobFadeout {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -168,10 +197,10 @@ input[type="submit"] {
 }
 
 .mob ul {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
     list-style: none;
     margin-bottom: 0;
@@ -183,7 +212,13 @@ input[type="submit"] {
     width: 10vw;
 }
 
-#image-container{
+.mobCD{
+    color: white;
+    font-size: 1.75rem;
+}
+
+
+#image-container {
     height: 30vh;
     width: auto;
 }
@@ -198,38 +233,65 @@ input[type="submit"] {
     margin-top: 0;
 }
 
-.mobHP{
+.mobHP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     height: 2vh;
     width: 50vw;
     padding: auto;
     background-image: linear-gradient(to right, rgb(190, 5, 5), rgb(216, 4, 4));
     opacity: 0.8;
+    color: aliceblue;
+    font-size: 1.25rem;
 }
 
-.mob_attack_step1{
+.mob_attack_step1 {
     animation: attack_step1 1s forwards;
 }
 
-.mob_attack_step2{
+.mob_attack_step2 {
     animation: attack_step2 0.5s forwards;
 }
 
 @keyframes attack_step1 {
-    0%{transform: scale(1);}
-    25%{transform: scale(1.2);}
-    75%{transform: scale(1.2);}
-    100%{transform: scale(1.2);}
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 @keyframes attack_step2 {
-    0%{transform: scale(1);}
-    25%{transform: scale(1.25);}
-    75%{transform: scale(1.25);}
-    100%{transform: scale(1);}
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.25);
+    }
+
+    75% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.displayDamage{
+.displayDamage {
     position: relative;
     text-align: center;
     bottom: 40%;
@@ -242,24 +304,34 @@ input[type="submit"] {
     animation: damage_slow_rise 0.5s ease-out;
 }
 
-@keyframes damage_slow_rise{
-    0% { transform: translate(-50%, -50%) translateY(0.5vh); } /* 初始位置 */
-    100% { transform: translate(-50%, -50%) translateY(-1vh); } /* 上移 5px */
+@keyframes damage_slow_rise {
+    0% {
+        transform: translate(-50%, -50%) translateY(0.5vh);
+    }
+
+    /* 初始位置 */
+    100% {
+        transform: translate(-50%, -50%) translateY(-1vh);
+    }
+
+    /* 上移 5px */
 }
+
 /* =======================================================================我是分隔線================================================================== */
 
 
 
 /* 玩家生命值 */
 /* =======================================================================我是分隔線================================================================== */
-.playerHP_Bar{
+.playerHP_Bar {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to top, rgb(150, 5, 5), rgb(216, 4, 4));
     opacity: 0.8;
     z-index: 0;
 }
-.playerHP_Bar_Left{
+
+.playerHP_Bar_Left {
     position: absolute;
     height: 100%;
     width: 2.2vh;
@@ -267,7 +339,8 @@ input[type="submit"] {
     right: 99%;
     bottom: 0;
 }
-.playerHP_Bar_Right{
+
+.playerHP_Bar_Right {
     position: absolute;
     height: 100%;
     width: 2.3vh;
@@ -275,22 +348,22 @@ input[type="submit"] {
     right: 0;
     bottom: 0;
 }
-.playerHP_value{
+
+.playerHP_value {
     display: inline;
     margin: 0;
-    padding: 1vh;
-    width:80vw;
+    width: 80vw;
     height: 9vh;
     position: absolute;
     left: 10vw;
-    bottom:33.5vh;
-    font-size: 3.5vh;
+    bottom: 35vh;
+    font-size: 3.5rem;
     /* color: rgb(237, 240, 243); */
-    color: green;
+    color: aliceblue;
     z-index: 2;
 }
 
-#damageEffect{
+#damageEffect {
     display: none;
     position: fixed;
     top: 0;
@@ -303,21 +376,32 @@ input[type="submit"] {
 
 
     align-items: center;
-	justify-content: center;
+    justify-content: center;
     font-size: 200px;
     gap: 20vh;
     color: blue;
 }
 
-.animate{
+.animate {
     animation: Damage_Effect_Animation 0.7s ease-out;
 }
 
 @keyframes Damage_Effect_Animation {
-    0%{opacity: 0;}
-    50%{opacity: 50%;}
-    70%{opacity: 50%;}
-    100%{opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    70% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 #playerDied {
@@ -327,28 +411,40 @@ input[type="submit"] {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw; 
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色背景 */
     z-index: 200;
     margin: 0;
     padding: 0;
-    align-items: center; /* 子元素水平居中 */
-    justify-content: center; /* 子元素垂直居中 */
+    align-items: center;
+    /* 子元素水平居中 */
+    justify-content: center;
+    /* 子元素垂直居中 */
 }
 
 .menuFadein {
-    animation: menu_fadein 1s forwards; /* 持續 2 秒 */
+    animation: menu_fadein 1s forwards;
+    /* 持續 2 秒 */
 }
 
 @keyframes menu_fadein {
-    0% { opacity: 0; }   /* 起始完全透明 */
-    100% { opacity: 1; } /* 最終完全不透明 */
+    0% {
+        opacity: 0;
+    }
+
+    /* 起始完全透明 */
+    100% {
+        opacity: 1;
+    }
+
+    /* 最終完全不透明 */
 }
 
 
-#playerDied div strong{
+#playerDied div strong {
     color: red;
-    
+
     text-align: center;
     font-size: larger;
 }
@@ -356,13 +452,13 @@ input[type="submit"] {
 .menuArea {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    height: auto; 
-    width: 60vw; 
-    background-color: rgb(192, 190, 190); 
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 60vw;
+    background-color: rgb(192, 190, 190);
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -370,7 +466,7 @@ input[type="submit"] {
     color: white;
     text-align: center;
     font-size: 5vh;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 #playerDied button {
@@ -391,7 +487,7 @@ input[type="submit"] {
 }
 
 #playerDied button:active {
-    color:#444;
+    color: #444;
     background-color: #59595a;
     box-shadow: 0 0.5vh #666;
     transform: translateY(1px);
@@ -406,30 +502,33 @@ input[type="submit"] {
 /* =======================================================================我是分隔線================================================================== */
 #TextContainer {
     position: absolute;
-    bottom: 7.5vh; 
-    left: 50%; 
-    transform: translateX(-50%); 
+    bottom: 7.5vh;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     padding: 2.5%;
 
-    color: #888;
+    color: #e6e5e5;
     display: flex;
     flex-wrap: wrap;
 
     width: 80vw;
     height: 30vh;
     font-size: 5.5vh;
-    background-color: rgba(28, 29, 28, 0.08);
+    background-color: rgba(28, 29, 28, 0.5);
     border: solid;
     border-color: rgb(128, 128, 128, 0.05);
 }
-#TextContainer span{
+
+#TextContainer span {
     height: 5vh;
     margin: 0;
     padding: 0;
 }
-#typeBox{
-    opacity: 0; /*取消顯示 */
+
+#typeBox {
+    opacity: 0;
+    /*取消顯示 */
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
@@ -439,19 +538,22 @@ input[type="submit"] {
     position: relative;
     bottom: 25px;
 }
+
 .correct {
     color: green;
 }
+
 .incorrect {
     color: red;
 }
-.blank_incorrect{
+
+.blank_incorrect {
     background-color: red;
     /* width: 30px; */
     height: 60px;
 }
 
-.TransitionBlock_in{
+.TransitionBlock_in {
     position: fixed;
     top: 0;
     left: 0;
@@ -459,14 +561,18 @@ input[type="submit"] {
     width: 100%;
     background-color: black;
     z-index: 0;
-    transform: translateX(0); /* 初始位置 */
-    transition: transform 0.3s ease-out; /* 加入平滑動畫效果 */
-}
-.hidden {
-    transform: translateX(-100%); /* 從右移到左，離開螢幕 */
+    transform: translateX(0);
+    /* 初始位置 */
+    transition: transform 0.3s ease-out;
+    /* 加入平滑動畫效果 */
 }
 
-.TransitionBlock_out{
+.hidden {
+    transform: translateX(-100%);
+    /* 從右移到左，離開螢幕 */
+}
+
+.TransitionBlock_out {
     position: fixed;
     top: 0;
     right: 0;
@@ -475,24 +581,26 @@ input[type="submit"] {
     background-color: black;
     z-index: 100;
     transition: transform 0.3s ease-out;
-    transform: translateX(0); /* 這裡從右側移動 */
+    transform: translateX(0);
+    /* 這裡從右側移動 */
 }
 
-.active{
-    transition: transform 0.3s ease-out; /* 加入平滑動畫效果 */
+.active {
+    transition: transform 0.3s ease-out;
+    /* 加入平滑動畫效果 */
 }
 
-.testButtons{
+.testButtons {
     position: fixed;
     top: 70%;
     left: 5%;
 }
 
-.testButtons button{
+.testButtons button {
     cursor: pointer;
 }
 
-#turnBlock{
+#turnBlock {
     position: fixed;
     top: 0;
     left: 0;
@@ -513,22 +621,33 @@ input[type="submit"] {
     gap: 1vh;
 }
 
-#turnBlock div{
+#turnBlock div {
     opacity: 1;
 }
 
-.turnAnimation{
+.turnAnimation {
     animation: Turn_Effect_Animation 1.2s ease-out;
 }
 
 @keyframes Turn_Effect_Animation {
-    0%{opacity: 0;}
-    50%{opacity: 90%;}
-    70%{opacity: 90%;}
-    100%{opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 90%;
+    }
+
+    70% {
+        opacity: 90%;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-#warningBlock{
+#warningBlock {
     position: fixed;
     top: 0;
     left: 0;
@@ -540,19 +659,32 @@ input[type="submit"] {
     background-color: rgb(3, 3, 3, 0.6);
     z-index: 1000;
 }
-.warningBlock{
+
+.warningBlock {
     height: 60vh;
     width: auto;
 }
 
-.warningBlock_fade{
+.warningBlock_fade {
     animation: warningBlock_fade_in_out 1.5s forwards;
 }
 
 @keyframes warningBlock_fade_in_out {
-    0%{opacity: 0;}
-    25%{opacity: 1;}
-    75%{opacity: 1;}
-    100%{opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 /* =======================================================================我是分隔線================================================================== */

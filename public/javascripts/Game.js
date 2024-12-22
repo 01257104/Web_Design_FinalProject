@@ -77,7 +77,7 @@ async function mob_init(turn) {
         mob.setAttribute('id', `mob${i}`);
         mob.innerHTML = `
             <ul>
-                <li>CD: <span id="mob${i}CD"></span></li>
+                <li class="mobCD">CD: <span id="mob${i}CD"></span></li>
                 <li><span class="mobHP" id="mob${i}HP"></span></li>
             </ul>
             <div id="image-container">
@@ -347,9 +347,7 @@ async function attack(index, damage) {
     // 更新怪物生命
     MobHP[index] = (MobHP[index] - damage < 0) ? 0 : MobHP[index] - damage;
     let turn = parseInt(localStorage.getItem('Turn'));
-    if (isNaN(Math.round(MobHP_original[index] * Math.pow(1.2, turn - 1))) || Math.round(MobHP_original[index] * Math.pow(1.2, turn - 1)) == 0) {
-        console.log("MobHP_original: ", MobHP_original[index], Math.round(MobHP_original[index] * Math.pow(1.2, turn - 1)));
-    }
+    
     if (turn % 3 == 0 && index == 2) {
         document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${Math.round(BossHP[index] * Math.pow(1.2, turn - 1))}`;
         document.getElementById(`mob${index}HP`).style.width = `${MobHP[index] / (BossHP[index] * Math.pow(1.2, turn - 1)) * 100}%`;

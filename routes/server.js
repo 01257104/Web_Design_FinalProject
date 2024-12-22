@@ -68,7 +68,6 @@ router.post("/", async (req, res) => {
 
 
 router.get('/get-words', (req, res) => {
-    //const pythonScript = path.join(__dirname, 'Project/routes/python_script.py');
     const process = spawn('python', ['routes/python_script.py']);
 
     let result = '';
