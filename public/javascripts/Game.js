@@ -23,6 +23,13 @@ document.addEventListener('click', () => {
     audio.src = `sound_effect/button.mp3`;
     audio.play();
 });
+
+const textbox = document.getElementById('typeBox');
+
+// 禁止黏貼
+textbox.addEventListener('paste', (event) => {
+    event.preventDefault();
+});
 //=======================================================================我是分隔線==================================================================
 
 
@@ -39,12 +46,12 @@ let mobPicSrc = ['./images/chiikawa1.png', './images/chiikawa2.png', './images/c
     , './images/chiikawa6.png', './images/ghost.png', './images/George.png', './images/goblin.png', './images/PePePig.png'
 ];
 //BOSS數據
-let BossHP = [50, 50, 50];
-let BossPicSrc = ['./images/Elon Ma!.png', './images/Zuckerberg-frog.png', './images/i_show_sponge.png'];
-let BossSE = ['yi long ma.mp3', 'Zuckerberg.mp3', 'sponge_laugh.mp3'];
-let BossVolume = [0.9, 0.6, 0.6];
-let BossATKVal = [100, 100, 100];
-let BossLevel = [5, 5, 5];
+let BossHP = [50, 50, 50, 50, 50];
+let BossPicSrc = ['./images/Elon Ma!.png', './images/momoi.png', './images/anger.png', './images/Zuckerberg-frog.png', './images/i_show_sponge.png'];
+let BossSE = ['yi long ma.mp3', 'momoi.mp3', 'Wtf Bro.mp3', 'Zuckerberg.mp3', 'sponge_laugh.mp3'];
+let BossVolume = [0.9, 0.6, 0.7, 0.6, 0.6];
+let BossATKVal = [100, 100, 100, 100, 100];
+let BossLevel = [3, 3, 4, 5, 5];
 let BossIndex = 0;
 //localStorage設定
 localStorage.setItem('userName', 'init');
@@ -103,7 +110,7 @@ async function mob_init(turn) {
             audio.volume = BossVolume[BossIndex];
             audio.src = `sound_effect/${BossSE[BossIndex]}`;
             audio.play();
-            BossIndex = ((BossIndex + 1) >= 3) ? 0 : BossIndex + 1;
+            BossIndex = ((BossIndex + 1) >= 5) ? 0 : BossIndex + 1;
         } else {
             mobAtkVal[i] = mobAtkVal[i];
             MobHP[i] = MobHP_original[i];
@@ -347,7 +354,7 @@ async function attack(index, damage) {
     // 更新怪物生命
     MobHP[index] = (MobHP[index] - damage < 0) ? 0 : MobHP[index] - damage;
     let turn = parseInt(localStorage.getItem('Turn'));
-    
+
     if (turn % 3 == 0 && index == 2) {
         document.getElementById(`mob${index}HP`).textContent = `${MobHP[index]}/${Math.round(BossHP[index] * Math.pow(1.2, turn - 1))}`;
         document.getElementById(`mob${index}HP`).style.width = `${MobHP[index] / (BossHP[index] * Math.pow(1.2, turn - 1)) * 100}%`;

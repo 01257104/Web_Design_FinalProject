@@ -47,12 +47,12 @@ html {
 
 .score {
     display: block;
-    width: auto;
+    width: 14vw;
     color: aliceblue;
     font-size: 5vh;
     position: fixed;
     top: 1%;
-    left: 90%;
+    left: 85%;
 }
 
 .score p,
@@ -148,7 +148,7 @@ input[type="submit"] {
     position: relative;
     bottom: 15vh;
     display: flex;
-    gap: 3vw;
+    gap: 2vw;
     /* 控制 mob 之間的間距 */
     /* 控制 MOBs 容器與邊框之間的距離 */
     max-width: 100%;
@@ -185,7 +185,6 @@ input[type="submit"] {
     }
 }
 
-
 .mob {
     height: 35vh;
     width: 35vh;
@@ -219,7 +218,7 @@ input[type="submit"] {
 
 
 #image-container {
-    height: 30vh;
+    height: 25vh;
     width: auto;
 }
 
