@@ -522,7 +522,40 @@ input[type="submit"] {
 
 /* =======================================================================我是分隔線================================================================== */
 
+/*音量設置*/
+/* =======================================================================我是分隔線================================================================== */
+.volume-control {
+    position: absolute;
+    bottom: 3%; /* 距離底部 10px */
+    right: 0;  /* 距離右側 10px */
+    display: flex;
+    flex-direction: column; /* 子元素垂直排列 */
+    align-items: center; /* 子元素水平置中 */
+    background-color: rgba(0, 0, 0, 0); 
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
+#volumeSlider {
+    writing-mode: bt-lr; /* 垂直方向的滑桿，從下到上 */
+    -webkit-appearance: slider-vertical; /* 確保在 Webkit 瀏覽器中呈現垂直方向 */
+    appearance: slider-vertical;
+    height: 15vh; /* 設定滑桿高度 */
+    margin: 0.8rem 0; /* 與標籤和數值之間的間距 */
+}
+
+#volumeLabel {
+    margin-top: 0.8rem; /* 與滑桿之間的間距 */
+    font-size: 1rem; /* 控制數字的字型大小 */
+}
+
+label {
+    margin-bottom: 0.8rem; /* 與滑桿的距離 */
+    font-size: 1rem;
+}
+/* =======================================================================我是分隔線================================================================== */
 
 
 /* 打字區域 */

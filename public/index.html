@@ -73,6 +73,12 @@
                 id="displayTime">0</span>sec</p> <!--玩家生命值數值與時間-->
         <div id="TextContainer" onclick="typeBox_Focus()"></div>
         <textarea type="text" id="typeBox" size="50" oninput="Check_Input()" autofocus></textarea>
+        <!-- 音量 -->
+        <div class="volume-control">
+            <label for="volumeSlider">Volume</label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" orient="vertical">
+            <span id="volumeLabel">50%</span>
+        </div>
         <!-- 遊戲中選單區域 -->
         <div id="playerDied">
             <div class="You_Died"><strong>You Died</strong></div>

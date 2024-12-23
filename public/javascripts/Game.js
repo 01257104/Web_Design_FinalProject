@@ -18,8 +18,9 @@ function startGameTransition() {
 fetchTextJSON();
 //只要有按鈕按下，就發出聲音
 document.addEventListener('click', () => {
+    const globalVolume = document.getElementById('volumeSlider').value;;
     let audio = document.createElement('audio');
-    audio.volume = 0.2;
+    audio.volume = globalVolume*0.2;
     audio.src = `sound_effect/button.mp3`;
     audio.play();
 });
@@ -106,8 +107,9 @@ async function mob_init(turn) {
             let mobPic = document.getElementById(`mobPic${i}`);
             mobPic.src = BossPicSrc[BossIndex];
             MobLevel[i] = BossLevel[BossIndex];
+            const globalVolume = document.getElementById('volumeSlider').value;
             let audio = document.createElement('audio');
-            audio.volume = BossVolume[BossIndex];
+            audio.volume = globalVolume*BossVolume[BossIndex];
             audio.src = `sound_effect/${BossSE[BossIndex]}`;
             audio.play();
             BossIndex = ((BossIndex + 1) >= 5) ? 0 : BossIndex + 1;
@@ -137,9 +139,10 @@ async function mob_init(turn) {
 
 function BossWarningAnimation() {
     return new Promise(resolve => {
+        const globalVolume = document.getElementById('volumeSlider').value;; 
         let audio = document.createElement('audio');
         audio.src = 'sound_effect/warning.mp3';
-        audio.volume = 0.2;
+        audio.volume = globalVolume*0.2;
         audio.play();
 
         let warningBlock = document.getElementById('warningBlock');
@@ -178,8 +181,10 @@ async function Turn_Transition(turn) {
         let showTurn = document.getElementById('turnBlock');
         showTurn.innerHTML = `<div>Stage${turn}</div>`;
         //觸發音效
+        const globalVolume = document.getElementById('volumeSlider').value;
         let audio = document.createElement('audio');
         audio.src = "sound_effect/stage.mp3";
+        audio.volume = globalVolume * 0.7;
         audio.play();
         // 觸發動畫
         showTurn.classList.remove('turnAnimation'); // 確保清除之前的動畫狀態
@@ -288,9 +293,10 @@ function mob_attack_Animation_step1(mobIndex) {
 }
 
 function mob_attack_Animation_step2(mobIndex) {
+    const globalVolume = document.getElementById('volumeSlider').value;;
     let audio = document.createElement('audio');
     audio.src = 'sound_effect/jab.mp3';
-    audio.volume = 0.7;
+    audio.volume = globalVolume*0.7;
     audio.play();
     let mob = document.getElementById(`mob${mobIndex}`);
     mob.classList.add('mob_attack_step2');
@@ -370,9 +376,10 @@ async function attack(index, damage) {
 
 
 function displayDamage(index, damage) {//顯示mob受到的傷害
+    const globalVolume = document.getElementById('volumeSlider').value;
     let audio = document.createElement('audio');
     audio.src = 'sound_effect/player_attack.mp3';
-    audio.volume = 0.2;
+    audio.volume = globalVolume*0.2;
     audio.play();
     return new Promise(resolve => {//確保動畫結束再做下一步
         let output = document.getElementById(`displayDamage${index}`);
@@ -397,11 +404,11 @@ function PlayerHP_bar(current, total) {
 //玩家死亡
 async function player_died() {
     document.getElementById('typeBox').disabled = true;
-
-    await typeUserName();
-
+    
+    await typeUserName();  
+    const globalVolume = document.getElementById('volumeSlider').value;;      
     let audio = document.createElement('audio');
-    audio.volume = 0.3;
+    audio.volume = globalVolume*0.3;
     audio.src = `sound_effect/player_died.mp3`;
     audio.play();
 
@@ -661,4 +668,26 @@ function DamageCalculate(correctRate, duration) {
         Mob_move();
     }, 1000);//一秒延遲
 }
+
+//音量調整
+document.addEventListener('DOMContentLoaded', () => {
+    const volumeSlider = document.getElementById('volumeSlider'); // 音量滑桿
+    const volumeLabel = document.getElementById('volumeLabel');   // 音量百分比
+
+    // 初始化音量顯示
+    const initialVolume = volumeSlider.value; // 取得滑桿初始值
+    volumeLabel.textContent = `${Math.round(initialVolume * 100)}%`;
+
+    // 當滑桿值變化時，更新音量百分比
+    volumeSlider.addEventListener('input', () => {
+        const volume = volumeSlider.value; // 取得滑桿值 (0 ~ 1)
+
+        // 更新音量百分比顯示
+        const volumePercent = Math.round(volume * 100); // 轉換為百分比
+        volumeLabel.textContent = `${volumePercent}%`;
+        console.log(`整體音量調整為: ${volumePercent}%`);
+    });
+});
+
+
 //=======================================================================我是分隔線==================================================================
