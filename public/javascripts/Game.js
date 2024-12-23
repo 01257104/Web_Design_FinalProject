@@ -708,7 +708,7 @@ menuButton.addEventListener('click', async() => {
     });
     document.getElementById('tryAgain').addEventListener('click', () => {
         localStorage.clear();
-        location.href = location.href;//重新載入頁面
+        location.href = location.href;//重新載入頁面123
     });
     document.getElementById('playerDied').addEventListener('click',()=>{
         document.getElementById('playerDied').style.display="none";
