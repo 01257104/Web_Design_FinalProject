@@ -10,6 +10,12 @@
     <script src="./javascripts/Game.js" defer></script>
     <script>
         $(document).ready(function () {
+            $.get('server', function (Data) {
+                const studentList = $('#rank-list');
+                Data.forEach(function (data) {
+                    studentList.append(`<tr><td>${data.name}</td><td>${data.score}分</td></tr>`);
+                });
+            });
             setInterval(() => {
                 if (localStorage.getItem('renewScore') == 1) {
                     localStorage.setItem('renewScore', 0);
@@ -65,7 +71,7 @@
 
     <main>
         <!-- 左上角選menu按鈕-->
-        <button id="menuButton" class="menu-button">&#9776;</button> 
+        <button id="menuButton" class="menu-button">&#9776;</button>
         <!-- 分數與其他設定 -->
         <div class="score" id="scoreArea"></div>
         <!-- 怪物生成區域 -->
@@ -83,7 +89,7 @@
         </div>
         <!-- 遊戲中選單區域 -->
         <div id="playerDied">
-            <div class="You_Died"><strong>You Died</strong></div>
+            <div class="You_Died" id="You_Died"><strong>You Died</strong></div>
             <div class="menuArea">
                 <div id="settleScore"></div>
                 <button id="rankbtn">排行榜</button>

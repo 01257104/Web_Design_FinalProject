@@ -20,7 +20,7 @@ fetchTextJSON();
 document.addEventListener('click', () => {
     const globalVolume = document.getElementById('volumeSlider').value;;
     let audio = document.createElement('audio');
-    audio.volume = globalVolume*0.2;
+    audio.volume = globalVolume * 0.2;
     audio.src = `sound_effect/button.mp3`;
     audio.play();
 });
@@ -42,7 +42,7 @@ let MobHP = [], MobHP_original = [10, 20, 20, 20, 10];
 let MobLevel = [], MobLevel_original = [1, 2, 2, 2, 1];
 let mobAlive = [true, true, true, true, true];
 let mobCD_original = [1, 2, 3, 2, 1], mobCD_current = [];
-let mobAtkVal = [], mobAtkVal_original = [25, 50, 50, 50, 25];
+let mobAtkVal = [], mobAtkVal_original = [500, 50, 50, 50, 25];
 let mobPicSrc = ['./images/chiikawa1.png', './images/chiikawa2.png', './images/chiikawa3.png', './images/chiikawa4.png', './images/chiikawa5.png'
     , './images/chiikawa6.png', './images/ghost.png', './images/George.png', './images/goblin.png', './images/PePePig.png'
 ];
@@ -109,7 +109,7 @@ async function mob_init(turn) {
             MobLevel[i] = BossLevel[BossIndex];
             const globalVolume = document.getElementById('volumeSlider').value;
             let audio = document.createElement('audio');
-            audio.volume = globalVolume*BossVolume[BossIndex];
+            audio.volume = globalVolume * BossVolume[BossIndex];
             audio.src = `sound_effect/${BossSE[BossIndex]}`;
             audio.play();
             BossIndex = ((BossIndex + 1) >= 5) ? 0 : BossIndex + 1;
@@ -139,10 +139,10 @@ async function mob_init(turn) {
 
 function BossWarningAnimation() {
     return new Promise(resolve => {
-        const globalVolume = document.getElementById('volumeSlider').value;; 
+        const globalVolume = document.getElementById('volumeSlider').value;;
         let audio = document.createElement('audio');
         audio.src = 'sound_effect/warning.mp3';
-        audio.volume = globalVolume*0.2;
+        audio.volume = globalVolume * 0.2;
         audio.play();
 
         let warningBlock = document.getElementById('warningBlock');
@@ -296,7 +296,7 @@ function mob_attack_Animation_step2(mobIndex) {
     const globalVolume = document.getElementById('volumeSlider').value;;
     let audio = document.createElement('audio');
     audio.src = 'sound_effect/jab.mp3';
-    audio.volume = globalVolume*0.7;
+    audio.volume = globalVolume * 0.7;
     audio.play();
     let mob = document.getElementById(`mob${mobIndex}`);
     mob.classList.add('mob_attack_step2');
@@ -379,7 +379,7 @@ function displayDamage(index, damage) {//顯示mob受到的傷害
     const globalVolume = document.getElementById('volumeSlider').value;
     let audio = document.createElement('audio');
     audio.src = 'sound_effect/player_attack.mp3';
-    audio.volume = globalVolume*0.2;
+    audio.volume = globalVolume * 0.2;
     audio.play();
     return new Promise(resolve => {//確保動畫結束再做下一步
         let output = document.getElementById(`displayDamage${index}`);
@@ -404,16 +404,18 @@ function PlayerHP_bar(current, total) {
 //玩家死亡
 async function player_died() {
     document.getElementById('typeBox').disabled = true;
-    
-    await typeUserName();  
-    const globalVolume = document.getElementById('volumeSlider').value;;      
+
+    await typeUserName();
+    const globalVolume = document.getElementById('volumeSlider').value;;
     let audio = document.createElement('audio');
-    audio.volume = globalVolume*0.3;
+    audio.volume = globalVolume * 0.3;
     audio.src = `sound_effect/player_died.mp3`;
     audio.play();
 
     localStorage.setItem('renewScore', 1);
 
+    let menuTitle = document.getElementById('You_Died');
+    menuTitle.innerHTML = '<strong style="color: red">You Died</strong>';
     const score = localStorage.getItem('score');
     document.getElementById('settleScore').textContent = `Your score is ${score}`;
     //排行榜按鈕
@@ -692,10 +694,14 @@ document.addEventListener('DOMContentLoaded', () => {
 //選單按鈕地展開與收縮
 const menuButton = document.getElementById('menuButton');
 
-menuButton.addEventListener('click', async() => {
+menuButton.addEventListener('click', async () => {
     menuButton.classList.toggle('rotate'); // 切換按鈕的旋轉效果
+
+
+    let menuTitle = document.getElementById('You_Died');
+    menuTitle.innerHTML = '<strong style="color: rgb(145, 164, 248)">Menu</strong>';
+
     const score = localStorage.getItem('score');
-    document.querySelector('.You_Died').innerHTML = '<strong>Menu</strong>';
     document.getElementById('settleScore').textContent = `Your score is ${score}`;
     //排行榜按鈕
     document.getElementById('rankbtn').addEventListener('click', () => {
@@ -710,8 +716,9 @@ menuButton.addEventListener('click', async() => {
         localStorage.clear();
         location.href = location.href;//重新載入頁面123
     });
-    document.getElementById('playerDied').addEventListener('click',()=>{
-        document.getElementById('playerDied').style.display="none";
+    document.getElementById('playerDied').addEventListener('click', () => {
+        document.getElementById('playerDied').style.display = "none";
+        menuButton.classList.remove('rotate');
         return;
     });
     await menu_fade_in();
