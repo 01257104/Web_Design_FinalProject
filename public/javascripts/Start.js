@@ -37,17 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //音量調整
+//音量調整
 document.addEventListener('DOMContentLoaded', () => {
     const volumeSlider = document.getElementById('volumeSlider'); // 音量滑桿
     const volumeLabel = document.getElementById('volumeLabel');   // 音量百分比
-    const mediaElements = document.querySelectorAll('video, audio'); // 所有影音元素
 
-    // 當滑桿值變化時，調整所有音頻元素的音量
+    // 初始化音量顯示
+    const initialVolume = volumeSlider.value; // 取得滑桿初始值
+    volumeLabel.textContent = `${Math.round(initialVolume * 100)}%`;
+
+    // 當滑桿值變化時，更新音量百分比
     volumeSlider.addEventListener('input', () => {
         const volume = volumeSlider.value; // 取得滑桿值 (0 ~ 1)
-        mediaElements.forEach(media => {
-            media.volume = volume; // 設定每個影音元素的音量
-        });
 
         // 更新音量百分比顯示
         const volumePercent = Math.round(volume * 100); // 轉換為百分比
@@ -91,4 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
             videoElement.play(); // 播放影片
         }
     });
+});
+
+//backgroundmusic
+document.addEventListener('click', () => {
+    const audio = document.getElementById('backgroundMusic');
+    audio.volume=0.4;
+    if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+    }
 });

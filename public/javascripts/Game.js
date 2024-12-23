@@ -18,7 +18,7 @@ function startGameTransition() {
 fetchTextJSON();
 //只要有按鈕按下，就發出聲音
 document.addEventListener('click', () => {
-    const globalVolume = document.getElementById('volumeSlider').value;;
+    const globalVolume = document.getElementById('volumeSlider').value;
     let audio = document.createElement('audio');
     audio.volume = globalVolume * 0.2;
     audio.src = `sound_effect/button.mp3`;
@@ -724,5 +724,13 @@ menuButton.addEventListener('click', async () => {
     await menu_fade_in();
 });
 
+document.addEventListener('click', () => {
+    const audio = document.getElementById('backgroundMusic');
+    audio.volume=0.4;
+    if (audio.muted) {
+        audio.muted = false;
+        audio.play();
+    }
+});
 
 //=======================================================================我是分隔線==================================================================
