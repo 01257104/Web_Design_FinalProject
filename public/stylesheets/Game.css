@@ -489,6 +489,23 @@ input[type="submit"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* 左上角選單按鈕 */
+.menu-button {
+    position: fixed;
+    top: 2%;
+    left: 3%;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+.menu-button.rotate{
+    transform: rotate(90deg);
+}
+
 #playerDied div {
     color: white;
     text-align: center;

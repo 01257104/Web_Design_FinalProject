@@ -689,5 +689,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//選單按鈕地展開與收縮
+const menuButton = document.getElementById('menuButton');
+
+menuButton.addEventListener('click', async() => {
+    menuButton.classList.toggle('rotate'); // 切換按鈕的旋轉效果
+    const score = localStorage.getItem('score');
+    document.querySelector('.You_Died').innerHTML = '<strong>Menu</strong>';
+    document.getElementById('settleScore').textContent = `Your score is ${score}`;
+    //排行榜按鈕
+    document.getElementById('rankbtn').addEventListener('click', () => {
+        document.getElementById('rank').style.display = 'flex';
+    });
+    //回主畫面按鈕
+    document.getElementById('Back_to_StartMode').addEventListener('click', () => {
+        localStorage.clear();
+        location.href = 'Start.html';
+    });
+    document.getElementById('tryAgain').addEventListener('click', () => {
+        localStorage.clear();
+        location.href = location.href;//重新載入頁面
+    });
+    document.getElementById('playerDied').addEventListener('click',()=>{
+        document.getElementById('playerDied').style.display="none";
+        return;
+    });
+    await menu_fade_in();
+});
+
 
 //=======================================================================我是分隔線==================================================================
