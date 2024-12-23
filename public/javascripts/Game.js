@@ -253,7 +253,7 @@ async function Mob_move() {//Mob行動步驟
 
             if (currentHP <= 0) {//檢查玩家生存狀態
                 player_died();//玩家死亡
-                break;
+                return;
             }
 
             mobCD_current[i] = mobCD_original[i]; // 重置CD
@@ -426,6 +426,8 @@ async function player_died() {
 }
 
 async function typeUserName() {
+    document.getElementById('typeBox').disabled = true;
+    //document.getElementById('typeUserName').style.caretColor = 'black';
     await form_fade_in();
     return new Promise(resolve => {
         let displayForm = document.getElementById('typeUserArea');

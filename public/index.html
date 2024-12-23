@@ -23,17 +23,26 @@
                     };
 
                     document.getElementById('rank-list').innerHTML = "<tr><th>Name</th><th>Score</th></tr>";
-
-                    // 新增rank到db
-                    $.post('server', data);
-
-                    // 取得rank列表
-                    $.get('server', function (Data) {
-                        const studentList = $('#rank-list');
-                        Data.forEach(function (data) {
-                            studentList.append(`<tr><td>${data.name}</td><td>${data.score}分</td></tr>`);
+                    fetchRankFromDB();
+                    function postRankToDB() {
+                        return new Promise(resolve => {
+                            // 新增rank到db
+                            $.post('server', data)
+                                .then(response => {
+                                    resolve();
+                                });
                         });
-                    });
+                    }
+                    async function fetchRankFromDB() {
+                        await postRankToDB();
+                        // 取得rank列表
+                        $.get('server', function (Data) {
+                            const studentList = $('#rank-list');
+                            Data.forEach(function (data) {
+                                studentList.append(`<tr><td>${data.name}</td><td>${data.score}分</td></tr>`);
+                            });
+                        });
+                    }
                 }
             }, 500);
             setInterval(() => {

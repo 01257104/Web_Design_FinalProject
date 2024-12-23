@@ -123,7 +123,13 @@ body {
     position: relative;
     bottom: 7vh;
     font-size: 6rem; /* 設定標題的字體大小 */
-    margin-bottom: 4vh; /* 給標題與按鈕之間加一點間距 */
+}
+
+.subtitle{
+    position: relative;
+    bottom: 7vh;
+    font-size: 2rem;
+    margin-bottom: 4vh;
 }
 
 /*按鈕設計*/

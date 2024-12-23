@@ -97,6 +97,7 @@ html {
     background-color:rgba(210,165,5,0.35);
   }
 .rank button {
+    
     position: absolute;
     top: 6%;
     left: 2.5%;
@@ -106,6 +107,7 @@ html {
     font-weight: bold;
     background-color: #59595a;
     color: azure;
+    cursor: pointer;
 }
 .rank-title{
     margin:0 0 5%;
@@ -148,6 +150,7 @@ html {
     height: 5vh;
     width: 20vw;
     font-size: 2rem;
+    caret-color: black;
 }
 
 input[type="submit"] {
