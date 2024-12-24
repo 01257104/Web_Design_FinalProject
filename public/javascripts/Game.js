@@ -42,7 +42,7 @@ let MobHP = [], MobHP_original = [10, 20, 20, 20, 10];
 let MobLevel = [], MobLevel_original = [1, 2, 2, 2, 1];
 let mobAlive = [true, true, true, true, true];
 let mobCD_original = [1, 2, 3, 2, 1], mobCD_current = [];
-let mobAtkVal = [], mobAtkVal_original = [25, 50, 50, 50, 25];
+let mobAtkVal = [], mobAtkVal_original = [500, 50, 50, 50, 25];
 let mobPicSrc = ['./images/chiikawa1.png', './images/chiikawa2.png', './images/chiikawa3.png', './images/chiikawa4.png', './images/chiikawa5.png'
     , './images/chiikawa6.png', './images/ghost.png', './images/George.png', './images/goblin.png', './images/PePePig.png'
 ];
@@ -467,6 +467,7 @@ function form_fade_in() {
 
 function returnToGame() {
     document.getElementById('rank').style.display = 'none';
+    playerDied = document.getElementById('playerDied').style.display = 'flex';
 }
 
 function menu_fade_in() {

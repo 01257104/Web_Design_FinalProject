@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     caret-color: transparent; /* 隱藏插入符號 */
+    z-index: 2;
 }
 
 
