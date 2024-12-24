@@ -47,12 +47,12 @@ let mobPicSrc = ['./images/chiikawa1.png', './images/chiikawa2.png', './images/c
     , './images/chiikawa6.png', './images/ghost.png', './images/George.png', './images/goblin.png', './images/PePePig.png'
 ];
 //BOSS數據
-let BossHP = [50, 50, 50, 50, 50];
-let BossPicSrc = ['./images/Elon Ma!.png', './images/momoi.png', './images/anger.png', './images/Zuckerberg-frog.png', './images/i_show_sponge.png'];
-let BossSE = ['yi long ma.mp3', 'momoi.mp3', 'Wtf Bro.mp3', 'Zuckerberg.mp3', 'sponge_laugh.mp3'];
-let BossVolume = [0.9, 0.6, 0.7, 0.6, 0.6];
-let BossATKVal = [100, 100, 100, 100, 100];
-let BossLevel = [3, 3, 4, 5, 5];
+let BossHP = [50, 50, 50, 50, 50, 50];
+let BossPicSrc = ['./images/Elon Ma!.png', './images/momoi.png', './images/anger.png', './images/Zuckerberg-frog.png', './images/furina feliz navidad.png', './images/i_show_sponge.png'];
+let BossSE = ['yi long ma.mp3', 'momoi.mp3', 'Wtf Bro.mp3', 'Zuckerberg.mp3', 'Furina feliz navidad.mp3', 'sponge_laugh.mp3'];
+let BossVolume = [0.9, 0.6, 0.7, 0.6, 0.75, 0.6];
+let BossATKVal = [100, 100, 100, 100, 100, 100];
+let BossLevel = [3, 3, 4, 4, 5, 5];
 let BossIndex = 0;
 //localStorage設定
 localStorage.setItem('userName', 'init');
@@ -112,7 +112,7 @@ async function mob_init(turn) {
             audio.volume = globalVolume * BossVolume[BossIndex];
             audio.src = `sound_effect/${BossSE[BossIndex]}`;
             audio.play();
-            BossIndex = ((BossIndex + 1) >= 5) ? 0 : BossIndex + 1;
+            BossIndex = ((BossIndex + 1) >= BossPicSrc.length) ? 0 : BossIndex + 1;
         } else {
             mobAtkVal[i] = mobAtkVal[i];
             MobHP[i] = MobHP_original[i];
@@ -406,7 +406,7 @@ async function player_died() {
     document.getElementById('typeBox').disabled = true;
 
     await typeUserName();
-    const globalVolume = document.getElementById('volumeSlider').value;;
+    const globalVolume = document.getElementById('volumeSlider').value;
     let audio = document.createElement('audio');
     audio.volume = globalVolume * 0.3;
     audio.src = `sound_effect/player_died.mp3`;
@@ -725,8 +725,9 @@ menuButton.addEventListener('click', async () => {
 });
 
 document.addEventListener('click', () => {
+    const globalVolume = document.getElementById('volumeSlider').value;
     const audio = document.getElementById('backgroundMusic');
-    audio.volume=0.4;
+    audio.volume = 0.2 * globalVolume;
     if (audio.muted) {
         audio.muted = false;
         audio.play();
