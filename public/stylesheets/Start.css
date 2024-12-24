@@ -179,6 +179,7 @@ body {
 
 /*開始轉場*/
 #TransitionBlock{
+    display: block;
     position: fixed;
     top: 0;
     left: 100%;

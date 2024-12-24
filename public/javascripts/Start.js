@@ -36,26 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//音量調整
-//音量調整
-document.addEventListener('DOMContentLoaded', () => {
-    const volumeSlider = document.getElementById('volumeSlider'); // 音量滑桿
-    const volumeLabel = document.getElementById('volumeLabel');   // 音量百分比
 
-    // 初始化音量顯示
-    const initialVolume = volumeSlider.value; // 取得滑桿初始值
-    volumeLabel.textContent = `${Math.round(initialVolume * 100)}%`;
-
-    // 當滑桿值變化時，更新音量百分比
-    volumeSlider.addEventListener('input', () => {
-        const volume = volumeSlider.value; // 取得滑桿值 (0 ~ 1)
-
-        // 更新音量百分比顯示
-        const volumePercent = Math.round(volume * 100); // 轉換為百分比
-        volumeLabel.textContent = `${volumePercent}%`;
-        console.log(`整體音量調整為: ${volumePercent}%`);
-    });
-});
 
 // 取得影片元素和淡入元素
 const video = document.getElementById('myVideo');
