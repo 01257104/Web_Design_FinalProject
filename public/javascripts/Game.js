@@ -205,6 +205,7 @@ async function Turn_Transition(turn) {
 }
 
 async function Mob_move() {//Mob行動步驟
+    fetchTextJSON();
     let allDied = true;
     //更新mob生存狀態
     for (let i = 0; i < 5; ++i) {
@@ -371,16 +372,10 @@ async function attack(index, damage) {
     }
 
     await displayDamage(index, damage);  // 顯示傷害動畫
-    fetchTextJSON();
 }
 
 
 function displayDamage(index, damage) {//顯示mob受到的傷害
-    const globalVolume = document.getElementById('volumeSlider').value;
-    let audio = document.createElement('audio');
-    audio.src = 'sound_effect/player_attack.mp3';
-    audio.volume = globalVolume * 0.2;
-    audio.play();
     return new Promise(resolve => {//確保動畫結束再做下一步
         let output = document.getElementById(`displayDamage${index}`);
         output.textContent = `-${damage}`;
@@ -662,6 +657,12 @@ function DamageCalculate(correctRate, duration) {
     localStorage.setItem('wpm', wpm);
     //關閉typeBox
     document.getElementById('typeBox').disabled = true;
+    //播放音效
+    const globalVolume = document.getElementById('volumeSlider').value;
+    let audio = document.createElement('audio');
+    audio.src = 'sound_effect/player_attack.mp3';
+    audio.volume = globalVolume * 0.2;
+    audio.play();
     let damage = Math.round(correctRate * wpm);//傷害計算公式
     for (let i = 0; i < 5; ++i) {
         attack(i, damage);//玩家攻擊mob
