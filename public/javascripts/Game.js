@@ -731,7 +731,7 @@ menuButton.addEventListener('click', async () => {
 });
 
 
-document.getElementById('backgroundMusic').volume = 1;
+document.getElementById('backgroundMusic').volume = 0.2;
 document.getElementById('volumeSlider').addEventListener('click', () => {
     const globalVolume = document.getElementById('volumeSlider').value;
     const audio = document.getElementById('backgroundMusic');
