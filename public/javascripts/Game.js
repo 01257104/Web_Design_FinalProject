@@ -495,6 +495,11 @@ function menu_fade_in() {
 function KillAllBtn() {
     //關閉typeBox
     document.getElementById('typeBox').disabled = true;
+    const globalVolume = document.getElementById('volumeSlider').value;
+    let audio = document.createElement('audio');
+    audio.src = 'sound_effect/player_attack.mp3';
+    audio.volume = globalVolume * 0.2;
+    audio.play();
     for (let i = 0; i < 5; ++i) {
         attack(i, 777);
     }
@@ -657,13 +662,13 @@ function DamageCalculate(correctRate, duration) {
     localStorage.setItem('wpm', wpm);
     //關閉typeBox
     document.getElementById('typeBox').disabled = true;
+    let damage = Math.round(correctRate * wpm);//傷害計算公式
     //播放音效
     const globalVolume = document.getElementById('volumeSlider').value;
     let audio = document.createElement('audio');
     audio.src = 'sound_effect/player_attack.mp3';
     audio.volume = globalVolume * 0.2;
     audio.play();
-    let damage = Math.round(correctRate * wpm);//傷害計算公式
     for (let i = 0; i < 5; ++i) {
         attack(i, damage);//玩家攻擊mob
     }
@@ -726,8 +731,8 @@ menuButton.addEventListener('click', async () => {
 });
 
 
-document.getElementById('backgroundMusic').volume = 0.2;
-document.addEventListener('click', () => {
+document.getElementById('backgroundMusic').volume = 1;
+document.getElementById('volumeSlider').addEventListener('click', () => {
     const globalVolume = document.getElementById('volumeSlider').value;
     const audio = document.getElementById('backgroundMusic');
     audio.volume = 0.2 * globalVolume;

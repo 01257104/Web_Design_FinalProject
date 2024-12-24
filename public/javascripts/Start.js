@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             // 替換為您的遊戲頁面路徑
-            location.href = "http://localhost:3000/";
+            location.href = "https://web-design-finalproject.onrender.com/";
         }, 300); // 與 CSS transition 的時間一致
     });
 });
