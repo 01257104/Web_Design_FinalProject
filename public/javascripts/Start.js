@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             //render server連結
-            //location.href = "https://web-design-finalproject.onrender.com/";
+            location.href = "https://web-design-finalproject.onrender.com/";
             //本地端連結
-            location.href = "http://localhost:3000/";
+            //location.href = "http://localhost:3000/";
         }, 300);
     });
 });
