@@ -382,7 +382,7 @@ function displayDamage(index, damage) {//顯示mob受到的傷害
             output.classList.add('mob_fade_out');
         }, 350);
         document.addEventListener('animationend', () => {
-            output.style.display = 'none'; 
+            output.style.display = 'none';
             resolve();
         });
     });
@@ -488,22 +488,24 @@ function menu_fade_in() {
     });
 }
 
-
-function KillAllBtn() {
-    //關閉typeBox
-    document.getElementById('typeBox').disabled = true;
-    const globalVolume = document.getElementById('volumeSlider').value;
-    let audio = document.createElement('audio');
-    audio.src = 'sound_effect/player_attack.mp3';
-    audio.volume = globalVolume * 0.2;
-    audio.play();
-    for (let i = 0; i < 5; ++i) {
-        attack(i, 777);
-    }
-    if (currentHP > 0) {
-        setTimeout(() => {
-            Mob_move();
-        }, 1000);//一秒延遲
+window.KillAll = KillAll;
+function KillAll(command) {
+    if (command === "kill") {
+        //關閉typeBox
+        document.getElementById('typeBox').disabled = true;
+        const globalVolume = document.getElementById('volumeSlider').value;
+        let audio = document.createElement('audio');
+        audio.src = 'sound_effect/player_attack.mp3';
+        audio.volume = globalVolume * 0.2;
+        audio.play();
+        for (let i = 0; i < 5; ++i) {
+            attack(i, 777);
+        }
+        if (currentHP > 0) {
+            setTimeout(() => {
+                Mob_move();
+            }, 1000);//一秒延遲
+        }
     }
 }
 //=======================================================================我是分隔線==================================================================
