@@ -170,7 +170,7 @@ body {
     text-shadow: none;
 }
 .Gamestart_Button:hover:after {
-    transform: scaleX(1); /* 偽元素從小放大覆蓋按鈕 */
+    transform: scaleX(1);
 }
 .Gamestart_Button:active {
     transform: scaleY(2px);
@@ -187,8 +187,8 @@ body {
     width: 100%;
     background-color: black;
     z-index: 100;
-    transition: transform 0.3s ease-out; /* 加入平滑動畫效果 */
-    transform: translateX(0); /* 初始位置 */
+    transition: transform 0.3s ease-out; 
+    transform: translateX(0); 
 }
 #TransitionBlock.active {
     transform: translateX(-100%); /* 從右移到左，覆蓋整個螢幕 */

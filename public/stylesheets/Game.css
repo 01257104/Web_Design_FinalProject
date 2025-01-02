@@ -179,8 +179,6 @@ input[type="submit"] {
     bottom: 15vh;
     display: flex;
     gap: 2vw;
-    /* 控制 mob 之間的間距 */
-    /* 控制 MOBs 容器與邊框之間的距離 */
     max-width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -256,9 +254,6 @@ input[type="submit"] {
     display: inline-block;
     height: 100%;
     width: auto;
-    /* aspect-ratio: 1/1;
-    /* max-width: 100%;
-    max-height: 100%; */
     margin-top: 0;
 }
 
@@ -442,19 +437,15 @@ input[type="submit"] {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
-    /* 半透明黑色背景 */
     z-index: 200;
     margin: 0;
     padding: 0;
     align-items: center;
-    /* 子元素水平居中 */
     justify-content: center;
-    /* 子元素垂直居中 */
 }
 
 .menuFadein {
     animation: menu_fadein 1s forwards;
-    /* 持續 2 秒 */
 }
 
 @keyframes menu_fadein {
@@ -462,12 +453,9 @@ input[type="submit"] {
         opacity: 0;
     }
 
-    /* 起始完全透明 */
     100% {
         opacity: 1;
     }
-
-    /* 最終完全不透明 */
 }
 
 
@@ -545,11 +533,11 @@ input[type="submit"] {
 /* =======================================================================我是分隔線================================================================== */
 .volume-control {
     position: absolute;
-    bottom: 3%; /* 距離底部 10px */
-    right: 0;  /* 距離右側 10px */
+    bottom: 3%;
+    right: 0;
     display: flex;
-    flex-direction: column; /* 子元素垂直排列 */
-    align-items: center; /* 子元素水平置中 */
+    flex-direction: column; 
+    align-items: center; 
     background-color: rgba(0, 0, 0, 0); 
     padding: 10px;
     border-radius: 8px;
@@ -558,20 +546,20 @@ input[type="submit"] {
 }
 
 #volumeSlider {
-    writing-mode: bt-lr; /* 垂直方向的滑桿，從下到上 */
-    -webkit-appearance: slider-vertical; /* 確保在 Webkit 瀏覽器中呈現垂直方向 */
+    writing-mode: bt-lr; 
+    -webkit-appearance: slider-vertical; 
     appearance: slider-vertical;
-    height: 15vh; /* 設定滑桿高度 */
-    margin: 0.8rem 0; /* 與標籤和數值之間的間距 */
+    height: 15vh;
+    margin: 0.8rem 0;
 }
 
 #volumeLabel {
-    margin-top: 0.8rem; /* 與滑桿之間的間距 */
-    font-size: 1rem; /* 控制數字的字型大小 */
+    margin-top: 0.8rem; 
+    font-size: 1rem; 
 }
 
 label {
-    margin-bottom: 0.8rem; /* 與滑桿的距離 */
+    margin-bottom: 0.8rem; 
     font-size: 1rem;
 }
 /* =======================================================================我是分隔線================================================================== */
@@ -641,9 +629,9 @@ label {
     background-color: black;
     z-index: 0;
     transform: translateX(0);
-    /* 初始位置 */
+
     transition: transform 0.3s ease-out;
-    /* 加入平滑動畫效果 */
+   
 }
 
 .hidden {
@@ -661,12 +649,10 @@ label {
     z-index: 100;
     transition: transform 0.3s ease-out;
     transform: translateX(0);
-    /* 這裡從右側移動 */
 }
 
 .active {
     transition: transform 0.3s ease-out;
-    /* 加入平滑動畫效果 */
 }
 
 .testButtons {

@@ -8,7 +8,7 @@ function startGameTransition() {
         transitionBlock.style.zIndex = 100;//將Block設到最上層
         // 延遲移除黑屏效果
         setTimeout(() => {
-            transitionBlock.classList.add('hidden'); // 加入滑出的 class
+            transitionBlock.classList.add('hidden');
         }, 300); // 延遲讓用戶能看到黑屏效果
         setTimeout(() => {
             resolve();
@@ -147,7 +147,7 @@ function BossWarningAnimation() {
 
         let warningBlock = document.getElementById('warningBlock');
         warningBlock.classList.remove("warningBlock_fade");
-        warningBlock.offsetHeight;  // 觸發重排，讓動畫能夠重新開始
+        warningBlock.offsetHeight;  // 觸發重排
         warningBlock.classList.add('warningBlock_fade');
         warningBlock.style.display = 'flex';
 
@@ -164,7 +164,7 @@ async function MobArea_Animation() {
     return new Promise(resolve => {
         let mobArea = document.getElementById('mobArea');
         mobArea.classList.remove("mob_fade_in");
-        void mobArea.offsetWidth; // 觸發重排，使動畫重新啟動
+        void mobArea.offsetWidth; // 觸發重排
         mobArea.classList.add('mob_fade_in');
         mobArea.style.display = 'flex';
         mobArea.addEventListener('animationend', () => {
@@ -188,8 +188,8 @@ async function Turn_Transition(turn) {
         audio.play();
         // 觸發動畫
         showTurn.classList.remove('turnAnimation'); // 確保清除之前的動畫狀態
-        void showTurn.offsetWidth; // 觸發重排，使動畫重新啟動
-        showTurn.classList.add('turnAnimation'); // 再次添加動畫類
+        void showTurn.offsetWidth; // 觸發重排
+        showTurn.classList.add('turnAnimation');
         showTurn.style.display = 'block';
         showTurn.style.zIndex = 200;
 
@@ -286,7 +286,6 @@ function mob_attack_Animation_step1(mobIndex) {
         let mob = document.getElementById(`mob${mobIndex}`);
         mob.classList.add('mob_attack_step1');
         mob.addEventListener('animationend', () => {
-            //console.log(`Animation for mob${mobIndex} finished!`); // 確認事件觸發
             mob.classList.remove('mob_attack_step1');
             resolve();
         });
@@ -302,7 +301,6 @@ function mob_attack_Animation_step2(mobIndex) {
     let mob = document.getElementById(`mob${mobIndex}`);
     mob.classList.add('mob_attack_step2');
     mob.addEventListener('animationend', () => {
-        //console.log(`Animation for mob${mobIndex} finished!`); // 確認事件觸發
         mob.classList.remove('mob_attack_step2');
     });
 }
@@ -315,15 +313,14 @@ function mob_attack_damage_Animation(mobIndex) {
         effect.style.zIndex = 200;
         // 觸發動畫
         effect.classList.remove('animate'); // 確保清除之前的動畫狀態
-        void effect.offsetWidth; // 觸發重排，使動畫重新啟動
-        effect.classList.add('animate'); // 再次添加動畫類
+        void effect.offsetWidth; // 觸發重排
+        effect.classList.add('animate');
         //更新血量條顯示
         document.getElementById('playerHP_Left').style.height = `${currentHP / totalHP * 100}%`;
         document.getElementById('playerHP_Right').style.height = `${currentHP / totalHP * 100}%`;
         document.getElementById("currentHP").textContent = currentHP;//更新顯示
 
         effect.addEventListener('animationend', () => {//動畫結束
-            console.log(`Animation for mob${mobIndex} finished!`); // 確認事件觸發
             effect.classList.remove('animate');
             effect.style.display = 'none';
             effect.style.zIndex = 0;
@@ -376,16 +373,16 @@ async function attack(index, damage) {
 
 
 function displayDamage(index, damage) {//顯示mob受到的傷害
-    return new Promise(resolve => {//確保動畫結束再做下一步
+    return new Promise(resolve => {
         let output = document.getElementById(`displayDamage${index}`);
         output.textContent = `-${damage}`;
-        output.style.display = 'block';// 顯示元素並觸發動畫
+        output.style.display = 'block';
 
         setTimeout(() => {
             output.classList.add('mob_fade_out');
         }, 350);
         document.addEventListener('animationend', () => {
-            output.style.display = 'none'; // 隱藏元素
+            output.style.display = 'none'; 
             resolve();
         });
     });
@@ -431,7 +428,6 @@ async function player_died() {
 
 async function typeUserName() {
     document.getElementById('typeBox').disabled = true;
-    //document.getElementById('typeUserName').style.caretColor = 'black';
     await form_fade_in();
     return new Promise(resolve => {
         let displayForm = document.getElementById('typeUserArea');
@@ -483,9 +479,9 @@ function menu_fade_in() {
 
         // 監聽目標元素的動畫結束事件
         playerDied.addEventListener('animationend', function onAnimationEnd(event) {
-            if (event.target === playerDied) { // 確保是目標元素
-                playerDied.classList.remove('menuFadein'); // 清除動畫類別
-                playerDied.removeEventListener('animationend', onAnimationEnd); // 移除事件監聽
+            if (event.target === playerDied) {
+                playerDied.classList.remove('menuFadein');
+                playerDied.removeEventListener('animationend', onAnimationEnd);
                 resolve(); // 完成 Promise
             }
         });
@@ -586,7 +582,7 @@ function Check_Input() {
 //吃進鍵盤value
 let typeBoxValue = document.getElementById("typeBox");
 typeBoxValue.addEventListener("keypress", CorrectRateCal, false);//每次吃到鍵盤指令就呼叫CorrectRateCal函式
-let firstKeypress = true;//用於檢測是否是第一個打得字，避免重複計時
+let firstKeypress = true;//用於檢測是否是第一個打的字，避免重複計時
 let start, end, duration, displayTime = 0, timerInterval;//用於計時的變數
 document.getElementById('displayTime').textContent = displayTime;
 
@@ -620,7 +616,7 @@ function CorrectRateCal(event, autoComplete = false) {
     let CorrectCount = 0;
     if (autoComplete) {//打字完成
         if (!autoComplete) {//如果是用EnventListenr來執行，要防止報錯
-            event.preventDefault();//防止報錯用
+            event.preventDefault();
         }
         //結束計時
         clearInterval(timerInterval); // 停止計時
